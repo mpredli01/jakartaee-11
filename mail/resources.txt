@@ -1,0 +1,3 @@
+https://zetcode.com/java/mail/#google_vignette
+https://www.gmass.co/blog/gmail-smtp/
+https://tomee.apache.org/master/examples/javamail.html
