@@ -1,0 +1,9 @@
+== Jakarta RESTful Web Services 4.0 Example Application
+
+=== Introduction
+
+The [Jakarta RESTful Web Services 4.0](https://jakarta.ee/specifications/restful-ws/4.0/) specification, currently at version 3.1, provides a foundational API to develop web services following the Representational State Transfer (REST) architectural pattern.
+
+The compatible implementation for this specification is Eclipse Jersey 4.0.0.
+
+=== Example Application

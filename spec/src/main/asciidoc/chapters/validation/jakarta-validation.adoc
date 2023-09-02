@@ -1,0 +1,11 @@
+== Jakarta Validation 3.1 Example Application
+
+=== Introduction
+
+The [Jakarta Validation](https://jakarta.ee/specifications/bean-validation/3.1/) specification, currently at version 3.1, provides an object level constraint declaration and validation facility as well as a constraint metadata repository and query API.
+
+It also offers method and constructor validation facilities to ensure constraints on their parameters and return values. The compatible implementation for this specification is Hibernate Validator 8.0.0.
+
+It is important to note that Jakarta Validation was formerly known as Jakarta Bean Validation.
+
+=== Example Application

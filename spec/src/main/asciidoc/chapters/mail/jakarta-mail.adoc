@@ -1,0 +1,9 @@
+== Jakarta Mail 2.1 Example Application
+
+=== Introduction
+
+The [Jakarta Mail](https://jakarta.ee/specifications/mail/2.1/) specification, currently at version 2.1, provides a set of abstract classes defining objects that comprise a mail system with classes such as Message, Store and Transport.
+
+The compatible implementation for this specification is Eclipse Angus Mail 2.0.2.
+
+=== Example Application

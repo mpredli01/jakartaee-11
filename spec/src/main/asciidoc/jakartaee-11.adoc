@@ -1,0 +1,55 @@
+= Jakarta EE 11: Going Beyond the Era of Java EE
+:email: mike@redlich.net
+:author: Michael P. Redlich
+:doctype: book
+:source-highlighter: coderay
+:version-label!:
+:license: Apache License v2.0
+:source-highlighter: coderay
+:toc: left
+:toclevels: 3
+:sectnumlevels: 4
+:sectanchors:
+:stem:
+ifdef::backend-pdf[]
+:pagenums:
+:numbered:
+:title-logo-image: image:jakarta_ee_logo_schooner_color_stacked_default.png[pdfwidth=4.25in,align=right]
+endif::[]
+:icons: font
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+
+== Jakarta EE 11 Specification Example Applications
+
+This repository complements the presentation, Jakarta EE 11: Going Beyond the Era of Java EE, and provides example applications on some of the Jakarta EE specifications that will be updated for Jakarta EE 11.
+
+The specifications shown here are:
+
+* [Jakarta Data 1.0](https://jakarta.ee/specifications/data/1.0/)
+* [Jakarta RESTful Web Services 4.0](https://jakarta.ee/specifications/restful-ws/4.0/)
+* [Jakarta Validation 3.1](https://jakarta.ee/specifications/bean-validation/3.1/) (formerly known as Jakarta Bean Validation)
+
+In addition, there are example applications for:
+
+* [Jakarta Mail 2.1](https://jakarta.ee/specifications/mail/2.1/) which will not have an update for Jakarta EE 11.
+* [Jakarta NoSQL 1.0](https://jakarta.ee/specifications/nosql/1.0/) which was not included in the Jakarta EE 11 Platform.
+
+Each example application can be executed on the corresponding command line with:
+
+`$ mvn clean compile exec:java`
+
+Please consider contributing to this GitHub repository if you have ideas for continuous improvement. This would be much appreciated!
+
+I can be reached via email at [mike@redlich.net](mailto:mike@redlich.net)
+
+:sectnums:
+include::chapters/data/jakarta-data.adoc[]
+
+include::chapters/mail/jakarta-mail.adoc[]
+
+include::chapters/nosql/jakarta-nosql.adoc[]
+
+include::chapters/rest/jakarta-restful-ws.adoc[]
+
+include::chapters/validation/jakarta-validation.adoc[]
