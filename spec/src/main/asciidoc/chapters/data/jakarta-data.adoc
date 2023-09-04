@@ -7,3 +7,9 @@ The [Jakarta Data 1.0](https://jakarta.ee/specifications/data/1.0/) specificatio
 The Jakarta Working Group recently voted to include Jakarta Data in the Jakarta EE 11 Platform.
 
 === Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...

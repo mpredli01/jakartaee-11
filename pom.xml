@@ -28,6 +28,8 @@
         <module>mail</module>
         <module>nosql</module>
         <module>rest</module>
+        <module>security</module>
+        <module>spec</module>
         <module>validation</module>
     </modules>
 

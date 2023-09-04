@@ -1,0 +1,15 @@
+== Jakarta Security 3.0 Example Application
+
+=== Introduction
+
+The [Jakarta Security 4.0](https://jakarta.ee/specifications/security/4.0/) specification, defines a standard for creating secure Jakarta EE applications in modern application paradigms.
+
+The compatible implementation for this specification is Eclipse Soteria 3.0.2.
+
+=== Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...

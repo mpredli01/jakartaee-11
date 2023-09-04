@@ -7,3 +7,9 @@ The [Jakarta Mail](https://jakarta.ee/specifications/mail/2.1/) specification, c
 The compatible implementation for this specification is Eclipse Angus Mail 2.0.2.
 
 === Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...

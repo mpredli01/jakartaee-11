@@ -7,3 +7,10 @@ The [Jakarta RESTful Web Services 4.0](https://jakarta.ee/specifications/restful
 The compatible implementation for this specification is Eclipse Jersey 4.0.0.
 
 === Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...
+

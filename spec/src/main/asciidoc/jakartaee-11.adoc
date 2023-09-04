@@ -52,4 +52,6 @@ include::chapters/nosql/jakarta-nosql.adoc[]
 
 include::chapters/rest/jakarta-restful-ws.adoc[]
 
+include::chapters/security/jakarta-data.adoc[]
+
 include::chapters/validation/jakarta-validation.adoc[]

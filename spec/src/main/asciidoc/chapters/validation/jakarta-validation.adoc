@@ -9,3 +9,10 @@ It also offers method and constructor validation facilities to ensure constraint
 It is important to note that Jakarta Validation was formerly known as Jakarta Bean Validation.
 
 === Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...
+
