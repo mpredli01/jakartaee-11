@@ -14,6 +14,7 @@
         <maven.compile.version>3.5.1</maven.compile.version>
         <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakartaee.version>10.0.0</jakartaee.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
         <tinkerpop.version>3.6.1</tinkerpop.version>
@@ -21,6 +22,7 @@
         <mockito.verson>5.2.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
         <junit.version>5.10.0</junit.version>
+        <asciidoctorj-pdf.version>2.3.0</asciidoctorj-pdf.version>
     </properties>
 
     <modules>
@@ -34,6 +36,19 @@
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>3.3</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-shaded</artifactId>

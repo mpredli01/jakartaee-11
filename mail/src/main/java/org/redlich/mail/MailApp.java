@@ -2,12 +2,7 @@ package org.redlich.mail;
 
 import java.util.Properties;
 
-import jakarta.mail.Authenticator;
-import jakarta.mail.Message;
-import jakarta.mail.MessagingException;
-import jakarta.mail.PasswordAuthentication;
-import jakarta.mail.Session;
-import jakarta.mail.Transport;
+import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
@@ -15,7 +10,7 @@ import jakarta.mail.internet.AddressException;
 
 public class MailApp {
 
-    public static void main(String[] args) throws MessagingException {
+    public static void main(String[] args) { // throws MessagingException {
         String title = "[APP] Welcome to the Jakarta Mail Demo Application";
         displayTitle(title);
 
@@ -28,7 +23,6 @@ public class MailApp {
         final int port = 587;
 
         Properties props = new Properties();
-
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", host);
@@ -39,8 +33,12 @@ public class MailApp {
                 return new PasswordAuthentication(username, password);
             }
         };
-
+        
         System.out.println("[APP] " + auth);
+        System.out.println("[APP] To: " + to);
+        System.out.println("[APP] From: " + from);
+        System.out.println("[APP] Host: " + host);
+
         Session session = Session.getInstance(props, auth);
         MimeMessage message = new MimeMessage(session);
 
@@ -49,17 +47,18 @@ public class MailApp {
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject("Groovy email");
             message.setText("Test message");
+            Transport.send(message);
+            System.out.println("[APP] Email sent successfully");
+            }
+        catch(AuthenticationFailedException exception) {
+            System.out.println("[EXCEPTION] AuthenticationFailedException" + exception);
             }
         catch(AddressException exception) {
-            System.out.println(exception);
+            System.out.println("[EXCEPTION] AddressException" + exception);
             }
         catch(MessagingException exception) {
-            System.out.println(exception);
+            System.out.println("[EXCEPTION] MessagingException" + exception);
             }
-
-        Transport.send(message);
-
-        System.out.println("Email sent successfully");
         }
 
     public static void displayTitle(String title) {
