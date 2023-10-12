@@ -1,7 +1,23 @@
+/*
+ * Copyright (c), Eclipse Foundation, Inc. and its licensors.
+ *
+ * All rights reserved.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Distribution License v1.0, which is available at
+ * https://www.eclipse.org/org/documents/edl-v10.php
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 package org.redlich.mail;
 
-
-import jakarta.mail.*;
+import jakarta.mail.Authenticator;
+import jakarta.mail.PasswordAuthentication;
+import jakarta.mail.Session;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.Transport;
+import jakarta.mail.AuthenticationFailedException;
 import jakarta.mail.internet.AddressException;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
