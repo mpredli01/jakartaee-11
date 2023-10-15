@@ -28,6 +28,7 @@
     <modules>
         <module>concurrency</module>
         <module>data</module>
+        <module>jwtbridge</module>
         <module>mail</module>
         <module>nosql</module>
         <module>rest</module>
