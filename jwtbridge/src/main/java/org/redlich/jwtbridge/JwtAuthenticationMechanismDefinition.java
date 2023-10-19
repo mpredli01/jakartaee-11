@@ -21,4 +21,10 @@ public @interface JwtAuthenticationMechanismDefinition {
     String verifierKey() default  "#{MPConfig.config["+ Names.VERIFIER_PUBLIC_KEY +"]}";
     String acceptedIssuer() default "#{MPConfig.config["+ Names.ISSUER +"]}";
     int clockSkew() default 30;
+    JwtClaimsDefinition jwtClaimsDefinition() default @JwtClaimsDefinition;
+    PublicKeyDefinition publicKeyDefinition() default @PublicKeyDefinition;
+    PrivateKeyDefinition decryptionKeyDefinition() default @PrivateKeyDefinition;
+    JwtClaimsVerification jwtClaimsVerification() default @JwtClaimsVerification;
+    HttpHeadersDefinition httpHeadersDefinition() default @HttpHeadersDefinition;
+    JwksDefinition jwksDefinition() default @JwksDefinition;
     }

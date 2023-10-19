@@ -14,15 +14,16 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <soteria.version>3.0.3</soteria.version>
         <exec.mojo.version>3.1.0</exec.mojo.version>
-        <mainClass>org.redlich.jwt-bridge.JWTBridgeApp</mainClass>
+        <mainClass>org.redlich.jwtbridge.JWTBridgeApp</mainClass>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.jnosql.databases</groupId>
-            <artifactId>jnosql-mongodb</artifactId>
-            <version>${jnosql.version}</version>
+            <groupId>org.glassfish.soteria</groupId>
+            <artifactId>jakarta.security.enterprise</artifactId>
+            <version>${soteria.version}</version>
         </dependency>
     </dependencies>
 

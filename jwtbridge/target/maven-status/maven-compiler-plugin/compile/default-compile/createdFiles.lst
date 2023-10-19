@@ -1,0 +1,9 @@
+org/redlich/jwtbridge/JwtClaimsDefinition.class
+org/redlich/jwtbridge/JwtClaimsVerification.class
+org/redlich/jwtbridge/PublicKeyDefinition.class
+org/redlich/jwtbridge/JwksDefinition.class
+org/redlich/jwtbridge/JwtBridgeApp.class
+org/redlich/jwtbridge/PrivateKeyDefinition.class
+org/redlich/jwtbridge/JwtAuthenticationMechanismDefinition.class
+org/redlich/jwtbridge/JwtSecuredServlet.class
+org/redlich/jwtbridge/HttpHeadersDefinition.class
