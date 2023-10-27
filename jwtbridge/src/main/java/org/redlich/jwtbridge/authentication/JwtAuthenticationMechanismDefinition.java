@@ -9,7 +9,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.jwtbridge;
+package org.redlich.jwtbridge.authentication;
+
+import org.redlich.jwtbridge.authentication.HttpHeadersDefinition;
+import org.redlich.jwtbridge.authentication.JwtClaimsDefinition;
+import org.redlich.jwtbridge.authentication.JwtClaimsVerification;
+import org.redlich.jwtbridge.authentication.JwksDefinition;
+import org.redlich.jwtbridge.authentication.PrivateKeyDefinition;
+import org.redlich.jwtbridge.authentication.PublicKeyDefinition;
 
 import org.eclipse.microprofile.jwt.config.Names;
 

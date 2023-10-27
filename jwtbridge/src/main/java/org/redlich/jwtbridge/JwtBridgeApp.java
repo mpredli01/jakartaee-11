@@ -12,12 +12,16 @@
 package org.redlich.jwtbridge;
 
 public class JwtBridgeApp {
+    
+    JwtBridgeApp() {
+        }
     public static void main(String[] args) {
+        JwtBridgeApp app = new JwtBridgeApp();
         String title = "[APP] Welcome to the MicroProfile JWT Bridge Demo Application";
-        displayTitle(title);
+        app.displayTitle(title);
         }
 
-    public static void displayTitle(String title) {
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

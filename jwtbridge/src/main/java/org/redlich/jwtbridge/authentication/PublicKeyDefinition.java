@@ -9,13 +9,10 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.jwtbridge;
+package org.redlich.jwtbridge.authentication;
 
-public @interface JwtClaimsVerification {
-    int tokenAge() default 0;
-    int clockSkew() default 0;
-    String issuer() default "";
-    String audiences() default "";
-    String tokenAgeExpression() default "";
-    String clockSkewExpression() default "";
+public @interface PublicKeyDefinition {
+    String key() default "";
+    String location() default "";
+    String algorithm() default "";
     }

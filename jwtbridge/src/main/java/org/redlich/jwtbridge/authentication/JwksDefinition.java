@@ -9,7 +9,7 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.jwtbridge;
+package org.redlich.jwtbridge.authentication;
 
 public @interface JwksDefinition {
     int jwksConnectTimeout() default 0;

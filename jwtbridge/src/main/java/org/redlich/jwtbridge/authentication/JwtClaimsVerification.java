@@ -9,9 +9,13 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.jwtbridge;
+package org.redlich.jwtbridge.authentication;
 
-public @interface HttpHeadersDefinition {
-    String tokenHeader() default "";
-    String cookieName() default "";
+public @interface JwtClaimsVerification {
+    int tokenAge() default 0;
+    int clockSkew() default 0;
+    String issuer() default "";
+    String audiences() default "";
+    String tokenAgeExpression() default "";
+    String clockSkewExpression() default "";
     }

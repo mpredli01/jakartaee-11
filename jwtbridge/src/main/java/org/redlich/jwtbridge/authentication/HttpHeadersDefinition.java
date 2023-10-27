@@ -9,9 +9,9 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.jwtbridge;
+package org.redlich.jwtbridge.authentication;
 
-public @interface PrivateKeyDefinition {
-    String location() default "";
-    String algorithm() default "";
+public @interface HttpHeadersDefinition {
+    String tokenHeader() default "";
+    String cookieName() default "";
     }

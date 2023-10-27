@@ -11,8 +11,13 @@
  */
 package org.redlich.jwtbridge;
 
-public @interface PublicKeyDefinition {
-    String key() default "";
-    String location() default "";
-    String algorithm() default "";
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
+
+@BasicAuthenticationMechanismDefinition(realmName = "file")
+
+@ApplicationScoped
+@Named
+public class ApplicationConfig {
     }
