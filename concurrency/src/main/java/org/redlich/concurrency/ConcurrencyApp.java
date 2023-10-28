@@ -12,12 +12,17 @@
 package org.redlich.concurrency;
 
 public class ConcurrencyApp {
-    public static void main(String[] args) {
-        String title = "[APP] Welcome to the Jakarta Concurrency Demo Application";
-        displayTitle(title);
+
+    ConcurrencyApp() {
         }
 
-    public static void displayTitle(String title) {
+    public static void main(String[] args) {
+        ConcurrencyApp app = new ConcurrencyApp();
+        String title = "[APP] Welcome to the Jakarta Concurrency Demo Application";
+        app.displayTitle(title);
+        }
+
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

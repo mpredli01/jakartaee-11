@@ -1,0 +1,13 @@
+== MicroProfile JWT Bridge Example Application
+
+=== Introduction
+
+The https://github.com/eclipse/microprofile-jwt-bridge#microprofile-jwt-bridge[MicroProfile JWT Bridge] specification, a collaboration between Jakarta EE and MicroProfile Working Groups, will enable a https://jakarta.ee/specifications/security/[Jakarta Security] application to build on the https://github.com/eclipse/microprofile-jwt-auth/blob/main/README.adoc[MicroProfile JWT Authentication] specification that provides seamless integrations to eliminate duplication of effort and circular dependencies. This will be a standalone specfication under the auspices of MicroProfile.
+
+=== Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...

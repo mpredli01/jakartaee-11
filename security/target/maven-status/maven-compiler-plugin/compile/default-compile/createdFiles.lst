@@ -1,0 +1,4 @@
+org/redlich/security/TestIdentityStore.class
+org/redlich/security/SecurityApp.class
+org/redlich/security/ApplicationConfig.class
+org/redlich/security/Servlet.class

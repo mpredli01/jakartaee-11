@@ -12,12 +12,17 @@
 package org.redlich.rest;
 
 public class RestApp {
-    public static void main(String[] args) {
-        String title = "[APP] Welcome to the Jakarta RESTful Web Services Demo Application";
-        displayTitle(title);
+
+    RestApp() {
         }
 
-    public static void displayTitle(String title) {
+    public static void main(String[] args) {
+        RestApp app = new RestApp();
+        String title = "[APP] Welcome to the Jakarta RESTful Web Services Demo Application";
+        app.displayTitle(title);
+        }
+
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

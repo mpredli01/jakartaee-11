@@ -19,9 +19,14 @@ import jakarta.validation.ValidatorFactory;
 import java.util.Set;
 
 public class ValidationApp {
+
+    ValidationApp() {
+        }
+
     public static void main(String[] args) {
+        ValidationApp app = new ValidationApp();
         String title = "[APP] Welcome to the Jakarta Validation Demo Application";
-        displayTitle(title);
+        app.displayTitle(title);
 
         User user = new User(null, true, "Java Champion", 13, "mike");
         System.out.println("[APP] The user is: " + user);
@@ -36,7 +41,7 @@ public class ValidationApp {
             }
         }
 
-    public static void displayTitle(String title) {
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

@@ -12,12 +12,17 @@
 package org.redlich.data;
 
 public class DataApp {
-    public static void main(String[] args) {
-        String title = "[APP] Welcome to the Jakarta Data Demo Application";
-        displayTitle(title);
+
+    DataApp() {
         }
 
-    public static void displayTitle(String title) {
+    public static void main(String[] args) {
+        DataApp app = new DataApp();
+        String title = "[APP] Welcome to the Jakarta Data Demo Application";
+        app.displayTitle(title);
+        }
+
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

@@ -12,12 +12,17 @@
 package org.redlich.security;
 
 public class SecurityApp {
-    public static void main(String[] args) {
-        String title = "[APP] Welcome to the Jakarta Security Demo Application";
-        displayTitle(title);
+
+    SecurityApp(){
         }
 
-    public static void displayTitle(String title) {
+    public static void main(String[] args) {
+        SecurityApp app = new SecurityApp();
+        String title = "[APP] Welcome to the Jakarta Security Demo Application";
+        app.displayTitle(title);
+        }
+
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

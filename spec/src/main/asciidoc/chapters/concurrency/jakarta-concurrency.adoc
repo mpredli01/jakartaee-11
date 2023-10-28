@@ -1,0 +1,15 @@
+== Jakarta Concurrency Example Application
+
+=== Introduction
+
+The https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency] specification, currently at version 3.0, provides a mechanism for using concurrency from application components without compromising container integrity while still preserving the fundamental benefits of the Jakarta EE platform
+
+The compatible implementation for this specification is https://openliberty.io/blog/2023/05/16/23.0.0.5-beta.html[Open Liberty 22.0.0.5-beta].
+
+=== Example Application
+
+The application may be exercised by...
+
+=== Testing
+
+Testing of this application includes...

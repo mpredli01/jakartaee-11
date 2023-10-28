@@ -21,9 +21,13 @@ import jakarta.mail.internet.AddressException;
 
 public class MailApp {
 
+    MailApp() {
+        }
+
     public static void main(String[] args) { // throws MessagingException {
+        MailApp app = new MailApp();
         String title = "[APP] Welcome to the Jakarta Mail Demo Application";
-        displayTitle(title);
+        app.displayTitle(title);
 
         final String to = "mike@redlich.net";
         final String from = "mpredli@gmail.com";
@@ -72,7 +76,7 @@ public class MailApp {
             }
         }
 
-    public static void displayTitle(String title) {
+    public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");
         for(int i = 0; i < length; ++i) {

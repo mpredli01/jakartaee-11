@@ -1,4 +1,3 @@
-/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/TestIdentityStore.java
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/authentication/JwtAuthenticationMechanismDefinition.java
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/authentication/PublicKeyDefinition.java
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/JwtBridgeApp.java
@@ -9,3 +8,4 @@
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/authentication/PrivateKeyDefinition.java
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/ApplicationConfig.java
 /usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/authentication/HttpHeadersDefinition.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/ApplicationIdentityStore.java

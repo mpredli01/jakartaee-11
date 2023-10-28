@@ -1,8 +1,8 @@
-== Jakarta NoSQL 1.0 Example Application
+== Jakarta NoSQL Example Application
 
 === Introduction
 
-The [Jakarta NoSQL 1.0](https://jakarta.ee/specifications/nosql/1.0/) specification, currently at version 1.0 and under development, streamlines the integration of Java applications with NoSQL databases. This specification defines a set of APIs and provides a standard implementation for most NoSQL databases.
+The https://jakarta.ee/specifications/nosql/[Jakarta NoSQL] specification, currently at version 1.0 and under development, streamlines the integration of Java applications with NoSQL databases. This specification defines a set of APIs and provides a standard implementation for most NoSQL databases.
 
 The compatible implementation for this specification is Eclipse JNoSQL.
 

@@ -1,10 +1,10 @@
-org/redlich/jwtbridge/TestIdentityStore.class
 org/redlich/jwtbridge/JwtBridgeApp.class
 org/redlich/jwtbridge/JwtSecuredServlet.class
 org/redlich/jwtbridge/authentication/JwtClaimsDefinition.class
 org/redlich/jwtbridge/authentication/JwtAuthenticationMechanismDefinition.class
 org/redlich/jwtbridge/authentication/JwtClaimsVerification.class
 org/redlich/jwtbridge/ApplicationConfig.class
+org/redlich/jwtbridge/ApplicationIdentityStore.class
 org/redlich/jwtbridge/authentication/PrivateKeyDefinition.class
 org/redlich/jwtbridge/authentication/HttpHeadersDefinition.class
 org/redlich/jwtbridge/authentication/JwksDefinition.class
