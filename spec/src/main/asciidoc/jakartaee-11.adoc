@@ -35,9 +35,12 @@ In addition, there are example applications for specifications that will not hav
 * https://jakarta.ee/specifications/mail/2.1/[Jakarta Mail 2.1]
 * https://jakarta.ee/specifications/nosql/1.0/[Jakarta Mail 2.1] which was not included in the Jakarta EE 11 Platform.
 
+=== Example Applications
+
 Each example application can be executed on the corresponding command line with:
 
 `$ mvn clean compile exec:java`
+
 
 Please consider contributing to this GitHub repository if you have ideas for continuous improvement. This would be much appreciated!
 

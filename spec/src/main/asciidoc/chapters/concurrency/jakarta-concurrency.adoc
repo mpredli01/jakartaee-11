@@ -6,6 +6,15 @@ The https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency] specific
 
 The compatible implementation for this specification is https://openliberty.io/blog/2023/05/16/23.0.0.5-beta.html[Open Liberty 22.0.0.5-beta].
 
+Jakarta Concurrency will be updated to version 3.1 for Jakarta EE 11. New features include:
+
+* Integration with Java 21 Virtual Threads
+* Java Flow/ReactiveStreams and context propagation
+* Replace more features from EJB, such as Schedule and Lock annotations
+* Become more CDI-centric
+* Specification bug fixes and clarifications
+* TCK fixes and enhancements
+
 === Example Application
 
 The application may be exercised by...

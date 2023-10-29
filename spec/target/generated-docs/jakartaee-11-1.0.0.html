@@ -445,13 +445,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Michael P. Redlich</span><br>
 <span id="email" class="email"><a href="mailto:mike@redlich.net">mike@redlich.net</a></span><br>
 <span id="revnumber"> 1.0.0,</span>
-<span id="revdate">October 28, 2023</span>
+<span id="revdate">October 29, 2023</span>
 <br><span id="revremark">Draft</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_jakarta_ee_11_specification_example_applications">Jakarta EE 11 Specification Example Applications</a></li>
+<li><a href="#_jakarta_ee_11_specification_example_applications">Jakarta EE 11 Specification Example Applications</a>
+<ul class="sectlevel2">
+<li><a href="#_example_applications">Example Applications</a></li>
+</ul>
+</li>
 <li><a href="#_jakarta_concurrency_example_application">1. Jakarta Concurrency Example Application</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction">1.1. Introduction</a></li>
@@ -547,6 +551,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_example_applications"><a class="anchor" href="#_example_applications"></a>Example Applications</h3>
 <div class="paragraph">
 <p>Each example application can be executed on the corresponding command line with:</p>
 </div>
@@ -561,6 +567,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_jakarta_concurrency_example_application"><a class="anchor" href="#_jakarta_concurrency_example_application"></a>1. Jakarta Concurrency Example Application</h2>
 <div class="sectionbody">
@@ -571,6 +578,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>The compatible implementation for this specification is <a href="https://openliberty.io/blog/2023/05/16/23.0.0.5-beta.html">Open Liberty 22.0.0.5-beta</a>.</p>
+</div>
+<div class="paragraph">
+<p>Jakarta Concurrency will be updated to version 3.1 for Jakarta EE 11. New features include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Integration with Java 21 Virtual Threads</p>
+</li>
+<li>
+<p>Java Flow/ReactiveStreams and context propagation</p>
+</li>
+<li>
+<p>Replace more features from EJB, such as Schedule and Lock annotations</p>
+</li>
+<li>
+<p>Become more CDI-centric</p>
+</li>
+<li>
+<p>Specification bug fixes and clarifications</p>
+</li>
+<li>
+<p>TCK fixes and enhancements</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -776,7 +808,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
  1.0.0<br>
-Last updated 2023-10-28 11:20:46 -0400
+Last updated 2023-10-29 17:37:47 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">
