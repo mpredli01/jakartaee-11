@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>concurrency</artifactId>
-    <name>Jakarta Concurrency Specification Demo</name>
+    <artifactId>servlet</artifactId>
+    <name>Jakarta Servlet Specification Demo</name>
 
     <parent>
         <groupId>org.redlich</groupId>
@@ -11,17 +11,17 @@
     </parent>
 
     <packaging>war</packaging>
-
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <security.version>3.0.0</security.version>
         <soteria.version>3.0.3</soteria.version>
         <exec.mojo.version>3.1.0</exec.mojo.version>
-        <mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>
+        <mainClass>org.redlich.security.SecurityApp</mainClass>
     </properties>
 
     <dependencies>
-        <!-- <dependency>
+        <dependency>
             <groupId>jakarta.security.enterprise</groupId>
             <artifactId>jakarta.security.enterprise-api</artifactId>
             <version>${security.version}</version>
@@ -30,11 +30,6 @@
             <groupId>org.glassfish.soteria</groupId>
             <artifactId>jakarta.security.enterprise</artifactId>
             <version>${soteria.version}</version>
-        </dependency> -->
-        <dependency>
-            <groupId>jakarta.faces</groupId>
-            <artifactId>jakarta.faces-api</artifactId>
-            <version>4.0.1</version>
         </dependency>
     </dependencies>
 

@@ -17,8 +17,12 @@ Jakarta Concurrency will be updated to version 3.1 for Jakarta EE 11. New featur
 
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...

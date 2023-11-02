@@ -6,10 +6,26 @@ The https://jakarta.ee/specifications/security/[Jakarta Security] specification,
 
 The compatible implementation for this specification is https://projects.eclipse.org/projects/ee4j.soteria[Eclipse Soteria 3.0.2].
 
+Jakarta Security will be updated to version 4.0 for Jakarta EE 11. New features include:
+
+* Client-cert and Digest SECURITY
+* Authentication mechanism per URL SECURIY
+* User choice of authentication mechanism (login with provider X, login with provider Y, etc)
+* Multiple authentication mechanisms (try JWT, fallback to BASIC, etc)
+* @RolesAllowed alternative
+* Easily adding an interceptor to a build-in CDI bean
+* Authorization modules
+* All references to the `SecurityManager` and associated APIs have been removed
+
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://security-demo-dev-aed1c184.payara.app/security/[Welcome Page]
+* https://security-demo-dev-aed1c184.payara.app/security/servlet[Main Application]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...

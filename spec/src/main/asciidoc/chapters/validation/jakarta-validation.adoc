@@ -8,13 +8,21 @@ It also offers method and constructor validation facilities to ensure constraint
 
 The compatible implementation for this specification is https://hibernate.org/validator/releases/7.0/[Hibernate Validator 8.0.0.Alpha5]
 
-It is important to note that Jakarta Validation was formerly known as Jakarta Bean Validation.
+NOTE:: Jakarta Validation was formerly known as Jakarta Bean Validation.
+
+Jakarta Validation will be updated to version 3.1 for Jakarta EE 11. New features include:
+
+* support for Java Records
 
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://validation-demo-dev-695bb9e4.payara.app/validation/[Welcome Page]
+* https://validation-demo-dev-695bb9e4.payara.app/validation/validation/validate[Main Application]
 
 === Testing
 
-Testing of this application includes...
-
+Please stay tuned for details...

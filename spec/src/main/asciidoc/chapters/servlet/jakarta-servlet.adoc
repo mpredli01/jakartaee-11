@@ -1,0 +1,30 @@
+== Jakarta Servlet Example Application
+
+=== Introduction
+
+The https://jakarta.ee/specifications/servlet/[Jakarta Servlet] specification, currently at version 6.0, defines a server-side API for handling HTTP requests and responses
+
+The compatible implementation for this specification is https://github.com/eclipse-ee4j/glassfish/releases/tag/7.0.0-M4[Eclipse GlassFish 7.0.0-M4].
+
+Jakarta Servlet will be updated to version 6.1 for Jakarta EE 11. New features include:
+
+* Allow control of status code and response body when sending a redirect
+* Add a query string attribute to error dispatches
+* Add constants for new HTTP status codes
+* Add overloaded methods that use `CharSet` rather than `String`
+* Add `ByteBuffer` support to `ServletInputStream` and `ServletOutputStream`
+* Various
+* All references to the `SecurityManager` and associated APIs have been removed
+
+=== Example Application
+
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://servlet-demo-dev-a8f42f05.payara.app/servlet/[Welcome Page]
+* https://servlet-demo-dev-a8f42f05.payara.app/servlet/rest/hello?name=Mike[Main Application]
+
+=== Testing
+
+Please stay tuned for details...

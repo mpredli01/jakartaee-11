@@ -2,12 +2,16 @@
 
 === Introduction
 
-The https://github.com/eclipse/microprofile-jwt-bridge#microprofile-jwt-bridge[MicroProfile JWT Bridge] specification, a collaboration between Jakarta EE and MicroProfile Working Groups, will enable a https://jakarta.ee/specifications/security/[Jakarta Security] application to build on the https://github.com/eclipse/microprofile-jwt-auth/blob/main/README.adoc[MicroProfile JWT Authentication] specification that provides seamless integrations to eliminate duplication of effort and circular dependencies. This will be a standalone specfication under the auspices of MicroProfile.
+The https://github.com/eclipse/microprofile-jwt-bridge#microprofile-jwt-bridge[MicroProfile JWT Bridge] specification, a collaboration between Jakarta EE and MicroProfile Working Groups, will enable a https://jakarta.ee/specifications/security/[Jakarta Security] application to build on the https://github.com/eclipse/microprofile-jwt-auth/blob/main/README.adoc[MicroProfile JWT Authentication] specification that provides seamless integrations to eliminate duplication of effort and circular dependencies. This will be a standalone specification under the auspices of MicroProfile.
 
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://jwtbridge-demo-dev-9e0c64c9.payara.app/jwtbridge/[Welcome Page]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...

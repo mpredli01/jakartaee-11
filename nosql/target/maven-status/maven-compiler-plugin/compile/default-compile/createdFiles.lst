@@ -1,8 +1,0 @@
-org/redlich/nosql/BrewerRepository.class
-org/redlich/nosql/Beer.class
-org/redlich/nosql/BeerRepository.class
-org/redlich/nosql/Brewer$BrewerBuilder.class
-org/redlich/nosql/Brewer.class
-org/redlich/nosql/BeerType.class
-org/redlich/nosql/BeerApp.class
-org/redlich/nosql/Beer$BeerBuilder.class

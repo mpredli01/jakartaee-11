@@ -33,6 +33,7 @@
         <module>nosql</module>
         <module>rest</module>
         <module>security</module>
+        <module>servlet</module>
         <module>spec</module>
         <module>validation</module>
     </modules>

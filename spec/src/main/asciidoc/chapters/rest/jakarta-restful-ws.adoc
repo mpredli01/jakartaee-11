@@ -6,11 +6,24 @@ The https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services] 
 
 The compatible implementation for this specification is https://eclipse-ee4j.github.io/jersey/[Eclipse Jersey 4.0.0].
 
+Jakarta RESTful Web Services will be updated to version 4.0 for Jakarta EE 11. New features include:
+
+* Define CDI scopes for all Jakarta REST types
+* Define CDI integration and startup for Java SE applications
+* Enhance discovery of application artifacts using CDI scanning
+* Explore integration with Jakarta Concurrency
+* Explore alignment with CDI lite and potentially built-time injection support
+
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://rest-demo-dev-e6698816.payara.app/rest/[Welcome Page]
+* https://rest-demo-dev-e6698816.payara.app/rest/rest/rest[Main Application]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...
 

@@ -2,14 +2,25 @@
 
 === Introduction
 
-The https://jakarta.ee/specifications/data/[Jakarta Data] specification, currently under development, provides an API that allows easy access to database technologies. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface where the framework will implement it.
+The https://jakarta.ee/specifications/data/[Jakarta Data] specification, currently at version 1.0-M1, provides an API that allows easy access to database technologies. A Java developer can split the persistence from the model with several features, such as the ability to compose custom query methods on a Repository interface where the framework will implement it.
 
 The Jakarta Working Group recently voted to include Jakarta Data in the Jakarta EE 11 Platform.
 
+Jakarta Data will be updated to version 1.0 for Jakarta EE 11. New features include:
+
+* A `BasicRepository` interface for performing basic operations on entities
+* A `CrudRepository` interface that extends the capabilities of basic operations on entities, including insert and update operations
+* A `PageableRepository` interface that allows pagination on a repository
+
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://data-demo-dev-67884e4b.payara.app/data/[Welcome Page]
+* https://data-demo-dev-67884e4b.payara.app/data/data/data[Main Application]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...

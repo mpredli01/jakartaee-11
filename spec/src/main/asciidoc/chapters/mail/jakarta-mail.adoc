@@ -6,10 +6,17 @@ The https://jakarta.ee/specifications/mail/[Jakarta Mail] specification, current
 
 The compatible implementation for this specification is https://eclipse-ee4j.github.io/angus-mail/[Eclipse Angus Mail 2.0.2].
 
+NOTE:: Jakarta Mail will not be updated for Jakarta EE 11.
+
 === Example Application
 
-The application may be exercised by...
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://mail-demo-dev-416f7ef4.payara.app/mail/[Welcome Page]
+* https://mail-demo-dev-416f7ef4.payara.app/mail/mail/mail[Main Application]
 
 === Testing
 
-Testing of this application includes...
+Please stay tuned for details...
