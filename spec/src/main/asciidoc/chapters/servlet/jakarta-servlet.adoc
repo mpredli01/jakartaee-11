@@ -23,7 +23,10 @@ The application may be exercised by running the CLI version or deployed on Payar
 `$ mvn clean compile exec:java`
 
 * https://servlet-demo-dev-a8f42f05.payara.app/servlet/[Welcome Page]
-* https://servlet-demo-dev-a8f42f05.payara.app/servlet/rest/hello?name=Mike[Main Application]
+* https://servlet-demo-dev-a8f42f05.payara.app/servlet/rest/hello?name=Mike[Base REST Application]
+* https://servlet-demo-dev-a8f42f05.payara.app/servlet/hello[Hello World Servlet]
+* https://servlet-demo-dev-a8f42f05.payara.app/servlet/storePreferences[Coffee Shop Preferences]
+https://servlet-demo-dev-a8f42f05.payara.app/servlet/coffeeDashboard[Personalized Coffee Dashboard]
 
 === Testing
 
