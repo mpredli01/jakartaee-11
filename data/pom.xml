@@ -15,7 +15,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mojo.version>3.1.0</exec.mojo.version>
-        <mainClass>org.redlich.data.DataApp</mainClass>
+        <faker.version>1.0.2</faker.version>
+        <mainClass>org.redlich.data.FakerBeerApp</mainClass>
     </properties>
 
     <dependencies>
@@ -23,6 +24,11 @@
             <groupId>org.eclipse.jnosql.databases</groupId>
             <artifactId>jnosql-mongodb</artifactId>
             <version>${jnosql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${faker.version}</version>
         </dependency>
     </dependencies>
 
