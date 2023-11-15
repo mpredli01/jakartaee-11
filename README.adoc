@@ -1,9 +1,5 @@
 = Jakarta EE Example Applications
 
-== Disclaimer
-
-*PLEASE NOTE THAT THIS REPOSITORY IS STILL A WORK-IN-PROGRESS*
-
 == Introduction
 
 This repository complements the presentation, *Jakarta EE 11: Going Beyond the Era of Java EE* which will be debuted at the Philly Java Users Group on November 15, 2023.
