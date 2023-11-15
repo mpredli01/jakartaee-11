@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mojo.version>3.1.0</exec.mojo.version>
         <faker.version>1.0.2</faker.version>
-        <mainClass>org.redlich.data.FakerBeerApp</mainClass>
+        <mainClass>org.redlich.data.BeerApp</mainClass>
     </properties>
 
     <dependencies>
