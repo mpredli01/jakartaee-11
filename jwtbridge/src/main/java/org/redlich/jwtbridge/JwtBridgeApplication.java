@@ -14,7 +14,6 @@ package org.redlich.jwtbridge;
 import jakarta.annotation.security.DeclareRoles;
 import jakarta.inject.Inject;
 import jakarta.security.enterprise.SecurityContext;
-import jakarta.security.enterprise.identitystore.openid.JwtClaims;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HttpConstraint;
 import jakarta.servlet.annotation.ServletSecurity;
@@ -38,8 +37,8 @@ import java.security.Principal;
 import java.util.Set;
 
 @WebServlet("/jwtbridge")
-@DeclareRoles({ "foo", "bar", "kaz" })
-@ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
+@DeclareRoles({ "admin", "audit", "user" })
+@ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
 @JwtAuthenticationMechanismDefinition(
         jwtClaimsDefinition = @JwtClaimsDefinition(callerNameClaim = "upn", callerGroupsClaim = "groups"),
         publicKeyDefinition = @PublicKeyDefinition(key = "key", location = "location", algorithm = "RS256"),
@@ -47,7 +46,7 @@ import java.util.Set;
         jwtClaimsVerification = @JwtClaimsVerification(issuer = "issuer", audiences = "aud", tokenAge = 0, tokenAgeExpression = "", clockSkew = 0, clockSkewExpression = ""),
         httpHeadersDefinition = @HttpHeadersDefinition(tokenHeader = "Authorization", cookieName = "Bearer"),
         jwksDefinition = @JwksDefinition(jwksConnectTimeout = 500, jwksConnectTimeoutExpression = "", jwksReadTimeout = 500, jwksReadTimeoutExpression = ""))
-public class JwtSecuredServlet extends HttpServlet {
+public class JwtBridgeApplication extends HttpServlet {
 
     @Inject
     SecurityContext securityContext;
@@ -62,30 +61,30 @@ public class JwtSecuredServlet extends HttpServlet {
         // JwtClaims jwtClaims = securityContext.getPrincipalsByType(ptype);
         // Set<JwtClaims> jwtClaims = securityContext.getPrincipalsByType(JwtClaims.class);
 
-        // Example 1: Is the caller is one of the three roles: admin, user and demo
+        // Example 1: Is the caller is one of the three roles: admin, audit and user
         PrintWriter pw = response.getWriter();
 
-        pw.write(message);
+        pw.write(message + "\n\n");
 
         boolean role = securityContext.isCallerInRole("admin");
         pw.write("User has role 'admin': " + role + "\n");
 
+        role = securityContext.isCallerInRole("audit");
+        pw.write("User has role 'audit': " + role + "\n");
+
         role = securityContext.isCallerInRole("user");
         pw.write("User has role 'user': " + role + "\n");
-
-        role = securityContext.isCallerInRole("demo");
-        pw.write("User has role 'demo': " + role + "\n");
 
         // Example 2: What is the caller principal name
         String contextName = null;
         if (securityContext.getCallerPrincipal() != null) {
             contextName = securityContext.getCallerPrincipal().getName();
             }
-        response.getWriter().write("context username: " + contextName + "\n");
+        response.getWriter().write("Context username: " + contextName + "\n");
 
         Set<Principal> principals = securityContext.getPrincipalsByType(Principal.class);
         for(Principal customPrincipal : principals) {
-            response.getWriter().write((customPrincipal.getName()));
+            response.getWriter().write((customPrincipal.getName() + "\n"));
             }
         }
     }

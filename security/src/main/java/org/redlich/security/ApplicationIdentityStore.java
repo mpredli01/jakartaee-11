@@ -21,7 +21,7 @@ import jakarta.security.enterprise.identitystore.CredentialValidationResult;
 import jakarta.security.enterprise.identitystore.IdentityStore;
 
 @ApplicationScoped
-public class TestIdentityStore implements IdentityStore {
+public class ApplicationIdentityStore implements IdentityStore {
 
     public CredentialValidationResult validate(UsernamePasswordCredential usernamePasswordCredential) {
 
@@ -34,8 +34,8 @@ public class TestIdentityStore implements IdentityStore {
          * store can be defined.
          */
 
-        if (usernamePasswordCredential.compareTo("Joe", "secret1")) {
-            return new CredentialValidationResult("Joe", new HashSet<>(asList("foo", "bar")));
+        if (usernamePasswordCredential.compareTo("Mike", "password")) {
+            return new CredentialValidationResult("Mike", new HashSet<>(asList("admin", "audit")));
             }
 
         return CredentialValidationResult.INVALID_RESULT;

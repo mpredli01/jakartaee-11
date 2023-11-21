@@ -97,10 +97,14 @@ public class BeerApp {
             Page<Beer> page1 = beerRepository.findAll(page);
             page1.forEach(System.out::println);
 
+            app.delay(3000);
+
             app.displayTitle("[APP] Here is page 2:");
             Pageable secondPage = page.next();
             Page<Beer> page2 = beerRepository.findAll(secondPage);
             page2.forEach(System.out::println);
+
+            app.delay(3000);
 
             app.displayTitle("[APP] Here is page 3:");
             Pageable thirdPage = secondPage.next();
@@ -118,10 +122,10 @@ public class BeerApp {
             app.delay(3000);
             
             app.displayTitle("[APP] Let's delete a beer by its primary key:");
-            beerRepository.deleteById(31);
+            // beerRepository.deleteById(33);
 
             app.displayTitle("[APP] Let's delete a brewer by its primary key:");
-            brewerRepository.deleteById(35);
+            // brewerRepository.deleteById(35);
 
             app.displayTitle("[APP] COMING SOON: Let's update a document in the database");
             /*/

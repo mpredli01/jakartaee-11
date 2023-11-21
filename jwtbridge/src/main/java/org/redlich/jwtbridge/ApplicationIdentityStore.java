@@ -35,8 +35,8 @@ public class ApplicationIdentityStore implements IdentityStore {
          * store can be defined.
          */
 
-        if (usernamePasswordCredential.compareTo("Mike", "secret2")) {
-            return new CredentialValidationResult("Mike", new HashSet<>(asList("foo", "bar")));
+        if (usernamePasswordCredential.compareTo("Mike", "password")) {
+            return new CredentialValidationResult("Mike", new HashSet<>(asList("admin", "audit")));
             }
 
         return CredentialValidationResult.INVALID_RESULT;

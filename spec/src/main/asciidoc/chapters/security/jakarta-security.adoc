@@ -24,7 +24,7 @@ The application may be exercised by running the CLI version or deployed on Payar
 `$ mvn clean compile exec:java`
 
 * https://security-demo-dev-aed1c184.payara.app/security/[Welcome Page]
-* https://security-demo-dev-aed1c184.payara.app/security/servlet[Main Application]
+* https://security-demo-dev-aed1c184.payara.app/security/security[Main Application]
 
 === Testing
 

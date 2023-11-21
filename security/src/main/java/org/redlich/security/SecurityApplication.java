@@ -24,14 +24,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Test Servlet that prints out the name of the authenticated caller and whether
- * this caller is in any of the roles {foo, bar, kaz}
+ * this caller is in any of the roles {admin, audit, user}
  *
  */
 
-@WebServlet("/servlet")
-@DeclareRoles({ "foo", "bar", "kaz" })
-@ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
-public class Servlet extends HttpServlet {
+@WebServlet("/security")
+@DeclareRoles({ "admin", "audit", "user" })
+@ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
+public class SecurityApplication extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
@@ -44,9 +44,9 @@ public class Servlet extends HttpServlet {
             }
         response.getWriter().write("web username: " + webName + "\n");
 
-        response.getWriter().write("web user has role \"foo\": " + request.isUserInRole("foo") + "\n");
-        response.getWriter().write("web user has role \"bar\": " + request.isUserInRole("bar") + "\n");
-        response.getWriter().write("web user has role \"kaz\": " + request.isUserInRole("kaz") + "\n");
+        response.getWriter().write("web user has role \"admin\": " + request.isUserInRole("admin") + "\n");
+        response.getWriter().write("web user has role \"audit\": " + request.isUserInRole("audit") + "\n");
+        response.getWriter().write("web user has role \"user\": " + request.isUserInRole("user") + "\n");
         }
 
     }

@@ -2,7 +2,7 @@
 
 == Introduction
 
-This repository complements the presentation, *Jakarta EE 11: Going Beyond the Era of Java EE* which will be debuted at the Philly Java Users Group on November 15, 2023.
+This repository complements the presentation, *Jakarta EE 11: Going Beyond the Era of Java EE* which will be debuted at the https://www.meetup.com/phillyjug/events/294593853/[Philly Java Users Group] on November 15, 2023.
 
 Corresponding documentation is shown under the `spec` directory and will be automatically built upon executing `mvn clean package`.
 
