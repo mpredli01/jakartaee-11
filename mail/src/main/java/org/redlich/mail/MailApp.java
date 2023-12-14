@@ -31,8 +31,8 @@ public class MailApp {
 
         final String to = "mike@redlich.net";
         final String from = "mpredli@gmail.com";
-        final String username = "mpredli@gmail.com";
-        final String password = "Okt0b3r24@";
+        final String username = "<email address>";
+        final String password = "<password>";
 
         final String host = "smtp.gmail.com";
         final int port = 587;

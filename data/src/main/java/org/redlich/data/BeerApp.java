@@ -46,20 +46,20 @@ public class BeerApp {
 
             Brewer brewer01 = Brewer.builder()
                     .id((int)noOfBrewers + 1)
-                    .name("Narragansett Brewing")
-                    .city("Providence")
-                    .state("Rhode Island")
+                    .name("Fiddlehead Brewing Company")
+                    .city("Shelburne")
+                    .state("Vermont")
                     .build();
-            // brewerRepository.save(brewer01);
+            brewerRepository.save(brewer01);
 
             Beer beer01 = Beer.builder()
                     .id((int)noOfBeers + 1)
-                    .name("Lunch")
+                    .name("Fiddlehead IPA")
                     .type(BeerType.IPA)
-                    .brewer_id(33) // Maine Beer Company
-                    .abv(7.0)
+                    .brewer_id(36) // Fiddlehead
+                    .abv(6.2)
                     .build();
-            // beerRepository.save(beer01);
+            beerRepository.save(beer01);
 
             Beer beer02 = Beer.builder()
                     .id((int)noOfBeers + 2)
