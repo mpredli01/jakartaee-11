@@ -2,8 +2,30 @@
 
 == Introduction
 
-This repository complements the presentation, *Jakarta EE 11: Going Beyond the Era of Java EE* which will be debuted at the https://www.meetup.com/phillyjug/events/294593853/[Philly Java Users Group] on November 15, 2023.
+This repository complements the presentation, https://redlich.net/pdf/portfolio/jakarta-ee-11-going-beyond-the-era-of-java-ee.pdf[Jakarta EE 11: Going Beyond the Era of Java EE], which, so far, has been presented at:
 
-Corresponding documentation is shown under the `spec` directory and will be automatically built upon executing `mvn clean package`.
+* https://www.meetup.com/phillyjug/events/294593853/[Philly Java Users Group] on November 15, 2023
+* JCON World on November 21, 2023
+* https://www.youtube.com/watch?v=chC-fezerkc&list=PLutlXcN4EAwC64sgFLJSWAgQJvVo6T4Dh&index=1[Jakarta Tech Talk] on December 13, 2023
+* Payara Virtual Conference on December 14, 2023
 
-Stay tuned for more details!
+== Example Applications
+
+Each folder contains a demonstration of a Jakarta EE specification:
+
+* https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency]
+* https://jakarta.ee/specifications/data/[Jakarta Data]
+* https://jakarta.ee/specifications/mail/[Jakarta Mail]
+* https://jakarta.ee/specifications/nosql/[Jakarta NoSQL]
+* https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services]
+* https://jakarta.ee/specifications/security/[Jakarta Security]
+* https://jakarta.ee/specifications/servlet/[Jakarta Servlet]
+* https://jakarta.ee/specifications/bean-validation/[Jakarta Validation]
+
+There is also an example of the new https://github.com/eclipse/microprofile-jwt-bridge/blob/main/README.adoc[MicroProfile JWT Bridge] specification. Introduced in the Summer of 2023, this specification is still a work-in-progress. It has already been decided that this new specification will be maintained in the MicroProfile set of standalone specifications, and it is anticipated that it will be included in MicroProfile 7.0, scheduled for release on June 19, 2024.
+
+== Documentation
+
+Please refer to the corresponding `README.adoc` files under each project.
+
+Corresponding documentation for each Jakarta EE specification may be found under the `spec` directory and will be automatically be generated upon executing `mvn clean package`.

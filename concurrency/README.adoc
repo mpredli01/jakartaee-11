@@ -1,0 +1,29 @@
+= Jakarta Concurrency Demo Application
+
+This project is a demonstration on how to use the Jakarta Concurrency specification. The intent is to provide both command-line and REST applications. However, both versions may not be available at this time.
+
+== Command-Line Application
+
+The command-line application is currently a placeholder for a more comprehensive application. This `ConcurrencyApp` class is referenced in the `pom.xml` file as `<mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>`, so executing it is as easy as:
+
+`$ mvn clean compile exec:java`
+
+Upon executing this application, you will be presented with the following output on the terminal window:
+
+[APP] ---------------------------------------------------------
+[APP] Welcome to the Jakarta Concurrency Demo Application
+[APP] ---------------------------------------------------------
+
+== REST Application
+
+The REST application was modeled after the Task Creator example from the comprehensive set of https://github.com/eclipse-ee4j/jakartaee-examples/blob/main/README.md[Jakarta EE 10 Examples]. The `ConcurrencyApplication` class defines the `/jaxrs` endpoint and serves as the entry point of the application.
+
+`$ mvn clean compile package`
+
+This will build a WAR file that may be dropped in any Jakarta EE-compliant application server.
+
+== Executing the REST Application
+
+The REST application may be executed via:
+
+https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]

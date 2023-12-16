@@ -14,28 +14,29 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <security.version>3.0.0</security.version>
-        <soteria.version>3.0.3</soteria.version>
+        <faces.version>4.0.1</faces.version>
+        <mojarra.version>4.0.5</mojarra.version>
         <exec.mojo.version>3.1.0</exec.mojo.version>
         <mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>
     </properties>
 
     <dependencies>
-        <!-- <dependency>
-            <groupId>jakarta.security.enterprise</groupId>
-            <artifactId>jakarta.security.enterprise-api</artifactId>
-            <version>${security.version}</version>
-        </dependency>
         <dependency>
-            <groupId>org.glassfish.soteria</groupId>
-            <artifactId>jakarta.security.enterprise</artifactId>
-            <version>${soteria.version}</version>
-        </dependency> -->
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>10.0.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>
-            <version>4.0.1</version>
+            <version>${faces.version}</version>
         </dependency>
+        <!-- <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>mojarra-parent</artifactId>
+            <version>${mojarra.version}</version>
+        </dependency> -->
     </dependencies>
 
     <build>
