@@ -14,7 +14,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <validator.version>8.0.0.Final</validator.version>
+        <validator.version>8.0.1.Final</validator.version>
         <exec.mojo.version>3.1.0</exec.mojo.version>
         <mainClass>org.redlich.validation.ValidationApp</mainClass>
     </properties>
