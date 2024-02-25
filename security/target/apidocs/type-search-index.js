@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.redlich.security","l":"ApplicationConfig"},{"p":"org.redlich.security","l":"ApplicationIdentityStore"},{"p":"org.redlich.security","l":"SecurityApp"},{"p":"org.redlich.security","l":"SecurityApplication"}];updateSearchResults();
