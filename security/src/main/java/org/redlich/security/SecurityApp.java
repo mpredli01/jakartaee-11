@@ -11,17 +11,33 @@
  */
 package org.redlich.security;
 
+/**
+ * A command-line version of the application should it actually be implemented.
+ */
 public class SecurityApp {
 
-    SecurityApp(){
+    /**
+     * Constructor
+     */
+    SecurityApp() {
         }
 
+    /**
+     * The entry point for the command-line application
+     *
+     * @param args the command-line arguments
+     */
     public static void main(String[] args) {
         SecurityApp app = new SecurityApp();
         String title = "[APP] Welcome to the Jakarta Security Demo Application";
         app.displayTitle(title);
         }
 
+    /**
+     * Displays the title of the application surrounded by a dotted box.
+     *
+     * @param title the specified title for the application
+     */
     public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");

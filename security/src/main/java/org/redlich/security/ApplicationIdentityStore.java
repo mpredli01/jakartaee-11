@@ -20,9 +20,16 @@ import jakarta.security.enterprise.credential.UsernamePasswordCredential;
 import jakarta.security.enterprise.identitystore.CredentialValidationResult;
 import jakarta.security.enterprise.identitystore.IdentityStore;
 
+/**
+ * An implementation of the IdentityStore interface to add user `Mike` and define the roles.
+ */
 @ApplicationScoped
 public class ApplicationIdentityStore implements IdentityStore {
 
+    /**
+     * @param usernamePasswordCredential an instance of UsernamePasswordCredential
+     * @return CredentialValidationResult
+     */
     public CredentialValidationResult validate(UsernamePasswordCredential usernamePasswordCredential) {
 
         /*
