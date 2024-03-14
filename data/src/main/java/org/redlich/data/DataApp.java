@@ -20,6 +20,7 @@ public class DataApp {
         DataApp app = new DataApp();
         String title = "[APP] Welcome to the Jakarta Data Demo Application";
         app.displayTitle(title);
+        // TODO: add some verbiage about deploying the WAR file
         }
 
     public void displayTitle(String title) {

@@ -11,24 +11,9 @@
  */
 package org.redlich.data;
 
-/**
- * <p>BeerType class.</p>
- *
- * @author mpredli01
- * @version $Id: $Id
- */
-public enum BeerType {
-    ALE,
-    STOUT,
-    PORTER,
-    IPA,
-    APA,
-    LAGER,
-    GOSE,
-    SAISON,
-    LAMBIC,
-    KOLSCH,
-    PILSNER,
-    MARZEN,
-    ESB
+public record BrewerResponse(int id, String name, String city, String state) {
+
+    static BrewerResponse of(Brewer brewer) {
+        return new BrewerResponse(brewer.getId(), brewer.getName(), brewer.getCity(), brewer.getState());
+        }
     }

@@ -11,24 +11,80 @@
  */
 package org.redlich.data;
 
-import jakarta.data.repository.PageableRepository;
-
+import jakarta.data.page.Page;
+import jakarta.data.page.Pageable;
+import jakarta.data.repository.Delete;
 import jakarta.data.repository.Repository;
+import jakarta.data.repository.DataRepository;
 import jakarta.data.repository.Query;
-import jakarta.data.repository.Param;
+import jakarta.data.repository.Save;
+import jakarta.validation.Valid;
 
-import java.util.Set;
+import java.util.Optional;
+import java.util.stream.Stream;
 
+/**
+ * <p>BrewerRepository interface.</p>
+ *
+ * @author mpredli01
+ * @version $Id: $Id
+ */
 @Repository
-public interface BrewerRepository extends PageableRepository<Brewer, String> {
+public interface BrewerRepository extends DataRepository<Brewer, Integer> {
 
-    Set<Brewer> findByName(String brewer);
+    /**
+     * <p>findAll.</p>
+     *
+     * @return a {@link java.util.stream.Stream} object
+     */
+    Stream<Brewer> findAll();
 
-    void deleteById(int id);
+    /**
+     * <p>findById.</p>
+     *
+     * @param id a int
+     * @return a {@link java.util.Optional} object
+     */
+    Optional<Brewer> findById(int id);
 
-    void update(Brewer brewer);
+    /**
+     * <p>findByNameLike.</p>
+     *
+     * @param city a {@link java.lang.String} object
+     * @return a {@link java.util.stream.Stream} object
+     */
+    Stream<Brewer> findByNameLike(String city);
 
-    @Query("select * from Brewer where name = @name")
-    Set<Brewer> query(@Param("name") String name);
+    /**
+     * <p>findByNameLike.</p>
+     *
+     * @param name a {@link java.lang.String} object
+     * @param pageable a {@link jakarta.data.page.Pageable} object
+     * @return a {@link jakarta.data.page.Page} object
+     */
+    Page<Brewer> findByNameLike(String name, Pageable pageable);
 
+    /**
+     * <p>save.</p>
+     *
+     * @param brewer a {@link org.redlich.beers.Brewer} object
+     * @return a {@link org.redlich.beers.Brewer} object
+     */
+    @Save
+    Brewer save(@Valid Brewer brewer);
+
+    /**
+     * <p>remove.</p>
+     *
+     * @param brewer a {@link org.redlich.beers.Brewer} object
+     */
+    @Delete
+    void remove(Brewer brewer);
+
+    /**
+     * <p>deleteAll.</p>
+     */
+    @Query("delete from Brewer")
+    void deleteAll();
     }
+

@@ -19,7 +19,7 @@ Upon executing this application, you will be presented with the following output
 
 == REST Application
 
-The REST application was modeled after the Task Creator example from the comprehensive set of https://github.com/eclipse-ee4j/jakartaee-examples/blob/main/README.md[Jakarta EE 10 Examples]. The `ConcurrencyApplication` class defines the `/jaxrs` endpoint and serves as the entry point of the application.
+The REST application is a beer database that uses Jakarta Data, Jakarta NoSQL and MongoDB
 
 `$ mvn clean compile package`
 
@@ -27,6 +27,8 @@ This will build a WAR file that may be dropped in any Jakarta EE-compliant appli
 
 == Executing the REST Application
 
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": 3, "name": "Russian Imperial Stout", "type": "STOUT", "brewer_id": 1, "abv": 10.2}' http://10.0.0.229:8080/beers/db/beer/3`
+
 The REST application may be executed via:
 
-https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]
+http://10.0.0.229:8080/data-1.0.0/db[Main Application]
