@@ -16,9 +16,9 @@ Upon executing this application, you will be presented with the following output
 [APP] Welcome to the Jakarta Data Demo Application
 [APP] --------------------------------------------------
 
-Yes, this is not very exciting, but the structure is in place.
+Yes, this is not very exciting, but the structure is in place for something more useful.
 
-// TODO: add link to the jnosql-beers GitHub repository
+There is, however, you can check out this command-line https://github.com/mpredli01/jnosql-beers/blob/master/README.md[craft beer database application] that is the predecessor to this REST application.
 
 == REST Application
 

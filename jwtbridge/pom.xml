@@ -14,27 +14,44 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <soteria.version>3.0.3</soteria.version>
         <exec.mojo.version>3.1.0</exec.mojo.version>
+        <http.port>9080</http.port>
+        <https.port>9443</https.port>
+        <app.name>${project.artifactId}</app.name>
         <mainClass>org.redlich.jwtbridge.JwtBridgeApp</mainClass>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.glassfish.soteria</groupId>
-            <artifactId>jakarta.security.enterprise</artifactId>
-            <version>${soteria.version}</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <packagingExcludes>pom.xml</packagingExcludes>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>${exec.mojo.version}</version>
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.3.4</version>
+                <configuration>
+                    <stripVersion>true</stripVersion>
+                    <serverStartTimeout>120</serverStartTimeout>
+                    <bootstrapProperties>
+                        <default.http.port>${http.port}</default.http.port>
+                        <default.https.port>${https.port}</default.https.port>
+                        <app.context.root>${app.name}</app.context.root>
+                    </bootstrapProperties>
                 </configuration>
             </plugin>
         </plugins>
