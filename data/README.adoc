@@ -50,4 +50,15 @@ To add a brewer to the database, enter the following `curl` command in the termi
 
 `curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "Maine Beer Company", "city": "Freeport", "state": "Maine" }' http://10.0.0.229:8080/beers/db/brewer/<id>`
 
+To delete a brewer from the database:
+
+`curl -X DELETE http://172.20.1.228:8080/data-1.0.0/db/brewer/6`
+
+Brewer and Beer to be added during Devnexus:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "SweetWater Brewing Company", "city": "Atlanta", "state": "Georgia" }' http://10.0.0.229:8080/beers/db/brewer/<id>`
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "420 Extra Pale Ale", "type": "IPA", "brewer_id": <id>, "abv": 5.7}' http://10.0.0.229:8080/beers/db/beer/<id>`
+
+
 // TODO: add additional commands for other database operations
