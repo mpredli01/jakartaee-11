@@ -1,5 +1,4 @@
 <server>
-
     <featureManager>
         <feature>microProfile-6.0</feature>
     </featureManager>
@@ -10,5 +9,4 @@
     <webApplication location="jwtbridge-1.0.0.war" contextRoot="/"/>
 
     <mpJwt id="myMpJwt" clockSkew="99999h" />
-
 </server>

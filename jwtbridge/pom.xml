@@ -1,20 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jwtbridge</artifactId>
-    <name>MicroProfile JWT Bridge Specification Demo</name>
 
     <parent>
         <groupId>org.redlich</groupId>
-        <artifactId>jakarta-ee-11</artifactId>
+        <artifactId>jakartaee-11</artifactId>
         <version>1.0.0</version>
     </parent>
+
+    <groupId>org.redlich.jwtbridge</groupId>
+    <artifactId>jwtbridge</artifactId>
+    <version>1.0.0</version>
+
+    <name>MicroProfile JWT Bridge Specification Demo</name>
+    <description>Example application on how to use the new MicroProfile JWT Bridge specification</description>
+    <url>https://redlich.net</url>
 
     <packaging>war</packaging>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mojo.version>3.1.0</exec.mojo.version>
+        <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <http.port>9080</http.port>
         <https.port>9443</https.port>
         <app.name>${project.artifactId}</app.name>
@@ -35,7 +40,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${exec.mojo.version}</version>
+                <version>${exec.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
@@ -56,5 +61,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

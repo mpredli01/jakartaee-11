@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.redlich</groupId>
-        <artifactId>jakarta-ee-11</artifactId>
+        <artifactId>jakartaee-11</artifactId>
         <version>1.0.0</version>
     </parent>
 

@@ -46,6 +46,7 @@ public class RolesEndpoint {
     @GET
     @Path("/echo")
     @RolesAllowed("Echoer")
+    /*
     @JwtAuthenticationMechanismDefinition(
             publicKey = "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtL6HShqY5H4y56rsCo7V\n" +
                     "dhT9/eLQwsJpKWg66j98XsB/qc5ZxkJ25GXCzpjR0ZvzAxMNlj1hrMORaKVzz2/5\n" +
@@ -70,6 +71,7 @@ public class RolesEndpoint {
             tokenAge = 10,
             clockSkew = 10
             )
+     */
     public String echoInput(@Context SecurityContext securityContext, @QueryParam("input") String input) {
         Principal user = securityContext.getUserPrincipal();
         return "\n" + "Login successful!" + "\n" + "input = " + input + ", user = " + user.getName() + "\n";

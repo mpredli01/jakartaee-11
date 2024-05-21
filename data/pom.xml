@@ -1,28 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>data</artifactId>
-    <name>Jakarta Data Specification Demo</name>
 
     <parent>
         <groupId>org.redlich</groupId>
-        <artifactId>jakarta-ee-11</artifactId>
+        <artifactId>jakartaee-11</artifactId>
         <version>1.0.0</version>
     </parent>
+
+    <groupId>org.redlich.data</groupId>
+    <artifactId>data</artifactId>
+    <version>1.0.0</version>
+
+    <name>Jakarta Data Specification Demo</name>
+    <description>Example application on how to use Jakarta Data</description>
+    <url>https://redlich.net</url>
 
     <packaging>war</packaging>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mojo.version>3.1.0</exec.mojo.version>
-        <jakartaee.version>10.0.0</jakartaee.version>
+        <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <jakartaee.version>11.0.0-M2</jakartaee.version>
         <jakarta.nosql.version>1.0.0-b7</jakarta.nosql.version>
-        <!-- It was necessary to downgrade to JNSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
+        <!-- It was necessary to downgrade to JNoSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
         <!-- <jnosql.version>1.1.1-SNAPSHOT</jnosql.version> -->
         <jnosql.version>1.1.0</jnosql.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <!-- testing libraries -->
-        <hibernate.validator.version>8.0.0.Final</hibernate.validator.version>
+        <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <el.impl.version>5.0.0-M1</el.impl.version>
         <smallrye.config.version>3.4.4</smallrye.config.version>
         <weld.se.core.version>5.1.1.SP2</weld.se.core.version>
@@ -32,7 +37,7 @@
         <mockito.verson>5.9.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
         <awaitility.version>4.2.0</awaitility.version>
-        <testcontainers.version>1.19.4</testcontainers.version>
+        <testcontainers.version>1.19.6</testcontainers.version>
         <testcontainer.mongodb.version>1.19.4</testcontainer.mongodb.version>
         <mainClass>org.redlich.data.DataApp</mainClass>
     </properties>
@@ -60,7 +65,7 @@
         <dependency>
             <groupId>de.flapdoodle.embed</groupId>
             <artifactId>de.flapdoodle.embed.mongo</artifactId>
-            <version>4.12.2</version>
+            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -112,7 +117,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validator.version}</version>
             <scope>test</scope>
@@ -130,7 +135,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${exec.mojo.version}</version>
+                <version>${exec.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
