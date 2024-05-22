@@ -13,14 +13,13 @@
     <version>1.0.0</version>
     
     <name>Jakarta Concurrency Specification Demo</name>
-    <description>Example application on how to use Jakarta Concurrency</description>
+    <description>Example application demonstrating how to use Jakarta Concurrency specification</description>
     <url>https://redlich.net</url>
 
     <packaging>war</packaging>
 
     <properties>
-        <exec.maven.plugin.version>3.1.0</exec.maven.plugin.version>
-        <jakartaee.version>11.0.0-M2</jakartaee.version>
+        <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <faces.version>4.1.0-M1</faces.version>
         <mojarra.version>4.1.0-M1</mojarra.version>
         <mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>
@@ -28,21 +27,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-web-api</artifactId>
-            <version>${jakartaee.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>
             <version>${faces.version}</version>
         </dependency>
-        <!-- <dependency>
+        <dependency>
+            <!-- experimental; no need to fetch a POM as a dependency -->
             <groupId>org.glassfish</groupId>
             <artifactId>mojarra-parent</artifactId>
             <version>${mojarra.version}</version>
-        </dependency> -->
+            <type>pom</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,5 +52,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

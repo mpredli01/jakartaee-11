@@ -13,7 +13,7 @@
     <version>1.0.0</version>
 
     <name>Jakarta Mail Specification Demo</name>
-    <description>example application on how to use the Jakarta Mail specification</description>
+    <description>example application demonstrating how to use the Jakarta Mail specification</description>
     <url>https://redlich.net</url>
 
     <packaging>war</packaging>

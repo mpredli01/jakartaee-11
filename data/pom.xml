@@ -13,14 +13,13 @@
     <version>1.0.0</version>
 
     <name>Jakarta Data Specification Demo</name>
-    <description>Example application on how to use Jakarta Data</description>
+    <description>Example application demonstrating how to use the Jakarta Data specification</description>
     <url>https://redlich.net</url>
 
     <packaging>war</packaging>
 
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
-        <jakartaee.version>11.0.0-M2</jakartaee.version>
         <jakarta.nosql.version>1.0.0-b7</jakarta.nosql.version>
         <!-- It was necessary to downgrade to JNoSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
         <!-- <jnosql.version>1.1.1-SNAPSHOT</jnosql.version> -->
@@ -142,5 +141,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

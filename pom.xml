@@ -14,20 +14,20 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compile.version>3.5.1</maven.compile.version>
-        <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
-        <jakartaee.version>10.0.0</jakartaee.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compile.version>3.13.0</maven.compile.version>
+        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <jakartaee.version>11.0.0-M2</jakartaee.version>
         <jnosql.version>1.0.0</jnosql.version>
-        <microprofile.version>6.0</microprofile.version>
+        <microprofile.version>6.1</microprofile.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
         <tinkerpop.version>3.6.1</tinkerpop.version>
         <weld.se.core.version>5.1.0.Final</weld.se.core.version>
         <mockito.verson>5.2.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
-        <junit.version>5.10.0</junit.version>
+        <junit.version>5.10.2</junit.version>
         <asciidoctorj-pdf.version>2.3.0</asciidoctorj-pdf.version>
     </properties>
 
@@ -48,6 +48,12 @@
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>${jakartaee.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -201,12 +207,12 @@
         </pluginManagement>
     </build>
 
-    <repositories>
+    <!-- <repositories>
         <repository>
             <id>jakarta.sonatype.org-snapshot</id>
             <url>https://jakarta.oss.sonatype.org/content/repositories/snapshots/</url>
             <releases>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
@@ -216,11 +222,11 @@
             <id>oss.sonatype.org-snapshot</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <releases>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 </project>

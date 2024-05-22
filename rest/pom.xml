@@ -1,8 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>rest</artifactId>
-    <name>Jakarta RESTful Web Services Specification Demo</name>
 
     <parent>
         <groupId>org.redlich</groupId>
@@ -10,11 +8,17 @@
         <version>1.0.0</version>
     </parent>
 
+    <groupId>org.redlich.rest</groupId>
+    <artifactId>rest</artifactId>
+    <version>1.0.0</version>
+    
+    <name>Jakarta RESTful Web Services Specification Demo</name>
+    <description>Example application demonstrating how to use the Jakarta RESTful Web Services specification</description>
+
     <packaging>war</packaging>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mojo.version>3.1.0</exec.mojo.version>
+        <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <mainClass>org.redlich.rest.RestApp</mainClass>
     </properties>
 
@@ -31,12 +35,11 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${exec.mojo.version}</version>
+                <version>${exec.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
