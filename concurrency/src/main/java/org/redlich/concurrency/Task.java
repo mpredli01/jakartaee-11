@@ -26,8 +26,18 @@ import jakarta.ws.rs.core.Response;
 public class Task implements Runnable {
 
     private static final Logger log = Logger.getLogger("Task");
-    private static final String WS_URL = "https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/jaxrs/taskinfo"; // "http://localhost:8080/taskcreator/jaxrs/taskinfo";
 
+    // TODO: somehow dynamically obtain the URL
+
+    /* Use this WS_URL for localhost
+     * private static final String WS_URL = "http://localhost:8080/taskcreator/jaxrs/taskinfo";
+     */
+
+    /* Use this WS_URL for Payara Cloud
+     * private static final String WS_URL = "https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/jaxrs/taskinfo";
+     */
+    private static final String WS_URL = "http://10.0.0.229:8080/concurrency-1.0.0/jaxrs/taskinfo";
+    
     private final String name;
     private final String type;
     private final DateFormat dateFormat;

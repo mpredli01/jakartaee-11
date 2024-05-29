@@ -20,12 +20,18 @@
 
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <concurrency.version>3.1.0-RC2</concurrency.version>
         <faces.version>4.1.0-M1</faces.version>
         <mojarra.version>4.1.0-M1</mojarra.version>
         <mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>jakarta.enterprise.concurrent</groupId>
+            <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+            <version>${concurrency.version}</version>
+        </dependency>
         <dependency>
             <groupId>jakarta.faces</groupId>
             <artifactId>jakarta.faces-api</artifactId>

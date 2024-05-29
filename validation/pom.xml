@@ -19,7 +19,7 @@
     
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
-        <validator.version>3.1.0</validator.version>
+        <validation.version>3.1.0</validation.version>
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <expressly.version>5.0.0</expressly.version>
         <mainClass>org.redlich.validation.ValidationApp</mainClass>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>${validator.version}</version>
+            <version>${validation.version}</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.expressly</groupId>
