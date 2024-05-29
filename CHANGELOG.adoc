@@ -4,5 +4,6 @@
 
 === May 29, 2024
 
+* Introduce the `CHANGELOG.adoc` file.
 * Update the stylesheet on the Jakarta Concurrency demo to be consistent with the other example applications.
 * Fix the duplicate `width="x"` `width="y"` to `width=x height="y"` referencing the Jakarta EE logo in the `index.html` files within each application.
