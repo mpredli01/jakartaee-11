@@ -20,7 +20,7 @@
     
     <properties>
         <exec.maven.plugin.version>3.1.0</exec.maven.plugin.version>
-        <servlet.version>6.1.0-M2</servlet.version>
+        <servlet.version>6.1.0</servlet.version>
         <mainClass>org.redlich.security.SecurityApp</mainClass>
     </properties>
 
