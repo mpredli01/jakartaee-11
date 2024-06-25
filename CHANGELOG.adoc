@@ -12,3 +12,10 @@
 
 * Add a record in the Jakarta Validation example appliction to complement the POJO
 * Update Jakarta specification dependencies as necessary relative to the latest versions.
+
+=== June 25, 2024
+
+* Update Payara scripts to use the June 2024 release of Payara Micro 6.2024.6.
+* Update Jakarta Security to 4.0.0 from 4.0.0-M2.
+* Cleanup `pom.xml` file in RESTful Web Services application.
+

@@ -19,14 +19,15 @@
 
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <jaxrs.version>4.0.0</jaxrs.version>
         <mainClass>org.redlich.rest.RestApp</mainClass>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.jnosql.databases</groupId>
-            <artifactId>jnosql-mongodb</artifactId>
-            <version>${jnosql.version}</version>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
         </dependency>
     </dependencies>
 
