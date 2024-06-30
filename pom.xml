@@ -18,7 +18,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compile.version>3.13.0</maven.compile.version>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <jakartaee.version>11.0.0-M3</jakartaee.version>
+        <jakartaee.version>11.0.0-M4</jakartaee.version>
         <jnosql.version>1.0.0</jnosql.version>
         <microprofile.version>6.1</microprofile.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
