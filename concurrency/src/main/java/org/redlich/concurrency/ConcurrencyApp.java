@@ -22,6 +22,10 @@ public class ConcurrencyApp {
         app.displayTitle(title);
         }
 
+    /**
+     *
+     * @param title the title to display.
+     */
     public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");

@@ -44,6 +44,13 @@ public class CoffeeDashboardServlet extends HttpServlet {
        """);
     }
 
+    /**
+     *
+     * @param req the HTTP servlet request
+     * @param resp the HTTP servlet response
+     * @throws ServletException the servlet exception
+     * @throws IOException the I/O exception
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
@@ -57,6 +64,14 @@ public class CoffeeDashboardServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("""
            <html>
+           <head>
+               <title>Personalized Coffee Dashboard</title>
+               <style>
+                   li, a, p, h2, h3, p, td, h1 { font-family: Arial; color: white;}
+                   body { background-color: slategray;}
+               </style>
+           </head>
+              
            <body>
            <h1>Your Personalized Coffee Dashboard</h1>
        """);
@@ -80,10 +95,18 @@ public class CoffeeDashboardServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("""
        <html>
-           <body>
-               <h1>No Coffee Types Found</h1>
-               <p>Please select at least one type of coffee.</p>
-           </body>
+       <head>
+           <title>No Coffee Types Found</title>
+           <style>
+               li, a, p, h2, h3, p, td, h1 { font-family: Arial; color: white;}
+               body { background-color: slategray;}
+           </style>
+       </head>
+
+       <body>
+           <h1>No Coffee Types Found</h1>
+           <p>Please select at least one type of coffee.</p>
+       </body>
        </html>
        """);
         }

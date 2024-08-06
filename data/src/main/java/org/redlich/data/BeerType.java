@@ -11,6 +11,12 @@
  */
 package org.redlich.data;
 
+/**
+ * <p>BeerType class.</p>
+ *
+ * @author mpredli01
+ * @version $Id: $Id
+ */
 public enum BeerType {
     ALE,
     STOUT,

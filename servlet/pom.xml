@@ -1,35 +1,34 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>servlet</artifactId>
-    <name>Jakarta Servlet Specification Demo</name>
 
     <parent>
         <groupId>org.redlich</groupId>
-        <artifactId>jakarta-ee-11</artifactId>
+        <artifactId>jakartaee-11</artifactId>
         <version>1.0.0</version>
     </parent>
+    
+    <groupId>org.redlich.servlet</groupId>
+    <artifactId>servlet</artifactId>
+    <version>1.0.0</version>
 
+    <name>Jakarta Servlet Specification Demo</name>
+    <description>Example application demonstrating how to use the Jakarta Servlet specification</description>
+    <url>https://redlich.net</url>
+    
     <packaging>war</packaging>
     
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <security.version>3.0.0</security.version>
-        <soteria.version>3.0.3</soteria.version>
-        <exec.mojo.version>3.1.0</exec.mojo.version>
+        <exec.maven.plugin.version>3.1.0</exec.maven.plugin.version>
+        <servlet.version>6.1.0</servlet.version>
         <mainClass>org.redlich.security.SecurityApp</mainClass>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>jakarta.security.enterprise</groupId>
-            <artifactId>jakarta.security.enterprise-api</artifactId>
-            <version>${security.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.soteria</groupId>
-            <artifactId>jakarta.security.enterprise</artifactId>
-            <version>${soteria.version}</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${servlet.version}</version>
         </dependency>
     </dependencies>
 
@@ -38,12 +37,11 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${exec.mojo.version}</version>
+                <version>${exec.maven.plugin.version}</version>
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

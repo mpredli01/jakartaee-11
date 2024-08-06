@@ -14,13 +14,24 @@ package org.redlich.data;
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
+import java.util.Objects;
+
+/**
+ * <p>Brewer class.</p>
+ *
+ * @author mpredli01
+ * @version $Id: $Id
+ */
 @Entity
 public class Brewer {
     @Id
     private int id;
 
     @Column
+    @NotBlank
     private String name;
 
     @Column
@@ -29,6 +40,9 @@ public class Brewer {
     @Column
     private String state;
 
+    /**
+     * <p>Constructor for Brewer.</p>
+     */
     public Brewer() {
         this.id = 0;
         this.name = "{ brewer name }";
@@ -43,22 +57,43 @@ public class Brewer {
         this.state = state;
         }
 
+    /**
+     * <p>Getter for the field <code>id</code>.</p>
+     *
+     * @return a int
+     */
     public int getId() {
         return id;
         }
 
+    /**
+     * <p>Getter for the field <code>name</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getName() {
         return name;
         }
 
+    /**
+     * <p>Getter for the field <code>city</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getCity() {
         return city;
         }
 
+    /**
+     * <p>Getter for the field <code>state</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getState() {
         return state;
         }
 
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "Brewer { " +
@@ -69,6 +104,29 @@ public class Brewer {
                 " }\n";
         }
 
+    /** {@inheritDoc} */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Brewer brewer = (Brewer) o;
+        return id == brewer.id
+                && Objects.equals(name, brewer.name)
+                && Objects.equals(city, brewer.city)
+                && Objects.equals(state, brewer.state);
+        }
+
+    /** {@inheritDoc} */
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, city, state);
+        }
+
+    /**
+     * <p>builder.</p>
+     *
+     * @return a {@link org.redlich.beers.Brewer.BrewerBuilder} object
+     */
     public static BrewerBuilder builder() {
         return new BrewerBuilder();
         }
@@ -104,6 +162,7 @@ public class Brewer {
 
         public Brewer build() {
             return new Brewer(id, name, city, state);
-        }
+            }
         }
     }
+

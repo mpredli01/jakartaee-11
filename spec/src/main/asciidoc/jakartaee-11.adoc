@@ -20,9 +20,9 @@ endif::[]
 ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../../main/java]
 
-== Jakarta EE 11 Specification Example Applications
+== Specifications Updated for Jakarta EE 11
 
-This repository complements the presentation, Jakarta EE 11: Going Beyond the Era of Java EE, and provides example applications on some of the Jakarta EE specifications that will be updated for Jakarta EE 11.
+This repository complements the presentations: Jakarta EE 11: Going Beyond the Era of Java EE; and A Developer's Guide to Jakarta EE 11, and provides example applications on some of the Jakarta EE specifications that will be updated for Jakarta EE 11.
 
 The specifications shown here will have updates for Jakarta EE 11:
 
@@ -40,7 +40,6 @@ In addition, there are example applications for specifications that will not hav
 Each example application can be executed on the corresponding command line with:
 
 `$ mvn clean compile exec:java`
-
 
 Please consider contributing to this GitHub repository if you have ideas for continuous improvement. This would be much appreciated!
 
