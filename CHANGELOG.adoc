@@ -2,16 +2,13 @@
 
 == Jakarta EE Example Applications
 
-=== May 29, 2024
+=== August { x }, 2024
 
-* Introduce the `CHANGELOG.adoc` file.
-* Update the stylesheet on the Jakarta Concurrency demo to be consistent with the other example applications.
-* Fix the duplicate `width="x"` `width="y"` to `width=x height="y"` referencing the Jakarta EE logo in the `index.html` files within each application.
+* Update specification document and individual README.adoc files.
 
-=== June 13, 2024
+=== June 30, 2024
 
-* Add a record in the Jakarta Validation example application to complement the POJO
-* Update Jakarta specification dependencies as necessary relative to the latest versions.
+* Update to Jakarta EE 11-M4 and test projects for proper operation.
 
 === June 25, 2024
 
@@ -19,6 +16,17 @@
 * Update Jakarta Security to 4.0.0 from 4.0.0-M2 and test for proper operation.
 * Cleanup `pom.xml` file in RESTful Web Services application.
 
-=== June 30, 2024
+=== June 13, 2024
 
-* Update to Jakarta EE 11-M4 and test projects for proper operation.
+* Add a record in the Jakarta Validation example application to complement the POJO
+* Update Jakarta specification dependencies as necessary relative to the latest versions.
+
+
+=== May 29, 2024
+
+* Introduce the `CHANGELOG.adoc` file.
+* Update the stylesheet on the Jakarta Concurrency demo to be consistent with the other example applications.
+* Fix the duplicate `width="x"` `width="y"` to `width=x height="y"` referencing the Jakarta EE logo in the `index.html` files within each application.
+
+
+

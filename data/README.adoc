@@ -62,3 +62,17 @@ Brewer and Beer to be added during Devnexus:
 
 
 // TODO: add additional commands for other database operations
+
+
+=== Example Application
+
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://data-demo-dev-67884e4b.payara.app/data/[Welcome Page]
+* https://data-demo-dev-67884e4b.payara.app/data/data/data[Main Application]
+
+=== Testing
+
+Please stay tuned for details...
