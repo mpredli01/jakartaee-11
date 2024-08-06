@@ -40,17 +40,18 @@ public class ValidationResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String validate() {
         User user = new User(null, true, "Java Champion", 13, "mike");
+        UserRecord userRecord = new UserRecord(null, true, "Java Champion", 13, "mike");
 
         StringBuilder builder = new StringBuilder();
         builder.append(this.message);
-        builder.append("\n");
-        builder.append(user);
+        builder.append("\n\n");
+        builder.append(userRecord);
         builder.append("\n");
 
         try(ValidatorFactory factory = Validation.buildDefaultValidatorFactory()) {
             Validator validator = factory.getValidator();
-            Set<ConstraintViolation<User>> violations = validator.validate(user);
-            for (ConstraintViolation<User> violation : violations) {
+            Set<ConstraintViolation<UserRecord>> violations = validator.validate(userRecord);
+            for (ConstraintViolation<UserRecord> violation : violations) {
                 builder.append(violation.getMessage());
                 builder.append("\n");
                 }

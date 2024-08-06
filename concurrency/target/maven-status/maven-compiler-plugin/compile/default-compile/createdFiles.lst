@@ -1,6 +1,0 @@
-org/redlich/concurrency/ConcurrencyApp.class
-org/redlich/concurrency/TaskEJB.class
-org/redlich/concurrency/ConcurrencyApplication.class
-org/redlich/concurrency/TaskCreatorBean.class
-org/redlich/concurrency/Task.class
-org/redlich/concurrency/InfoEndpoint.class

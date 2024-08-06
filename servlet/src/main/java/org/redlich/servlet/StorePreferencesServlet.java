@@ -33,7 +33,6 @@ public class StorePreferencesServlet extends HttpServlet {
         String[] coffeeTypes = req.getParameterValues("coffeeType");
         HttpSession session = req.getSession();
         session.setAttribute("userCoffeeTypes", coffeeTypes);
-
         resp.sendRedirect("coffeeDashboard");
         }
     }

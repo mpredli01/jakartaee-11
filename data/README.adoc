@@ -1,0 +1,78 @@
+= Jakarta Data Demo Application
+
+This project is a demonstration on how to use the https://jakarta.ee/specifications/data/[Jakarta Data] and https://jakarta.ee/specifications/nosql/[Jakarta NoSQL] specifications. The application tracks craft beer and their corresponding brewers that are modeled in a https://www.mongodb.com/[MongoDB] database.
+
+The intent for all of these demos is to provide both command-line and REST applications. However, most of the command-line applications are a placeholder for a potential real application.  Most of the REST applications can be deployed in a Jakarta EE-compliant application server, such as Payara Server and Payara Cloud.
+
+== Command-Line Application
+
+The command-line application, `DataApp.java`, can be built and executed
+
+`$ mvn clean compile exec:java`
+
+Upon executing this application, you will be presented with the following output on the terminal window:
+
+[APP] --------------------------------------------------
+[APP] Welcome to the Jakarta Data Demo Application
+[APP] --------------------------------------------------
+
+Yes, this is not very exciting, but the structure is in place for something more useful.
+
+There is, however, you can check out this command-line https://github.com/mpredli01/jnosql-beers/blob/master/README.md[craft beer database application] that is the predecessor to this REST application.
+
+== REST Application
+
+The REST application can be packaged as follows:
+
+`$ mvn clean compile package`
+
+This will build a WAR file that may be dropped in any Jakarta EE-compliant application server.
+
+== Deploying the WAR File
+
+You can easily deploy the WAR file in Payara Micro as follows:
+
+`java -jar <path-to>/payara payara-micro-6.2024.3.jar <path-to>/target/data-1.0.0.war`
+
+== Executing the REST Application
+
+You can point your browser to the http://10.0.0.229:8080/data-1.0.0/db[Welcome Page]
+
+The Welcome Page contains the links to access the `/db/beer` and `/db/brewer` endpoints to get the current list of beers and brewers, respectively.
+
+== Exercising the Application
+
+To add a beer to the database, enter the following `curl` command in the terminal window:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "Russian Imperial Stout", "type": "STOUT", "brewer_id": <id>, "abv": 10.2}' http://10.0.0.229:8080/beers/db/beer/<id>`
+
+To add a brewer to the database, enter the following `curl` command in the terminal window:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "Maine Beer Company", "city": "Freeport", "state": "Maine" }' http://10.0.0.229:8080/beers/db/brewer/<id>`
+
+To delete a brewer from the database:
+
+`curl -X DELETE http://172.20.1.228:8080/data-1.0.0/db/brewer/6`
+
+Brewer and Beer to be added during Devnexus:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "SweetWater Brewing Company", "city": "Atlanta", "state": "Georgia" }' http://10.0.0.229:8080/beers/db/brewer/<id>`
+
+`curl -X POST -H "Content-Type: application/json" -d '{"_id": <id>, "name": "420 Extra Pale Ale", "type": "IPA", "brewer_id": <id>, "abv": 5.7}' http://10.0.0.229:8080/beers/db/beer/<id>`
+
+
+// TODO: add additional commands for other database operations
+
+
+=== Example Application
+
+The application may be exercised by running the CLI version or deployed on Payara Cloud:
+
+`$ mvn clean compile exec:java`
+
+* https://data-demo-dev-67884e4b.payara.app/data/[Welcome Page]
+* https://data-demo-dev-67884e4b.payara.app/data/data/data[Main Application]
+
+=== Testing
+
+Please stay tuned for details...

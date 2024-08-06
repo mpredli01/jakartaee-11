@@ -1,21 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>spec</artifactId>
-    <name>Jakarta EE Example Applications Documentation</name>
 
     <parent>
         <groupId>org.redlich</groupId>
-        <artifactId>jakarta-ee-11</artifactId>
+        <artifactId>jakartaee-11</artifactId>
         <version>1.0.0</version>
     </parent>
 
+    <groupId>org.redlich.spec</groupId>
+    <artifactId>spec</artifactId>
+    <version>1.0.0</version>
+
+    <name>Jakarta EE Example Applications Documentation</name>
+    <description>Automatic generation of example application documentation in PDF and HTML formats</description>
+    <url>https://redlich.net</url>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mojo.version>3.1.0</exec.mojo.version>
-        <asciidoctor-maven.version>2.2.4</asciidoctor-maven.version>
-        <asciidoctorj-pdf.version>2.3.7</asciidoctorj-pdf.version>
         <maven.build.timestamp.format>MMMM dd, yyyy</maven.build.timestamp.format>
+        <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <asciidoctor-maven.version>2.2.4</asciidoctor-maven.version>
+        <asciidoctorj-pdf.version>2.3.9</asciidoctorj-pdf.version>
         <revisiondate>${maven.build.timestamp}</revisiondate>
         <revremark>Draft</revremark>
         <gen-doc-dir>${project.build.directory}/generated-docs</gen-doc-dir>

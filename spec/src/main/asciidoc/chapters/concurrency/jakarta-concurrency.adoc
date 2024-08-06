@@ -1,28 +1,18 @@
-== Jakarta Concurrency Example Application
+== Jakarta Concurrency
 
 === Introduction
 
-The https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency] specification, currently at version 3.0, provides a mechanism for using concurrency from application components without compromising container integrity while still preserving the fundamental benefits of the Jakarta EE platform
+The https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency] specification, currently at version 3.1 for Jakarta EE 11, provides a mechanism for using concurrency from application components without compromising container integrity while still preserving the fundamental benefits of the Jakarta EE platform
 
-The compatible implementation for this specification is https://openliberty.io/blog/2023/05/16/23.0.0.5-beta.html[Open Liberty 22.0.0.5-beta].
+=== New Features
 
-Jakarta Concurrency will be updated to version 3.1 for Jakarta EE 11. New features include:
+New features in version 3.1 include:
 
-* Integration with Java 21 Virtual Threads
-* Java Flow/ReactiveStreams and context propagation
-* Replace more features from EJB, such as Schedule and Lock annotations
-* Become more CDI-centric
-* Specification bug fixes and clarifications
-* TCK fixes and enhancements
+* Integration with JEP 444, https://openjdk.org/jeps/444[Virtual Threads], delivered in JDK 22
+* Support for the Java https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/Flow.html[`Flow`] class and the https://github.com/eclipse/microprofile-reactive-streams-operators/blob/main/README.adoc[MicroProfile Reactive Streams Operators] and https://github.com/eclipse/microprofile-reactive-streams-operators/blob/main/README.adoc[MicroProfile Context Propagation] specifications
+* A new https://jakarta.ee/specifications/concurrency/3.1/apidocs/jakarta.concurrency/jakarta/enterprise/concurrent/schedule[`@Schedule`] annotation that replaces the original annotation defined in the now-retired Jakarta Enterprise Beans specification.
+* Evolve to be more CDI-centric by adding the ability to inject default resource implementations of the https://jakarta.ee/specifications/concurrency/3.1/apidocs/jakarta.concurrency/jakarta/enterprise/concurrent/managedexecutorservice[`ManagedExecutorService`] and https://jakarta.ee/specifications/concurrency/3.1/apidocs/jakarta.concurrency/jakarta/enterprise/concurrent/contextservice[`ContextService`] interfaces.
 
-=== Example Application
+=== Compatible Implementation(s)
 
-The application may be exercised by running the CLI version or deployed on Payara Cloud:
-
-`$ mvn clean compile exec:java`
-
-* https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]
-
-=== Testing
-
-Please stay tuned for details...
+The compatible implementation for this specification is https://github.com/OpenLiberty/open-liberty/releases/tag/gm-24.0.0.6[Open Liberty 24.0.0.6-beta].

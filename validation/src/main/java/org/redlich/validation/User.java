@@ -87,12 +87,12 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "User{ " +
                 "name='" + getName() + '\'' +
                 ", working=" + isWorking() +
                 ", aboutMe='" + getAboutMe() + '\'' +
                 ", age=" + getAge() +
                 ", email='" + getEmail() + '\'' +
-                '}';
+                " }";
         }
     }
