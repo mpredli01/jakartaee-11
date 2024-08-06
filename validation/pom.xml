@@ -18,6 +18,7 @@
     <packaging>war</packaging>
     
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <validation.version>3.1.0</validation.version>
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
