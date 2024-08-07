@@ -1,4 +1,12 @@
-= Jakarta Concurrency Demo Application
+= Welcome to the Jakarta Concurrency Demo Application
+
+ifndef::imagesdir[:imagesdir: src/main/webapp/images]
+
+Hosted on the Payara Platform and serverless Payara Cloud
+
+image::payara-logo.png[alt=Payara Logo, width=70%, height=70%]
+image::gsjug-logo.png[alt=PayGarden State JUG Logo, width=70%, height=70%]
+image::jakartaee-logo.png[alt=Jakarta EE Logo, width=70%, height=70%]
 
 This project is a demonstration on how to use the Jakarta Concurrency specification. The primary example application is a task creator that allows you to add tasks that are handled immediately or with a delay of three or eight seconds. A command-line application is also included that serves as a placeholder that displays a welcome screen.
 
