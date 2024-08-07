@@ -23,13 +23,13 @@
         <jakarta.nosql.version>1.0.0-b7</jakarta.nosql.version>
         <!-- It was necessary to downgrade to JNoSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
         <!-- <jnosql.version>1.1.1-SNAPSHOT</jnosql.version> -->
-        <jnosql.version>1.1.1</jnosql.version>
+        <jnosql.version>1.1.0</jnosql.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <!-- testing libraries -->
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <el.impl.version>5.0.0-M1</el.impl.version>
         <smallrye.config.version>3.4.4</smallrye.config.version>
-        <weld.se.core.version>5.1.1.SP2</weld.se.core.version>
+        <weld.se.core.version>5.1.2.Final</weld.se.core.version>
         <weld.jupiter.version>4.0.1.Final</weld.jupiter.version>
         <yasson.version>3.0.3</yasson.version>
         <junit.version>5.10.1</junit.version>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>org.eclipse.parsson</groupId>
             <artifactId>parsson</artifactId>
-            <version>1.1.5</version>
+            <version>1.1.7</version>
             <scope>test</scope>
         </dependency>
         <dependency>

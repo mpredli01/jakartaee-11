@@ -21,11 +21,14 @@
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
         <jakartaee.version>11.0.0-M4</jakartaee.version>
         <jnosql.version>1.1.1</jnosql.version>
-        <microprofile.version>6.1</microprofile.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
-        <tinkerpop.version>3.6.1</tinkerpop.version>
+        <microprofile.version>6.1</microprofile.version>
+        <microprofile.config.version>3.1</microprofile.config.version>
         <weld.se.core.version>5.1.2.Final</weld.se.core.version>
+        <smallye.config.version>3.8.2</smallye.config.version>
+        <yasson.version>3.0.4</yasson.version>
+        <tinkerpop.version>3.6.1</tinkerpop.version>
         <mockito.verson>5.2.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
         <junit.version>5.10.2</junit.version>
@@ -74,19 +77,19 @@
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>yasson</artifactId>
-            <version>3.0.4</version>
+            <version>${yasson.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.smallrye.config</groupId>
             <artifactId>smallrye-config-core</artifactId>
-            <version>3.8.2</version>
+            <version>${smallye.config.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.microprofile.config</groupId>
             <artifactId>microprofile-config-api</artifactId>
-            <version>3.1</version>
+            <version>${microprofile.config.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
