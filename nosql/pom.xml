@@ -19,7 +19,7 @@
     
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
-        <jnosql.version>1.1.0</jnosql.version>
+        <jnosql.version>1.1.1</jnosql.version>
         <mainClass>org.redlich.nosql.BeerApp</mainClass>
     </properties>
 
