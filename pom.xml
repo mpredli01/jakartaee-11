@@ -26,7 +26,7 @@
         <microprofile.version>6.1</microprofile.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <weld.se.core.version>5.1.2.Final</weld.se.core.version>
-        <smallye.config.version>3.8.2</smallye.config.version>
+        <smallye.config.version>3.8.3</smallye.config.version>
         <yasson.version>3.0.4</yasson.version>
         <tinkerpop.version>3.6.1</tinkerpop.version>
         <mockito.verson>5.2.0</mockito.verson>
