@@ -35,6 +35,7 @@ public class RestResource {
     @Inject
     RestService service;
 
+    // TODO: figure out why this throws the DeploymentExeption with unsatisfied dependencies
     @Inject
     UriInfo uriInfo;
 
