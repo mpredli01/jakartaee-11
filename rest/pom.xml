@@ -29,6 +29,12 @@
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>${jaxrs.version}</version>
         </dependency>
+        <!-- <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>4.0.0-M1</version>
+            <scope>provided</scope>
+        </dependency> -->
     </dependencies>
 
     <build>
