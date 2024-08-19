@@ -12,19 +12,21 @@
 package org.redlich.rest;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-@ApplicationScoped
+@RequestScoped
 @Path("rest")
 public class RestResource {
 
@@ -35,8 +37,7 @@ public class RestResource {
     @Inject
     RestService service;
 
-    // TODO: figure out why this throws the DeploymentExeption with unsatisfied dependencies
-    @Inject
+    @Context
     UriInfo uriInfo;
 
     @GET
@@ -45,6 +46,7 @@ public class RestResource {
 
         StringBuilder builder = new StringBuilder();
         builder.append(uriInfo.getMatchedResourceTemplate());
+        builder.append("Path: /" + uriInfo.getPath() + "\n");
         builder.append(this.message);
         builder.append("\n");
         builder.append(service.message());
