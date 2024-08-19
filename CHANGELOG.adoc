@@ -2,12 +2,13 @@
 
 == Jakarta EE Example Applications
 
-=== August { x }, 2024
+=== August 19, 2024
 
-* Update specification document and individual README.adoc files.
-* Dependency upgrades
-* Minor improvements to Jakarta Validation example
-* Upgrade to Payara Micro 6.2024.7
+* Initial updates on specification document and individual README.adoc files.
+* Dependency upgrades.
+* Minor improvements to Jakarta Validation example.
+* Add new getMatchedResourceTemplate() method, defined in the https://jakarta.ee/specifications/restful-ws/4.0/apidocs/jakarta.ws.rs/jakarta/ws/rs/core/uriinfo[UriInfo] interface.
+* Upgrade to Payara Micro 6.2024.8.
 
 === June 30, 2024
 
