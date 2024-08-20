@@ -13,6 +13,6 @@ package org.redlich.mail;
 
 public class MailService {
     public String message() {
-        return "Hosted on serverless Payara Cloud!";
+        return "Hosted on the Payara Platform and serverless Payara Cloud!";
         }
     }

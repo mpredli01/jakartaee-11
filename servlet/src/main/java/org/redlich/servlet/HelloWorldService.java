@@ -11,15 +11,11 @@
  */
 package org.redlich.servlet;
 
-public class Hello {
+import jakarta.enterprise.context.ApplicationScoped;
 
-    private String name;
-
-    public Hello(String name) {
-        this.name = name;
-        }
-
-    public String getHello(){
-        return name;
+@ApplicationScoped
+public class HelloWorldService {
+    public String message() {
+        return "Hosted on the Payara Platform and serverless Payara Cloud!";
         }
     }

@@ -48,6 +48,14 @@ public class MailResource {
     String from;
 
     @Inject
+    @ConfigProperty(name = "username")
+    String username;
+
+    @Inject
+    @ConfigProperty(name = "password")
+    String password;
+
+    @Inject
     MailService service;
 
     @GET
@@ -56,14 +64,12 @@ public class MailResource {
 
         StringBuilder builder = new StringBuilder();
         builder.append(this.message);
-        builder.append("\n");
-        builder.append(service.message());
-        builder.append("\n");
+        builder.append("\n\n");
 
         // final String to = this.to;
         // final String from = this.from;
-        final String username = "mpredli@gmail.com";
-        final String password = "Okt0b3r24@";
+        // final String username = "mpredli@gmail.com";
+        // final String password = "Okt0b3r24@";
 
         final String host = "smtp.gmail.com";
         final int port = 587;
@@ -83,9 +89,11 @@ public class MailResource {
 
         builder.append(auth);
         builder.append("\n");
-        builder.append(this.to);
+        builder.append("To: " + this.to);
         builder.append("\n");
-        builder.append(this.from);
+        builder.append("From: " + this.from);
+        builder.append("\n");
+        builder.append("Username: " + this.username);
         builder.append("\n");
 
         Session session = Session.getInstance(props, auth);

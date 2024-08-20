@@ -9,10 +9,25 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.validation;
+package org.redlich.servlet;
 
-public class ValidationService {
-    public String message() {
-        return "Hosted on the Payara Platform and serverless Payara Cloud!";
+public class HelloWorld {
+
+    private String name;
+
+    public HelloWorld(String name) {
+        this.name = name;
+        }
+
+    public HelloWorld() {
+        this.name = "world";
+    }
+
+    public String getName() {
+        return name;
+        }
+
+    public void setName(String name) {
+        this.name = name;
         }
     }
