@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.redlich.nosql.TestBeerApp
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in org.redlich.nosql.TestBeerApp
