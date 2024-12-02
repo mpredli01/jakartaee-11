@@ -22,4 +22,6 @@ import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthentica
 @ApplicationScoped
 @Named
 public class ApplicationConfig {
+    ApplicationConfig() {
+        }
     }

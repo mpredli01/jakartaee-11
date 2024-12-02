@@ -31,6 +31,9 @@ import jakarta.servlet.http.HttpServletResponse;
 @ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
 public class SecurityApplication extends HttpServlet {
 
+    SecurityApplication() {
+        }
+
     private static final long serialVersionUID = 1L;
 
     /**

@@ -26,7 +26,12 @@ import jakarta.security.enterprise.identitystore.IdentityStore;
 @ApplicationScoped
 public class ApplicationIdentityStore implements IdentityStore {
 
+    ApplicationIdentityStore() {
+        }
+
     /**
+     * A method to validate the username.
+     *
      * @param usernamePasswordCredential an instance of UsernamePasswordCredential
      * @return CredentialValidationResult
      */
