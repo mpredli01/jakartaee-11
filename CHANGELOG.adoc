@@ -2,9 +2,18 @@
 
 == Jakarta EE Example Applications
 
+=== December 3, 2024
+
+* add `@InMemoryIdentityStoreDefinition` annotation to Jakarta Security demo.
+
+=== December 2, 2024
+
+* Update Payara scripts
+* Further consistency refinements for the individual `index.html` files for each specification.
+
 === August 23, 2024
 
-* Update `index.html` files for consistency
+* Update `index.html` files for consistency.
 
 === August 20, 2024
 

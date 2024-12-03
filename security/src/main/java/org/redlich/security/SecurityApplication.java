@@ -53,5 +53,4 @@ public class SecurityApplication extends HttpServlet {
         response.getWriter().write("web user has role \"audit\": " + request.isUserInRole("audit") + "\n");
         response.getWriter().write("web user has role \"user\": " + request.isUserInRole("user") + "\n");
         }
-
     }

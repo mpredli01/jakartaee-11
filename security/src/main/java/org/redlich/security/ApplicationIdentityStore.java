@@ -20,10 +20,18 @@ import jakarta.security.enterprise.credential.UsernamePasswordCredential;
 import jakarta.security.enterprise.identitystore.CredentialValidationResult;
 import jakarta.security.enterprise.identitystore.IdentityStore;
 
+import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition;
+import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition.Credentials;
+
+
 /**
  * An implementation of the IdentityStore interface to add user `Mike` and define the roles.
  */
 @ApplicationScoped
+@InMemoryIdentityStoreDefinition(
+        {@Credentials(callerName = "Mike", password = "password", groups = { "admin", "audit" }),
+        @Credentials(callerName = "Rowena", password = "password", groups = { "admin", "user" })}
+        )
 public class ApplicationIdentityStore implements IdentityStore {
 
     ApplicationIdentityStore() {
@@ -46,7 +54,7 @@ public class ApplicationIdentityStore implements IdentityStore {
          * store can be defined.
          */
 
-        if (usernamePasswordCredential.compareTo("Mike", "password")) {
+        if(usernamePasswordCredential.compareTo("Mike", "password")) {
             return new CredentialValidationResult("Mike", new HashSet<>(asList("admin", "audit")));
             }
 
