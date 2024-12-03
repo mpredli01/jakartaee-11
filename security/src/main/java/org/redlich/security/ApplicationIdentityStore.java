@@ -28,10 +28,10 @@ import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition
  * An implementation of the IdentityStore interface to add user `Mike` and define the roles.
  */
 @ApplicationScoped
-@InMemoryIdentityStoreDefinition(
-        {@Credentials(callerName = "Mike", password = "password", groups = { "admin", "audit" }),
-        @Credentials(callerName = "Rowena", password = "password", groups = { "admin", "user" })}
-        )
+@InMemoryIdentityStoreDefinition({
+        @Credentials(callerName = "Mike", password = "password", groups = { "admin", "audit" }),
+        @Credentials(callerName = "Rowena", password = "password", groups = { "admin", "user" })
+        })
 public class ApplicationIdentityStore implements IdentityStore {
 
     ApplicationIdentityStore() {
