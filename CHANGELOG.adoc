@@ -2,10 +2,10 @@
 
 == Jakarta EE Example Applications
 
-=== December 20, 2024
+=== December 19, 2024
 
-* Update Payara scripts to use Payara Micro 6.2024.12 and 7.2024.1.Alpha3.
-* Remove command-line applications for example demos only displayed a greeting
+* Update Payara scripts to use Payara Micro 6.2024.12 and prepare for Payara 7.2024.1.Alpha3.
+* Remove command-line applications for example demos only displayed a greeting.
 
 === December 3, 2024
 
