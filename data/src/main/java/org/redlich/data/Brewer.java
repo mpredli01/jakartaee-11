@@ -16,6 +16,7 @@ import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
@@ -28,16 +29,19 @@ import java.util.Objects;
 @Entity
 public class Brewer {
     @Id
+    @Positive(message = "The primary key must be a non-negative integer!")
     private int id;
 
     @Column
-    @NotBlank
+    @NotBlank(message = "The name of the brewer is required!")
     private String name;
 
     @Column
+    @NotNull(message = "The city where the brewer resides is required!")
     private String city;
 
     @Column
+    @NotNull(message = "The state where the brewer resides is required!")
     private String state;
 
     /**

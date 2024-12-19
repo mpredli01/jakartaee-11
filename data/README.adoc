@@ -2,25 +2,10 @@
 
 This project is a demonstration on how to use the https://jakarta.ee/specifications/data/[Jakarta Data] and https://jakarta.ee/specifications/nosql/[Jakarta NoSQL] specifications. The application tracks craft beer and their corresponding brewers that are modeled in a https://www.mongodb.com/[MongoDB] database.
 
-The intent for all of these demos is to provide both command-line and REST applications. However, most of the command-line applications are a placeholder for a potential real application.  Most of the REST applications can be deployed in a Jakarta EE-compliant application server, such as Payara Server and Payara Cloud.
+// TODO: add links to Payara
+Most of the REST applications can be deployed in a Jakarta EE-compliant application server, such as Payara Server and Payara Cloud.
 
-== Command-Line Application
-
-The command-line application, `DataApp.java`, can be built and executed
-
-`$ mvn clean compile exec:java`
-
-Upon executing this application, you will be presented with the following output on the terminal window:
-
-[APP] --------------------------------------------------
-[APP] Welcome to the Jakarta Data Demo Application
-[APP] --------------------------------------------------
-
-Yes, this is not very exciting, but the structure is in place for something more useful.
-
-There is, however, you can check out this command-line https://github.com/mpredli01/jnosql-beers/blob/master/README.md[craft beer database application] that is the predecessor to this REST application.
-
-== REST Application
+== Example Application
 
 The REST application can be packaged as follows:
 

@@ -18,19 +18,7 @@ These examples may be executed using any Jakarta EE-compliant application server
 
 A script, `start-payara-micro.sh` is included for your convenience. All you need to do is install Payara Micro
 
-== Command-Line Application
-
-The command-line application is currently a placeholder for a more comprehensive application. This `ConcurrencyApp` class is referenced in the `pom.xml` file as `<mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>`, so executing it is as easy as:
-
-`$ mvn clean compile exec:java`
-
-Upon executing this application, you will be presented with the following output on the terminal window:
-
-[APP] ---------------------------------------------------------
-[APP] Welcome to the Jakarta Concurrency Demo Application
-[APP] ---------------------------------------------------------
-
-== REST Application
+== Example Application
 
 The REST application was modeled after the Task Creator example from the comprehensive set of https://github.com/eclipse-ee4j/jakartaee-examples/blob/main/README.md[Jakarta EE 10 Examples]. The `ConcurrencyApplication` class defines the `/jaxrs` endpoint and serves as the entry point of the application.
 

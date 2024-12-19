@@ -16,6 +16,7 @@ import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
@@ -31,31 +32,34 @@ public class Beer {
      *
      */
     @Id
+    @Positive(message = "The primary key must be a non-negative integer!")
     private int id;
     /**
      *
      */
     @Column
-    @NotBlank
+    @NotBlank(message = "The name of the beer is required!")
     private String name;
 
     /**
      *
      */
     @Column
-    @NotNull
+    @NotNull(message = "The beer type is required!")
     private BeerType type;
 
     /**
      *
      */
     @Column("brewer_id")
+    @NotNull(message = "The brewerId is required!")
     private int brewerId;
 
     /**
      *
      */
     @Column
+    @NotNull(message = "The alcohol by volume (ABV) is required!")
     private double abv;
 
     /**

@@ -2,13 +2,18 @@
 
 == Jakarta EE Example Applications
 
+=== December 20, 2024
+
+* Update Payara scripts to use Payara Micro 6.2024.12 and 7.2024.1.Alpha3.
+* Remove command-line applications for example demos only displayed a greeting
+
 === December 3, 2024
 
 * add `@InMemoryIdentityStoreDefinition` annotation to Jakarta Security demo.
 
 === December 2, 2024
 
-* Update Payara scripts
+* Update Payara scripts to use Payara Micro 6.2024.11 and 7.2024.1.Alpha2.
 * Further consistency refinements for the individual `index.html` files for each specification.
 
 === August 23, 2024
