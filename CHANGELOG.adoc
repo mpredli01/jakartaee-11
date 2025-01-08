@@ -2,6 +2,11 @@
 
 == Jakarta EE Example Applications
 
+=== January 8, 2025
+
+* Revise the JWT Bridge example application that automatically generates the JWT token.
+* Update Payara scripts to use Payara Micro 7.2024.1.Alpha2 with workaround.
+
 === December 19, 2024
 
 * Update Payara scripts to use Payara Micro 6.2024.12 and prepare for Payara 7.2024.1.Alpha3.
