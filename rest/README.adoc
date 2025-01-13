@@ -1,4 +1,4 @@
-= Welcome to the Jakarta Data Demo Application
+= Welcome to the Jakarta RESTful Web Services Demo Application
 
 ifndef::imagesdir[:imagesdir: src/main/webapp/images]
 
@@ -10,7 +10,7 @@ image::jakartaee-logo.png[alt=Jakarta EE Logo, width=30%, height=30%]
 
 == Example Application
 
-This project is a demonstration on how to use the https://jakarta.ee/specifications/data/[Jakarta Data] specification.
+This project is a demonstration on how to use the https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services] specification.
 
 == Build the Application
 
@@ -22,7 +22,7 @@ This will build a WAR file that may be dropped in any Jakarta EE-compliant appli
 
 These examples may be deployed using any Jakarta EE-compliant application server. For these demos, I am using https://www.payara.fish/learn/getting-started-with-payara-micro/[Payara Micro]. It may be downloaded as a JAR file and executed as follows:
 
-`$ java -jar <path>/payara-micro-<version>.jar target/data-1.0.0.war`
+`$ java -jar <path>/payara-micro-<version>.jar target/rest-1.0.0.war`
 
 Here, `<version>` is in the form of 6.2024.12 or 7.2024.1.Alpha2
 
@@ -32,7 +32,7 @@ A script, `start-payara-micro.sh` is included for your convenience. All you need
 
 Upon successful deployment, the application may be executed in the browser:
 
-http://localhost:8080/data-1.0.0[Main Application]
+http://localhost:8080/rest-1.0.0[Main Application]
 
 == Testing
 

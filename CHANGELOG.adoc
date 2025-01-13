@@ -2,6 +2,11 @@
 
 == Jakarta EE Example Applications
 
+=== January 13, 2025
+
+* Initial addition of `README.adoc` files for each specification.
+* Ensure consistency with the `microprofile-config.properties` file in each specification.
+
 === January 8, 2025
 
 * Revise the JWT Bridge example application that automatically generates the JWT token.
