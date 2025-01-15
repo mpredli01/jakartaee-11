@@ -11,46 +11,17 @@
  */
 package org.redlich.security;
 
-import java.io.IOException;
-
-import jakarta.annotation.security.DeclareRoles;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.HttpConstraint;
-import jakarta.servlet.annotation.ServletSecurity;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
 
 /**
- * Test Servlet that prints out the name of the authenticated caller and whether
- * this caller is in any of the roles {admin, audit, user}
+ * Define a container authentication mechanism that implements the HTTP basic access authentication protocol as defined by the Servlet spec (13.6.1) and make that implementation available as an enabled CDI bean.
  */
-@WebServlet("/security")
-@DeclareRoles({ "admin", "audit", "user" })
-@ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
-public class SecurityApplication extends HttpServlet {
-
+@BasicAuthenticationMechanismDefinition(realmName = "file")
+@ApplicationScoped
+@Named
+public class SecurityApplication {
     SecurityApplication() {
-        }
-
-    private static final long serialVersionUID = 1L;
-
-    /**
-     * @param request the HttpServletRequest
-     * @param response the HttpServletResponse
-     */
-    @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        String webName = null;
-        if (request.getUserPrincipal() != null) {
-            webName = request.getUserPrincipal().getName();
-            }
-        response.getWriter().write("web username: " + webName + "\n");
-
-        response.getWriter().write("web user has role \"admin\": " + request.isUserInRole("admin") + "\n");
-        response.getWriter().write("web user has role \"audit\": " + request.isUserInRole("audit") + "\n");
-        response.getWriter().write("web user has role \"user\": " + request.isUserInRole("user") + "\n");
         }
     }
