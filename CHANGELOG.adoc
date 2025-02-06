@@ -2,6 +2,10 @@
 
 == Jakarta EE Example Applications
 
+=== February 6, 2025
+
+* Update Payara scripts to use Payara Micro 7.2025.1.Alpha1
+
 === January 15, 2025
 
 * Initial implementation to improve the Jakarta Security demo application.

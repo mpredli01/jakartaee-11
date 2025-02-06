@@ -23,7 +23,7 @@
         <jnosql.version>1.1.1</jnosql.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
-        <microprofile.version>6.1</microprofile.version>
+        <microprofile.version>7.0</microprofile.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <weld.se.core.version>5.1.2.Final</weld.se.core.version>
         <smallye.config.version>3.8.2</smallye.config.version>
