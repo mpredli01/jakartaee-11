@@ -13,7 +13,8 @@ package org.redlich.nosql;
 
 import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
-import jakarta.nosql.document.DocumentTemplate;
+// import jakarta.nosql.document.DocumentTemplate;
+import jakarta.nosql.Template;
 
 import org.eclipse.jnosql.mapping.DatabaseQualifier;
 
@@ -79,7 +80,7 @@ public class BeerApp {
             // beerRepository.save(beer);
             // brewerRepository.save(brewer);
 
-            DocumentTemplate template = container.select(DocumentTemplate.class).get();
+            Template template = container.select(Template.class).get(); // DocumentTemplate
 
             /*
             Beer beer = template.insert(beer01);

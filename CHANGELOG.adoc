@@ -2,13 +2,17 @@
 
 == Jakarta EE Example Applications
 
+=== February 7, 2025
+
+* Update the Jakarta NoSQL demo application to include the new `NoSQLRepository` class from Eclipse JNoSQL and validation as needed.
+
 === February 6, 2025
 
 * Update Payara scripts to use Payara Micro 7.2025.1.Alpha1
 
 === January 15, 2025
 
-* Initial implementation to improve the Jakarta Security demo application.
+* Initial implementation for improved the Jakarta Security demo application.
 * The addition of Arquillian tests for the Jakarta Security that may be expanded to the other demos.
 
 === January 13, 2025

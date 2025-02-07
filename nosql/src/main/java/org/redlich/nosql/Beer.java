@@ -14,24 +14,32 @@ package org.redlich.nosql;
 import jakarta.nosql.Column;
 import jakarta.nosql.Id;
 import jakarta.nosql.Entity;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
 @Entity
 public class Beer {
     @Id
+    @Positive(message = "The primary key must be a non-negative integer!")
     private int id;
 
     @Column
+    @NotBlank(message = "The name of the beer is required!")
     private String name;
 
     @Column
+    @NotNull(message = "The beer type is required!")
     private BeerType type;
 
     @Column("brewer_id")
+    @NotNull(message = "The brewerId is required!")
     private int brewerId;
 
     @Column
+    @NotNull(message = "The alcohol by volume (ABV) is required!")
     private double abv;
 
     public Beer() {
