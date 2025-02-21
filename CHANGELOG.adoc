@@ -2,6 +2,10 @@
 
 == Jakarta EE Example Applications
 
+=== February 20, 2025
+
+* Spruce up Jakarta NoSQL demo application.
+
 === February 7, 2025
 
 * Update the Jakarta NoSQL demo application to include the new `NoSQLRepository` class from Eclipse JNoSQL and validation as needed.

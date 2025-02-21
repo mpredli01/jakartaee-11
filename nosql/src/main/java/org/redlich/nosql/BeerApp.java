@@ -13,7 +13,6 @@ package org.redlich.nosql;
 
 import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
-// import jakarta.nosql.document.DocumentTemplate;
 import jakarta.nosql.Template;
 
 import org.eclipse.jnosql.mapping.DatabaseQualifier;
@@ -29,13 +28,6 @@ public class BeerApp {
         displayTitle(title);
 
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-
-            final String brewerName = "Apponaug Brewing";
-            final String beerName = "Golden Boi";
-
-            // placeholders variables
-            int brewer_id = 1;
-            int beer_id = 5;
 
             BeerRepository beerRepository = container.select(BeerRepository.class)
                     .select(DatabaseQualifier.ofDocument()).get();
@@ -54,47 +46,71 @@ public class BeerApp {
             allBeers.forEach(beer -> System.out.println("[APP] " + beer));
             allBrewers.forEach(brewer -> System.out.println("[APP] " + brewer));
 
-            Beer beer = Beer.builder()
-                    .id((int)noOfBeers + 1)
-                    .name(beerName)
-                    .type(BeerType.IPA)
-                    .brewer_id(brewer_id)
-                    .abv(8.0)
-                    .build();
+            final String brewerName = "Redlich Brewing";
+            final String beerName = "Colonial IPA";
+            final String city = "Williamsburg";
+            final String state = "Virginia";
+
+            int brewerId = (int)noOfBrewers + 1;
+            int beerId = (int)noOfBeers + 1;
+            BeerType type = BeerType.IPA;
+            double abv = 10.0;
 
             Brewer brewer = Brewer.builder()
-                    .id((int)noOfBrewers + 1)
+                    .id(brewerId)
                     .name(brewerName)
-                    .city("Warwick")
-                    .state("Rhode Island")
+                    .city(city)
+                    .state(state)
                     .build();
 
+            Beer beer = Beer.builder()
+                    .id(beerId)
+                    .name(beerName)
+                    .type(type)
+                    .brewer_id(brewerId)
+                    .abv(abv)
+                    .build();
+
+            
+            brewerRepository.save(brewer);
+            beerRepository.save(beer);
+
+
+            /*/
+            // Despite being null, the conditional still moves to the else clause
             Brewer brewerTest = brewerRepository.findByName(brewerName);
-            System.out.println("!!!! " + brewerTest);
-            if(brewerTest != null)
-                System.out.println("[APP] Saving " + brewerName + " in the database" );
-                // brewerRepository.save(brewer);
+            System.out.println("[APP] brewerTest = " + brewerTest);
+            if(brewerTest != null) {
+                System.out.println("[APP] Saving " + brewerName + " in the database");
+                brewerRepository.save(brewer);
+                }
             else
                 System.out.println("[APP] This brewer already exists in the database");
 
-            // beerRepository.save(beer);
-            // brewerRepository.save(brewer);
+            Beer beerTest = beerRepository.findByName(beerName);
+            System.out.println("[APP] beerTest = " + beerTest);
+            if(beerTest != null) {
+                System.out.println("[APP] Saving " + beerName + " in the database");
+                beerRepository.save(beer);
+                }
+            else
+                System.out.println("[APP] This beer already exists in the database");
+            /*/
 
-            Template template = container.select(Template.class).get(); // DocumentTemplate
+            Template template = container.select(Template.class).get();
 
-            /*
-            Beer beer = template.insert(beer01);
-            System.out.println("Beer saved" + beer);
-             */
-            
-            // List<Beer> beerList = beerRepository.findByName("Pumking");
+            // Brewer brewer01 = template.insert(brewer);
+            // System.out.println("[APP] Saving " + brewer01 + " in the database");
+
+            // Beer beer01 = template.insert(beer);
+            // System.out.println("[APP] Saving " + beer01 + " in the database");
 
             Optional<Beer> beerOptional = template.select(Process.class)
-                    .where("id").eq(beer_id).singleResult();
+                    .where("id").eq(beerId).singleResult();
             System.out.println("[APP] Entity found (Optional): " + beerOptional);
 
             List<Beer> beered = template.<Beer>select(Beer.class)
-                    .where("id").eq(beer_id)
+                    .where("id").eq(beerId)
                     .result();
             System.out.println("[APP] Entity found: " + beered);
             }

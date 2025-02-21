@@ -41,6 +41,7 @@
         <module>jwtbridge</module>
         <module>mail</module>
         <module>nosql</module>
+        <module>persistence</module>
         <module>rest</module>
         <module>security</module>
         <module>servlet</module>
