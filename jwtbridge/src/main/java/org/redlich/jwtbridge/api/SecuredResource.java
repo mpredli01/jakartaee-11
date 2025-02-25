@@ -13,9 +13,20 @@ import io.jsonwebtoken.Claims;
 
 import java.util.List;
 
+/**
+ * <p>SecuredResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("secured")
 public class SecuredResource {
 
+    /**
+     * <p>getSecuredHello.</p>
+     *
+     * @param authHeader a {@link java.lang.String} object
+     * @return a {@link jakarta.ws.rs.core.Response} object
+     */
     @GET
     @Path("/hi-with-token")
     @Produces(MediaType.TEXT_PLAIN)
@@ -26,16 +37,22 @@ public class SecuredResource {
     public Response getSecuredHello(@HeaderParam("Authorization") String authHeader) {
         if (authHeader == null || authHeader.isEmpty()) {
             return Response.status(Response.Status.BAD_REQUEST)
-                    .entity("Include a token into the Header")
+                    .entity("This is a secure endpoint. Please include a token into the header.")
                     .build();
             }
         String token = authHeader.substring("Bearer".length()).trim();
         Claims claims = JWTUtils.decodeToken(token);
         String username = claims.getSubject();
-        return Response.ok("Hey, " + username + "! You are connected to a secured endpoint.")
+        return Response.ok("Hey, " + username + "! You are now connected to a secured endpoint.")
                 .build();
         }
 
+    /**
+     * <p>getSecuredAdmin.</p>
+     *
+     * @param authHeader a {@link java.lang.String} object
+     * @return a {@link jakarta.ws.rs.core.Response} object
+     */
     @GET
     @Path("/admin-with-token")
     @Produces(MediaType.TEXT_PLAIN)
@@ -54,7 +71,7 @@ public class SecuredResource {
                     .build();
             }
         String username = claims.getSubject();
-        return Response.ok("Hey, " + username + "! You are connected to a secured endpoint as an ADMIN user.")
+        return Response.ok("Hey, " + username + "! You are now connected to a secured endpoint as an ADMIN user.")
                 .build();
         }
     }

@@ -2,9 +2,15 @@
 
 == Jakarta EE Example Applications
 
+=== February 25, 2025
+
+* A refactor of code, filenames and endpoints to match the naming convention stated in the main `README.adoc` file.
+* The addition of the maven Javadoc plugin for all example demos.
+* Where necessary, execute `mvn javadoc:fix`.
+
 === February 24, 2025
 
-* Recheck all demo applications with Payara Micro 7.2025.1.Alpha1
+* Recheck all demo applications with Payara Micro 7.2025.1.Alpha1.
 
 === February 20, 2025
 

@@ -9,14 +9,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.rest;
+package org.redlich.nosql;
 
 /**
- * <p>RestService class.</p>
+ * <p>NoSQLService class.</p>
  *
  * @author mpredli01
  */
-public class RestService {
+public class NoSQLService {
     /**
      * <p>message.</p>
      *
@@ -24,5 +24,5 @@ public class RestService {
      */
     public String message() {
         return "Hosted on the Payara Platform and serverless Payara Cloud!";
-        }
     }
+}

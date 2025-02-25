@@ -39,7 +39,7 @@ public class BrewerResources {
      * <p>findById.</p>
      *
      * @param id a int
-     * @return a {@link org.redlich.beers.BrewerResponse} object
+     * @return a {@link org.redlich.data.BrewerResponse} object
      */
     @GET
     @Path("/{id}")
@@ -97,8 +97,8 @@ public class BrewerResources {
      * <p>add.</p>
      *
      * @param id a int
-     * @param request a {@link org.redlich.beers.BrewerRequest} object
-     * @return a {@link org.redlich.beers.BrewerResponse} object
+     * @param request a {@link org.redlich.data.BrewerRequest} object
+     * @return a {@link org.redlich.data.BrewerResponse} object
      */
     @POST
     @Path("/{id}")

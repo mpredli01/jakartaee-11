@@ -37,3 +37,9 @@ http://localhost:8080/mail-1.0.0[Main Application]
 == Testing
 
 Please stay tuned for details...
+
+== Resources
+
+* https://zetcode.com/java/mail/#google_vignette[Java Mail (Zetcode)]
+* https://www.gmass.co/blog/gmail-smtp/[Gmail SMTP Settings: Easy Step-by-Step Setup Guide (GMass)]
+* https://github.com/apache/tomee/tree/main/examples/javamail[Java Mail Example (Apache TomEE)]

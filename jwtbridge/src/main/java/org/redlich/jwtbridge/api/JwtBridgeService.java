@@ -9,13 +9,20 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.servlet;
+package org.redlich.jwtbridge;
 
-import jakarta.enterprise.context.ApplicationScoped;
-
-@ApplicationScoped
-public class HelloWorldService {
+/**
+ * <p>JwtBridgeService class.</p>
+ *
+ * @author mpredli01
+ */
+public class JwtBridgeService {
+    /**
+     * <p>message.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String message() {
         return "Hosted on the Payara Platform and serverless Payara Cloud!";
-        }
     }
+}

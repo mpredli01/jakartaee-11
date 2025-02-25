@@ -77,8 +77,8 @@ public class BrewerService {
     /**
      * <p>add.</p>
      *
-     * @param brewer a {@link org.redlich.beers.Brewer} object
-     * @return a {@link org.redlich.beers.Brewer} object
+     * @param brewer a {@link org.redlich.data.Brewer} object
+     * @return a {@link org.redlich.data.Brewer} object
      */
     public Brewer add(Brewer brewer) {
         return brewerRepository.save(brewer);

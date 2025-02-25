@@ -11,8 +11,19 @@
  */
 package org.redlich.data;
 
+/**
+ * <p>BrewerResponse class.</p>
+ *
+ * @author mpredli01
+ */
 public record BrewerResponse(int id, String name, String city, String state) {
 
+    /**
+     * <p>of.</p>
+     *
+     * @param brewer a {@link org.redlich.data.Brewer} object
+     * @return a {@link org.redlich.data.BrewerResponse} object
+     */
     static BrewerResponse of(Brewer brewer) {
         return new BrewerResponse(brewer.getId(), brewer.getName(), brewer.getCity(), brewer.getState());
         }

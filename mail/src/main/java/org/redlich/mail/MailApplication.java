@@ -15,6 +15,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.core.MediaType;
 
@@ -27,7 +28,8 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author airhacks.com
  */
-@ApplicationPath("mail")
+@ApplicationPath("/mail")
+@Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class MailApplication extends Application {
 
@@ -35,8 +37,20 @@ public class MailApplication extends Application {
     @ConfigProperty(name = "message")
     String message;
 
+    @Inject
+    MailService mailService;
+
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     public String sayHello() {
-        return this.message;
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(mailService.message());
+        return builder.toString();
         }
     }

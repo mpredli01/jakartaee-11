@@ -17,6 +17,8 @@ import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthentica
 
 /**
  * Define a container authentication mechanism that implements the HTTP basic access authentication protocol as defined by the Servlet spec (13.6.1) and make that implementation available as an enabled CDI bean.
+ *
+ * @author mpredli01
  */
 @BasicAuthenticationMechanismDefinition(realmName = "file")
 @ApplicationScoped

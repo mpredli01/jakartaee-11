@@ -20,6 +20,11 @@ import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
+/**
+ * <p>Beer class.</p>
+ *
+ * @author mpredli01
+ */
 @Entity
 public class Beer {
     @Id
@@ -42,6 +47,9 @@ public class Beer {
     @NotNull(message = "The alcohol by volume (ABV) is required!")
     private double abv;
 
+    /**
+     * <p>Constructor for Beer.</p>
+     */
     public Beer() {
         id = 0;
         name = "{ beer name }";
@@ -60,6 +68,7 @@ public class Beer {
 
     /**
      * public int getId()
+     *
      * @return id of the Beer entity.
      */
     public int getId() {
@@ -68,6 +77,7 @@ public class Beer {
 
     /**
      * public String getName()
+     *
      * @return the name of the beer.
      */
     public String getName() {
@@ -75,6 +85,7 @@ public class Beer {
         }
 
     /**
+     * <p>Getter for the field <code>type</code>.</p>
      *
      * @return the beer type.
      */
@@ -83,6 +94,7 @@ public class Beer {
         }
 
     /**
+     * <p>Getter for the field <code>brewerId</code>.</p>
      *
      * @return the value of `brewerId` from the Brewer entity.
      */
@@ -91,6 +103,7 @@ public class Beer {
         }
 
     /**
+     * <p>Getter for the field <code>abv</code>.</p>
      *
      * @return the value of `abv`.
      */
@@ -98,6 +111,7 @@ public class Beer {
         return abv;
         }
 
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "Beer { " +
@@ -109,6 +123,11 @@ public class Beer {
                 " }\n";
         }
 
+    /**
+     * <p>builder.</p>
+     *
+     * @return a {@link org.redlich.nosql.Beer.BeerBuilder} object
+     */
     public static BeerBuilder builder() {
         return new BeerBuilder();
         }

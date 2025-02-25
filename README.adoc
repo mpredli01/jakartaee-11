@@ -39,3 +39,16 @@ There is also an example of the new https://github.com/eclipse/microprofile-jwt-
 Please refer to the corresponding `README.adoc` files under each project.
 
 Corresponding documentation for each Jakarta EE specification may be found under the `spec` directory and will be automatically be generated upon executing `mvn clean package`.
+
+== Naming Conventions Used in This Repository
+
+For each demo application, there is an effort to provide a consistent set of naming conventions. While things may be slightly different in some demo applications, these are:
+
+* `<specficationName>App.java`
+* `<specificationName>Application.java`
+* `<specificationName>Resource.java`
+* `<specficationName>Service.java`
+
+The root endpoint will match the name of each folder
+
+* `http://localhost:8080/<specificationName>`

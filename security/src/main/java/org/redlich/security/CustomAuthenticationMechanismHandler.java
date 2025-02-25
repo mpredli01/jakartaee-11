@@ -16,6 +16,8 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * This HttpAuthenticationMechanismHandler overrides the default provided one and delegates
  * requests to two individual authentication mechanisms depending on the request path.
+ *
+ * @author mpredli01
  */
 @Alternative
 @Priority(APPLICATION)
@@ -28,6 +30,7 @@ public class CustomAuthenticationMechanismHandler implements HttpAuthenticationM
     @Inject
     TestAuthenticationMechanism2 authenticationMechanism2;
 
+    /** {@inheritDoc} */
     @Override
     public AuthenticationStatus validateRequest(HttpServletRequest request, HttpServletResponse response,
                                                 HttpMessageContext httpMessageContext) throws AuthenticationException {
@@ -39,6 +42,12 @@ public class CustomAuthenticationMechanismHandler implements HttpAuthenticationM
         return authenticationMechanism2.validateRequest(request, response, httpMessageContext);
         }
 
+    /**
+     * <p>getRequestRelativeURI.</p>
+     *
+     * @param request a {@link jakarta.servlet.http.HttpServletRequest} object
+     * @return a {@link java.lang.String} object
+     */
     public static String getRequestRelativeURI(HttpServletRequest request) {
         return request.getRequestURI().substring(request.getContextPath().length());
         }

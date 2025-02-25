@@ -19,11 +19,21 @@ import jakarta.mail.internet.MimeMessage;
 
 import jakarta.mail.internet.AddressException;
 
+/**
+ * <p>MailApp class.</p>
+ *
+ * @author mpredli01
+ */
 public class MailApp {
 
     MailApp() {
         }
 
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects
+     */
     public static void main(String[] args) { // throws MessagingException {
         MailApp app = new MailApp();
         String title = "[APP] Welcome to the Jakarta Mail Demo Application";
@@ -76,6 +86,11 @@ public class MailApp {
             }
         }
 
+    /**
+     * <p>displayTitle.</p>
+     *
+     * @param title a {@link java.lang.String} object
+     */
     public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");

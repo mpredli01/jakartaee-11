@@ -11,8 +11,19 @@
  */
 package org.redlich.data;
 
+/**
+ * <p>BeerRequest class.</p>
+ *
+ * @author mpredli01
+ */
 public record BeerRequest(String name, BeerType type, int brewerId, double abv) {
 
+    /**
+     * <p>createBeer.</p>
+     *
+     * @param id a int
+     * @return a {@link org.redlich.data.Beer} object
+     */
     public Beer createBeer(int id) {
         return Beer.builder()
                 .id(id)

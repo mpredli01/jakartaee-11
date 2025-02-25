@@ -18,11 +18,21 @@ import jakarta.validation.ValidatorFactory;
 
 import java.util.Set;
 
+/**
+ * <p>ValidationApp class.</p>
+ *
+ * @author mpredli01
+ */
 public class ValidationApp {
 
     ValidationApp() {
         }
 
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects
+     */
     public static void main(String[] args) {
         ValidationApp app = new ValidationApp();
         String title = "[APP] Welcome to the Jakarta Validation Demo Application";
@@ -41,6 +51,11 @@ public class ValidationApp {
             }
         }
 
+    /**
+     * <p>displayTitle.</p>
+     *
+     * @param title a {@link java.lang.String} object
+     */
     public void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");

@@ -11,7 +11,17 @@
  */
 package org.redlich.mail;
 
+/**
+ * <p>MailService class.</p>
+ *
+ * @author mpredli01
+ */
 public class MailService {
+    /**
+     * <p>message.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String message() {
         return "Hosted on the Payara Platform and serverless Payara Cloud!";
         }

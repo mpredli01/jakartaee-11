@@ -18,11 +18,14 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
 
-public record UserRecord(@NotNull(message = "'name' must not be null") String name,
-                         @AssertTrue boolean working,
-                         @Size(min = 10, max = 200, message = "'aboutMe' must be between 10 and 200 characters") String aboutMe,
-                         @Min(value = 18, message = "'age' should not be less than 18") @Max(value = 150, message = "'age' should not be greater than 150") int age,
-                         @Email(message = "'email' is not in a valid format") String email) {
+/**
+ * <p>UserRecord class.</p>
+ *
+ * @author mpredli01
+ */
+public record UserRecord(@NotNull(message = "'name' must not be null") String name, @AssertTrue boolean working, @Size(min = 10, max = 200, message = "'aboutMe' must be between 10 and 200 characters") String aboutMe, @Min(value = 18, message = "'age' should not be less than 18") @Max(value = 150, message = "'age' should not be greater than 150") int age, @Email(message = "'email' is not in a valid format") String email) {
+
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "UserRecord{ " +
@@ -32,6 +35,5 @@ public record UserRecord(@NotNull(message = "'name' must not be null") String na
                 ", age=" + age() +
                 ", email='" + email() + '\'' +
                 " }";
+        }
     }
-
-}

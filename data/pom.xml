@@ -20,6 +20,7 @@
 
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <jakarta.nosql.version>1.0.0-b7</jakarta.nosql.version>
         <!-- It was necessary to downgrade to JNoSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
         <!-- <jnosql.version>1.1.1-SNAPSHOT</jnosql.version> -->
@@ -130,6 +131,19 @@
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

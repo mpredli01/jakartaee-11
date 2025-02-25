@@ -33,6 +33,11 @@ import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 
+/**
+ * <p>TaskEJB class.</p>
+ *
+ * @author mpredli01
+ */
 @Startup
 @Singleton
 @LocalBean
@@ -56,12 +61,18 @@ public class TaskEJB {
     @Inject
     private Event<String> events;
 
+    /**
+     * <p>init.</p>
+     */
     @PostConstruct
     public void init() {
         periodicTasks = new HashMap<>();
         infoField = "";
         }
 
+    /**
+     * <p>destroy.</p>
+     */
     @PreDestroy
     public void destroy() {
         /* Cancel periodic tasks */
@@ -72,6 +83,12 @@ public class TaskEJB {
         sExecService.shutdownNow();
         }
 
+    /**
+     * <p>submitTask.</p>
+     *
+     * @param task a {@link org.redlich.concurrency.Task} object
+     * @param type a {@link java.lang.String} object
+     */
     public void submitTask(Task task, String type) {
         /* Use the managed executor objects from the app server
          * to schedule the tasks */
@@ -91,6 +108,11 @@ public class TaskEJB {
             }
         }
 
+    /**
+     * <p>cancelPeriodicTask.</p>
+     *
+     * @param name a {@link java.lang.String} object
+     */
     public void cancelPeriodicTask(String name) {
         /* Cancel a periodic task */
         if (periodicTasks.containsKey(name)) {
@@ -102,6 +124,11 @@ public class TaskEJB {
             }
         }
 
+    /**
+     * <p>addToInfoField.</p>
+     *
+     * @param msg a {@link java.lang.String} object
+     */
     @POST
     @Consumes("text/html")
     /* The tasks post updates to this JAX-RS endpoint */
@@ -114,15 +141,28 @@ public class TaskEJB {
         }
 
     /* Provide the execution log for the client's pages */
+    /**
+     * <p>Getter for the field <code>infoField</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getInfoField() {
         return infoField;
         }
 
+    /**
+     * <p>clearInfoField.</p>
+     */
     public void clearInfoField() {
         infoField = "";
         }
 
     /* Provide the list of running tasks */
+    /**
+     * <p>Getter for the field <code>periodicTasks</code>.</p>
+     *
+     * @return a {@link java.util.Set} object
+     */
     public Set<String> getPeriodicTasks() {
         return periodicTasks.keySet();
         }

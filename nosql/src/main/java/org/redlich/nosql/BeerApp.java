@@ -21,7 +21,17 @@ import java.util.List;
 import java.util.stream.Stream;
 import java.util.Optional;
 
+/**
+ * <p>BeerApp class.</p>
+ *
+ * @author mpredli01
+ */
 public class BeerApp {
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects
+     */
     public static void main(String[] args) {
 
         String title = "[APP] Welcome to the Jakarta NoSQL Demo Application";
@@ -116,6 +126,11 @@ public class BeerApp {
             }
         }
 
+    /**
+     * <p>displayTitle.</p>
+     *
+     * @param title a {@link java.lang.String} object
+     */
     public static void displayTitle(String title) {
         int length = title.length();
         System.out.print("[APP] ");

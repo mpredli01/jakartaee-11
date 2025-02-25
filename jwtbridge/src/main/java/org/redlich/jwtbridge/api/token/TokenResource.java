@@ -12,12 +12,23 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+/**
+ * <p>TokenResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("/token")
 public class TokenResource {
 
     @Inject
     UserFacade userFacade;
 
+    /**
+     * <p>generateToken.</p>
+     *
+     * @param request a {@link org.redlich.jwtbridge.api.token.TokenRequest} object
+     * @return a {@link jakarta.ws.rs.core.Response} object
+     */
     @POST
     @Path("/generate")
     @Produces(MediaType.APPLICATION_JSON)

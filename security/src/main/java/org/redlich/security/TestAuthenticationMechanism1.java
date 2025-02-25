@@ -14,12 +14,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import static jakarta.security.enterprise.identitystore.CredentialValidationResult.Status.VALID;
 
+/**
+ * <p>TestAuthenticationMechanism1 class.</p>
+ *
+ * @author mpredli01
+ */
 @ApplicationScoped
 public class TestAuthenticationMechanism1 implements HttpAuthenticationMechanism {
 
     @Inject
     private IdentityStoreHandler identityStoreHandler;
 
+    /** {@inheritDoc} */
     @Override
     public AuthenticationStatus validateRequest(HttpServletRequest request, HttpServletResponse response, HttpMessageContext httpMessageContext) throws AuthenticationException {
 

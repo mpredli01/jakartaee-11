@@ -9,14 +9,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.rest;
+package org.redlich.servlet;
+
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
- * <p>RestService class.</p>
+ * <p>ServletService class.</p>
  *
  * @author mpredli01
  */
-public class RestService {
+@ApplicationScoped
+public class ServletService {
     /**
      * <p>message.</p>
      *

@@ -29,6 +29,8 @@ import java.lang.annotation.Target;
 /**
  * Annotation used to define a JSON Web Token (JWT) authentication mechanism.
  * JWT authentication mechanism can verify JWT bearer access tokens which are sent with HTTP Authorization or other headers.
+ *
+ * @author mpredli01
  */
 @Target({TYPE, METHOD})
 @Retention(RUNTIME)

@@ -9,6 +9,11 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/**
+ * <p>JWTUtils class.</p>
+ *
+ * @author mpredli01
+ */
 public class JWTUtils {
     private static final String SECRET_KEY;
 
@@ -21,6 +26,13 @@ public class JWTUtils {
 
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24;
 
+    /**
+     * <p>generateToken.</p>
+     *
+     * @param username a {@link java.lang.String} object
+     * @param roles a {@link java.util.List} object
+     * @return a {@link java.lang.String} object
+     */
     public static String generateToken(String username, List<String> roles) {
         return Jwts.builder()
                 .setSubject(username)
@@ -31,6 +43,12 @@ public class JWTUtils {
                 .compact();
         }
 
+    /**
+     * <p>decodeToken.</p>
+     *
+     * @param token a {@link java.lang.String} object
+     * @return a {@link io.jsonwebtoken.Claims} object
+     */
     public static Claims decodeToken(String token) {
         return Jwts.parser()
                 .setSigningKey(SECRET_KEY)

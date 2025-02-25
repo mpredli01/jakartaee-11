@@ -16,6 +16,7 @@ import java.io.IOException;
  * Test Servlet that prints out the name of the authenticated caller and whether
  * this caller is in any of the roles {foo, bar, kaz}
  *
+ * @author mpredli01
  */
 @WebServlet("/protectedServlet1")
 @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
@@ -27,6 +28,7 @@ public class ProtectedServlet1 extends HttpServlet {
     @Inject
     private SecurityContext securityContext;
 
+    /** {@inheritDoc} */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

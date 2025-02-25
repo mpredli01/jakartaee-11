@@ -26,7 +26,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  * @author mpredli01
  * @version $Id: $Id
  */
-@ApplicationPath("/db")
+@ApplicationPath("/data")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class DataApplication extends Application {
@@ -40,6 +40,9 @@ public class DataApplication extends Application {
     @ConfigProperty(name = "message")
     String message;
 
+    @Inject
+    DataService dataService;
+
     /**
      * <p>sayHello.</p>
      *
@@ -47,6 +50,11 @@ public class DataApplication extends Application {
      */
     @GET
     public String sayHello() {
-        return this.message;
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(dataService.message());
+        return builder.toString();
+
         }
     }

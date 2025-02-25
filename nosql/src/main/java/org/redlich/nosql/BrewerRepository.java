@@ -19,10 +19,26 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
+/**
+ * <p>BrewerRepository interface.</p>
+ *
+ * @author mpredli01
+ */
 @Repository
 public interface BrewerRepository extends NoSQLRepository<Brewer, String> { // PageableRepository
 
+    /**
+     * <p>findAll.</p>
+     *
+     * @return a {@link java.util.stream.Stream} object
+     */
     Stream<Brewer> findAll();
+    /**
+     * <p>findByName.</p>
+     *
+     * @param name a {@link java.lang.String} object
+     * @return a {@link org.redlich.nosql.Brewer} object
+     */
     Brewer findByName(String name);
 
     }

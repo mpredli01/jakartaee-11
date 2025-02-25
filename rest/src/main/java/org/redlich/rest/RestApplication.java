@@ -16,6 +16,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Application;
 
 import jakarta.ws.rs.core.MediaType;
@@ -30,7 +31,8 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  * @author airhacks.com
  */
 @ApplicationScoped
-@ApplicationPath("rest")
+@ApplicationPath("/rest")
+@Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class RestApplication extends Application {
 
@@ -38,8 +40,20 @@ public class RestApplication extends Application {
     @ConfigProperty(name = "message")
     String message;
 
+    @Inject
+    RestService restService;
+
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     public String sayHello() {
-        return this.message;
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(restService.message());
+        return builder.toString();
         }
     }

@@ -47,3 +47,7 @@ An example `curl` command is as follows:
 == Testing
 
 Please stay tuned for details...
+
+== Resources
+
+https://github.com/luiseufrasio[Luís Neto GitHub]

@@ -25,6 +25,8 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Test Servlet that prints out the name of the authenticated caller and whether
  * this caller is in any of the roles {admin, audit, user}
+ *
+ * @author mpredli01
  */
 @WebServlet("/security")
 @DeclareRoles({ "admin", "audit", "user" })
@@ -36,10 +38,7 @@ public class SingleSecurityServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @param request the HttpServletRequest
-     * @param response the HttpServletResponse
-     */
+    /** {@inheritDoc} */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

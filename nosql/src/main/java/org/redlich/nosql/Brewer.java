@@ -18,6 +18,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
+/**
+ * <p>Brewer class.</p>
+ *
+ * @author mpredli01
+ */
 @Entity
 public class Brewer {
     @Id
@@ -36,6 +41,9 @@ public class Brewer {
     @NotNull(message = "The state where the brewer resides is required!")
     private String state;
 
+    /**
+     * <p>Constructor for Brewer.</p>
+     */
     public Brewer() {
         this.id = 0;
         this.name = "{ brewer name }";
@@ -50,22 +58,43 @@ public class Brewer {
         this.state = state;
         }
 
+    /**
+     * <p>Getter for the field <code>id</code>.</p>
+     *
+     * @return a int
+     */
     public int getId() {
         return id;
         }
 
+    /**
+     * <p>Getter for the field <code>name</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getName() {
         return name;
         }
 
+    /**
+     * <p>Getter for the field <code>city</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getCity() {
         return city;
         }
 
+    /**
+     * <p>Getter for the field <code>state</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getState() {
         return state;
         }
 
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "Brewer { " +
@@ -76,6 +105,11 @@ public class Brewer {
                 " }\n";
         }
 
+    /**
+     * <p>builder.</p>
+     *
+     * @return a {@link org.redlich.nosql.Brewer.BrewerBuilder} object
+     */
     public static BrewerBuilder builder() {
         return new BrewerBuilder();
         }

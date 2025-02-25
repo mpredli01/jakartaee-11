@@ -67,8 +67,8 @@ public interface BrewerRepository extends DataRepository<Brewer, Integer> {
     /**
      * <p>save.</p>
      *
-     * @param brewer a {@link org.redlich.beers.Brewer} object
-     * @return a {@link org.redlich.beers.Brewer} object
+     * @param brewer a {@link org.redlich.data.Brewer} object
+     * @return a {@link org.redlich.data.Brewer} object
      */
     @Save
     Brewer save(@Valid Brewer brewer);
@@ -76,7 +76,7 @@ public interface BrewerRepository extends DataRepository<Brewer, Integer> {
     /**
      * <p>remove.</p>
      *
-     * @param brewer a {@link org.redlich.beers.Brewer} object
+     * @param brewer a {@link org.redlich.data.Brewer} object
      */
     @Delete
     void remove(Brewer brewer);

@@ -11,6 +11,11 @@
  */
 package org.redlich.nosql;
 
+/**
+ * <p>BeerType class.</p>
+ *
+ * @author mpredli01
+ */
 public enum BeerType {
     ALE,
     STOUT,

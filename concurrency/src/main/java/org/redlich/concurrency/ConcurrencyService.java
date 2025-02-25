@@ -9,14 +9,17 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
-package org.redlich.rest;
+package org.redlich.concurrency;
+
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
- * <p>RestService class.</p>
+ * <p>ConcurrencyService class.</p>
  *
  * @author mpredli01
  */
-public class RestService {
+@ApplicationScoped
+public class ConcurrencyService {
     /**
      * <p>message.</p>
      *

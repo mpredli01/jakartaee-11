@@ -26,6 +26,8 @@ import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition
 
 /**
  * An implementation of the IdentityStore interface to add user `Mike` and define the roles.
+ *
+ * @author mpredli01
  */
 @ApplicationScoped
 @InMemoryIdentityStoreDefinition({

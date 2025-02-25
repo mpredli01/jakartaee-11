@@ -32,6 +32,11 @@ import java.util.Properties;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+/**
+ * <p>MailResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("mail")
 public class MailResource {
 
@@ -58,6 +63,11 @@ public class MailResource {
     @Inject
     MailService service;
 
+    /**
+     * <p>mail.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String mail() {
@@ -69,7 +79,7 @@ public class MailResource {
         // final String to = this.to;
         // final String from = this.from;
         // final String username = "mpredli@gmail.com";
-        // final String password = "Okt0b3r24@";
+        // final String password = "<password>";
 
         final String host = "smtp.gmail.com";
         final int port = 587;
@@ -84,8 +94,8 @@ public class MailResource {
         Authenticator auth = new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
-            }
-        };
+                }
+            };
 
         builder.append(auth);
         builder.append("\n");

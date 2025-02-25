@@ -7,13 +7,23 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+/**
+ * <p>UnsecuredResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("unsecured")
 public class UnsecuredResource {
 
+    /**
+     * <p>getUnsecuredHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     @Path("/hi-without-token")
     @Produces(MediaType.TEXT_PLAIN)
     public String getUnsecuredHello() {
-        return "Hey! This is an unsecured endpoint.";
+        return "Hey! This is an unsecured endpoint!";
         }
     }

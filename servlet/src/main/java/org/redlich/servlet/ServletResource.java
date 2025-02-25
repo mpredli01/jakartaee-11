@@ -19,34 +19,42 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+/**
+ * <p>ServletResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("hello")
-public class HelloWorldResource {
+public class ServletResource {
 
     @Inject
     @ConfigProperty(name = "message")
     String message;
 
     @Inject
-    HelloWorldService service;
+    ServletService servletService;
 
+    /**
+     * <p>hello.</p>
+     *
+     * @param name a {@link java.lang.String} object
+     * @return a {@link java.lang.String} object
+     */
     @GET
     @Produces({ MediaType.APPLICATION_JSON })
     public String hello(@QueryParam("name") String name) {
-        HelloWorld hello = new HelloWorld();
-        if((name == null) || name.trim().isEmpty())  {
-            hello.setName("World");
-            }
-        else {
-            hello.setName(name);
-            }
         StringBuilder builder = new StringBuilder();
         builder.append(this.message);
         builder.append("\n\n");
-        builder.append("Hello, " + hello.getName() + "!");
-        builder.append("\n");
-        builder.append(service.message());
-        builder.append("\n");
-
+        // builder.append("Hello, " + hello.getName() + "!");
+        if((name == null) || name.trim().isEmpty()) {
+            builder.append("Hello, World!");
+            }
+        else {
+            builder.append("Hello, " + name + "!");
+        }
+        builder.append("\n\n");
+        builder.append(servletService.message());
         return builder.toString();
         }
     }
