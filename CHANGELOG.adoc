@@ -2,11 +2,16 @@
 
 == Jakarta EE Example Applications
 
+=== February 26, 2025
+
+* Finish fixing Javadoc errors in the Jakarta Data example application.
+* Update the Jakarta Security example application to match the naming convention for endpoints and filenames.
+
 === February 25, 2025
 
 * A refactor of code, filenames and endpoints to match the naming convention stated in the main `README.adoc` file.
-* The addition of the maven Javadoc plugin for all example demos.
-* Where necessary, execute `mvn javadoc:fix`.
+* The addition of the maven Javadoc plugin for all example applications.
+* Execute `mvn javadoc:fix` for all example applications.
 
 === February 24, 2025
 
@@ -42,7 +47,7 @@
 === December 19, 2024
 
 * Update Payara scripts to use Payara Micro 6.2024.12 and prepare for Payara 7.2024.1.Alpha3.
-* Remove command-line applications for example demos only displayed a greeting.
+* Remove command-line applications for example applications only displayed a greeting.
 
 === December 3, 2024
 

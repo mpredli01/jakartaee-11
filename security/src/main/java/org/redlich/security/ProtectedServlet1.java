@@ -10,7 +10,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
 import java.io.IOException;
+import java.io.Serial;
 
 /**
  * Test Servlet that prints out the name of the authenticated caller and whether
@@ -23,7 +26,15 @@ import java.io.IOException;
 @DeclareRoles({"bar", "kaz"})
 public class ProtectedServlet1 extends HttpServlet {
 
+    @Serial
     private static final long serialVersionUID = 1L;
+
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
+    @Inject
+    SecurityService securityService;
 
     @Inject
     private SecurityContext securityContext;
@@ -32,30 +43,26 @@ public class ProtectedServlet1 extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.getWriter().write("This is a servlet \n");
-
         String webName = null;
         if (request.getUserPrincipal() != null) {
             webName = request.getUserPrincipal().getName();
             }
-
-        response.getWriter().write("web username: " + webName + "\n");
-
-        response.getWriter().write("web user has role \"foo\": " + request.isUserInRole("foo") + "\n");
-        response.getWriter().write("web user has role \"bar\": " + request.isUserInRole("bar") + "\n");
-        response.getWriter().write("web user has role \"kaz\": " + request.isUserInRole("kaz") + "\n");
+        response.getWriter().write(message + "\n\n");
+        response.getWriter().write("Web username: " + webName + "\n");
+        response.getWriter().write("* user has role \"foo\": " + request.isUserInRole("foo") + "\n");
+        response.getWriter().write("* user has role \"bar\": " + request.isUserInRole("bar") + "\n");
+        response.getWriter().write("* user has role \"kaz\": " + request.isUserInRole("kaz") + "\n\n");
 
         String contextName = null;
         if (securityContext.getCallerPrincipal() != null) {
             contextName = securityContext.getCallerPrincipal().getName();
             }
 
-        response.getWriter().write("context username: " + contextName + "\n");
-
-        response.getWriter().write("context user has role \"foo\": " + securityContext.isCallerInRole("foo") + "\n");
-        response.getWriter().write("context user has role \"bar\": " + securityContext.isCallerInRole("bar") + "\n");
-        response.getWriter().write("context user has role \"kaz\": " + securityContext.isCallerInRole("kaz") + "\n");
-
-        response.getWriter().write("has access " + securityContext.hasAccessToWebResource("/servlets"));
+        response.getWriter().write("Context username: " + contextName + "\n");
+        response.getWriter().write("* user has role \"foo\": " + securityContext.isCallerInRole("foo") + "\n");
+        response.getWriter().write("* context user has role \"bar\": " + securityContext.isCallerInRole("bar") + "\n");
+        response.getWriter().write("* context user has role \"kaz\": " + securityContext.isCallerInRole("kaz") + "\n");
+        response.getWriter().write("* user has has access to web resource: " + securityContext.hasAccessToWebResource("/servlets") + "\n\n");
+        response.getWriter().write(securityService.message());
         }
     }

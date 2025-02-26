@@ -21,7 +21,7 @@ public record BeerRequest(String name, BeerType type, int brewerId, double abv) 
     /**
      * <p>createBeer.</p>
      *
-     * @param id a int
+     * @param id - the id
      * @return a {@link org.redlich.data.Beer} object
      */
     public Beer createBeer(int id) {

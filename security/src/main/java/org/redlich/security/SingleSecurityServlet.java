@@ -14,6 +14,7 @@ package org.redlich.security;
 import java.io.IOException;
 
 import jakarta.annotation.security.DeclareRoles;
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HttpConstraint;
 import jakarta.servlet.annotation.ServletSecurity;
@@ -21,6 +22,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Test Servlet that prints out the name of the authenticated caller and whether
@@ -28,10 +30,17 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author mpredli01
  */
-@WebServlet("/security")
+@WebServlet("/singleSecurityServlet")
 @DeclareRoles({ "admin", "audit", "user" })
 @ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
 public class SingleSecurityServlet extends HttpServlet {
+
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
+    @Inject
+    SecurityService securityService;
 
     SingleSecurityServlet() {
         }
@@ -46,10 +55,11 @@ public class SingleSecurityServlet extends HttpServlet {
         if (request.getUserPrincipal() != null) {
             webName = request.getUserPrincipal().getName();
             }
-        response.getWriter().write("web username: " + webName + "\n");
-
-        response.getWriter().write("web user has role \"admin\": " + request.isUserInRole("admin") + "\n");
-        response.getWriter().write("web user has role \"audit\": " + request.isUserInRole("audit") + "\n");
-        response.getWriter().write("web user has role \"user\": " + request.isUserInRole("user") + "\n");
+        response.getWriter().write(message + "\n\n");
+        response.getWriter().write("Web username: " + webName + "\n");
+        response.getWriter().write("* user has role \"admin\": " + request.isUserInRole("admin") + "\n");
+        response.getWriter().write("* user has role \"audit\": " + request.isUserInRole("audit") + "\n");
+        response.getWriter().write("* user has role \"user\": " + request.isUserInRole("user") + "\n\n");
+        response.getWriter().write(securityService.message());
         }
     }

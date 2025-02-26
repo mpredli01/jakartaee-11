@@ -37,7 +37,7 @@ public class BrewerService {
     /**
      * <p>findById.</p>
      *
-     * @param id a int
+     * @param id the id of the breewer in the database
      * @return a {@link java.util.Optional} object
      */
     public Optional<Brewer> findById(int id) {
@@ -87,7 +87,7 @@ public class BrewerService {
     /**
      * <p>remove.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      */
     public void remove(int id) {
         brewerRepository.findById(id)

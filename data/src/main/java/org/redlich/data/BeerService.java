@@ -37,7 +37,7 @@ public class BeerService {
     /**
      * <p>findById.</p>
      *
-     * @param id a int
+     * @param id the id
      * @return a {@link java.util.Optional} object
      */
     public Optional<Beer> findById(int id) {
@@ -83,8 +83,8 @@ public class BeerService {
     /**
      * <p>add.</p>
      *
-     * @param beer a {@link org.redlich.beers.Beer} object
-     * @return a {@link org.redlich.beers.Beer} object
+     * @param beer a {@link org.redlich.data.Beer} object
+     * @return a {@link org.redlich.data.Beer} object
      */
     public Beer add(Beer beer) {
         return beerRepository.save(beer);
@@ -93,7 +93,7 @@ public class BeerService {
     /**
      * <p>remove.</p>
      *
-     * @param id a int
+     * @param id the id
      */
     public void remove(int id) {
         beerRepository.findById(id)

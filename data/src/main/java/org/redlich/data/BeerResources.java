@@ -45,7 +45,7 @@ public class BeerResources {
     /**
      * <p>findById.</p>
      *
-     * @param id a int
+     * @param id - the id
      * @return a {@link org.redlich.data.BeerResponse} object
      */
     @GET
@@ -100,7 +100,7 @@ public class BeerResources {
     /**
      * <p>add.</p>
      *
-     * @param id a int
+     * @param id the id
      * @param request a {@link org.redlich.data.BeerRequest} object
      * @return a {@link org.redlich.data.BeerResponse} object
      */
@@ -113,7 +113,7 @@ public class BeerResources {
     /**
      * <p>remove.</p>
      *
-     * @param id a int
+     * @param id the id
      */
     @DELETE
     @Path("/{id}")

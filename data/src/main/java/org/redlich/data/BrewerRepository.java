@@ -42,7 +42,7 @@ public interface BrewerRepository extends DataRepository<Brewer, Integer> {
     /**
      * <p>findById.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      * @return a {@link java.util.Optional} object
      */
     Optional<Brewer> findById(int id);

@@ -64,7 +64,7 @@ public class Brewer {
     /**
      * <p>Getter for the field <code>id</code>.</p>
      *
-     * @return a int
+     * @return the id of the brewer in the database
      */
     public int getId() {
         return id;
@@ -129,7 +129,7 @@ public class Brewer {
     /**
      * <p>builder.</p>
      *
-     * @return a {@link org.redlich.beers.Brewer.BrewerBuilder} object
+     * @return a {@link org.redlich.data.Brewer.BrewerBuilder} object
      */
     public static BrewerBuilder builder() {
         return new BrewerBuilder();

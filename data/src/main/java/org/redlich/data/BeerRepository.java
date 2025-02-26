@@ -70,8 +70,8 @@ public interface BeerRepository extends DataRepository<Beer, Integer> {
     /**
      * <p>save.</p>
      *
-     * @param beer a {@link org.redlich.beers.Beer} object
-     * @return a {@link org.redlich.beers.Beer} object
+     * @param beer a {@link org.redlich.data.Beer} object
+     * @return a {@link org.redlich.data.Beer} object
      */
     @Save
     Beer save(@Valid Beer beer);
@@ -79,7 +79,7 @@ public interface BeerRepository extends DataRepository<Beer, Integer> {
     /**
      * <p>remove.</p>
      *
-     * @param beer a {@link org.redlich.beers.Beer} object
+     * @param beer a {@link org.redlich.data.Beer} object
      */
     @Delete
     void remove(Beer beer);

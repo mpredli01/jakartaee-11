@@ -11,19 +11,44 @@
  */
 package org.redlich.security;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Named;
-import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Define a container authentication mechanism that implements the HTTP basic access authentication protocol as defined by the Servlet spec (13.6.1) and make that implementation available as an enabled CDI bean.
  *
  * @author mpredli01
  */
-@BasicAuthenticationMechanismDefinition(realmName = "file")
-@ApplicationScoped
-@Named
-public class SecurityApplication {
-    SecurityApplication() {
+
+@ApplicationPath("/security")
+@Path("")
+@Produces(MediaType.APPLICATION_JSON)
+public class SecurityApplication extends Application {
+
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
+    @Inject
+    SecurityService securityService;
+
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
+    @GET
+    public String sayHello() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(securityService.message());
+        return builder.toString();
         }
     }

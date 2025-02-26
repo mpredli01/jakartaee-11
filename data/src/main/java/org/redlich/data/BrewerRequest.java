@@ -21,7 +21,7 @@ public record BrewerRequest(String name, String city, String state) {
     /**
      * <p>createBrewer.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      * @return a {@link org.redlich.data.Brewer} object
      */
     public Brewer createBrewer(int id) {

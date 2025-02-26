@@ -38,7 +38,7 @@ public class BrewerResources {
     /**
      * <p>findById.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      * @return a {@link org.redlich.data.BrewerResponse} object
      */
     @GET
@@ -96,7 +96,7 @@ public class BrewerResources {
     /**
      * <p>add.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      * @param request a {@link org.redlich.data.BrewerRequest} object
      * @return a {@link org.redlich.data.BrewerResponse} object
      */
@@ -110,7 +110,7 @@ public class BrewerResources {
     /**
      * <p>remove.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      */
     @Path("/{id}")
     @DELETE
