@@ -29,13 +29,22 @@ public class ProtectedServlet1 extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Inject the configuration property, message, from the microprofile-config.properties file.
+     */
     @Inject
     @ConfigProperty(name = "message")
     String message;
 
+    /**
+     * Inject an instance of {@link SecurityService} class.
+     */
     @Inject
     SecurityService securityService;
 
+    /**
+     * Inject an instance of the {@link SecurityContext} interface.
+     */
     @Inject
     private SecurityContext securityContext;
 

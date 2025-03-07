@@ -189,6 +189,7 @@ public class Beer {
 
         /**
          * Returns the primary key in the Beer database collection.
+         *
          * @param id - the primary key
          * @return id
          */
@@ -199,6 +200,7 @@ public class Beer {
 
         /**
          * Returns the name of the beer.
+         *
          * @param name - the name of the beer.
          * @return - the name of the beer.
          */
@@ -208,7 +210,8 @@ public class Beer {
             }
 
         /**
-         * Returns the beer typ, i.e., ale, stout, etc.
+         * Returns the beer type, i.e., ale, stout, etc.
+         *
          * @param type - beer type
          * @return BeerBuilder
          */
@@ -218,6 +221,7 @@ public class Beer {
             }
 
         /**
+         * Returns the brewerId of the brewer.
          *
          * @param brewerId - the brewerId
          * @return BeerBuilder
@@ -228,6 +232,7 @@ public class Beer {
             }
 
         /**
+         *
          * Returns the alcohol by volume.
          * @param abv - the alcohol by volume value
          * @return BeerBuilder

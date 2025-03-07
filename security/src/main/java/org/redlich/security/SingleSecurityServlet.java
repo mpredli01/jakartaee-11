@@ -35,10 +35,16 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
 public class SingleSecurityServlet extends HttpServlet {
 
+    /**
+     * Inject the configuration property, message, from the microprofile-config.properties file.
+     */
     @Inject
     @ConfigProperty(name = "message")
     String message;
 
+    /**
+     * Inject an instance of {@link SecurityService} class.
+     */
     @Inject
     SecurityService securityService;
 

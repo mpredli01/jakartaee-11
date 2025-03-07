@@ -2,6 +2,11 @@
 
 == Jakarta EE Example Applications
 
+=== March 7, 2025
+
+* Continue clean up of JavaDoc warnings.
+* Add glassfish.properties file in the Jakarta Validation example application for future use.
+
 === February 26, 2025
 
 * Finish fixing Javadoc errors in the Jakarta Data example application.

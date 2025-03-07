@@ -14,6 +14,10 @@ package org.redlich.data;
 /**
  * <p>BeerRequest class.</p>
  *
+ * @param name the name of the beer.
+ * @param type the beer type.
+ * @param brewerId the brewerId of the beer.
+ * @param abv the ABV of the beer.
  * @author mpredli01
  */
 public record BeerRequest(String name, BeerType type, int brewerId, double abv) {
@@ -21,7 +25,7 @@ public record BeerRequest(String name, BeerType type, int brewerId, double abv) 
     /**
      * <p>createBeer.</p>
      *
-     * @param id - the id
+     * @param id the primary key.
      * @return a {@link org.redlich.data.Beer} object
      */
     public Beer createBeer(int id) {

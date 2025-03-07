@@ -18,17 +18,56 @@ package org.redlich.data;
  * @version $Id: $Id
  */
 public enum BeerType {
+    /**
+     * An ale style beer.
+     */
     ALE,
+    /**
+     * A stout style ber.
+     */
     STOUT,
+    /**
+     * A porter style beer.
+     */
     PORTER,
+    /**
+     * An India Pale Ale (IPA) style beer.
+     */
     IPA,
+    /**
+     * An American Pale Ale (APA) style beer.
+     */
     APA,
+    /**
+     * A lager style beer.
+     */
     LAGER,
+    /**
+     * A gose style beer.
+     */
     GOSE,
+    /**
+     * A saison style beer.
+     */
     SAISON,
+    /**
+     * A lambic style beer.
+     */
     LAMBIC,
+    /**
+     * A kölsch style beer
+     */
     KOLSCH,
+    /**
+     * A pilsner style beer.
+     */
     PILSNER,
+    /**
+     * A märzen style beer.
+     */
     MARZEN,
+    /**
+     * An Extra Special Bitter (ESB) style beer.
+     */
     ESB
     }
