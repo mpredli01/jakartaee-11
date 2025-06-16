@@ -2,3 +2,4 @@
 /persistence
 .idea
 *.iml
+start-payara-micro-with-workaround.sh
