@@ -48,6 +48,9 @@ public class SingleSecurityServlet extends HttpServlet {
     @Inject
     SecurityService securityService;
 
+    /**
+     * <p>Default constructor.</p>
+     */
     SingleSecurityServlet() {
         }
 

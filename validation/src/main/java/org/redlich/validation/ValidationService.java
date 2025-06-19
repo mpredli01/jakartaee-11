@@ -17,6 +17,13 @@ package org.redlich.validation;
  * @author mpredli01
  */
 public class ValidationService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ValidationService() {
+        }
+
     /**
      * <p>message.</p>
      *

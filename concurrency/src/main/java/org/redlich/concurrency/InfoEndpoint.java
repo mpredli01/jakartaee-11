@@ -39,6 +39,12 @@ public class InfoEndpoint {
     private static final Queue<Session> sessions = new ConcurrentLinkedQueue<>();
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public InfoEndpoint() {
+        }
+
+    /**
      * <p>onOpen.</p>
      *
      * @param session a {@link jakarta.websocket.Session} object

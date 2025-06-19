@@ -22,6 +22,12 @@ import java.util.List;
 public class SecuredResource {
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public SecuredResource() {
+    }
+
+    /**
      * <p>getSecuredHello.</p>
      *
      * @param authHeader a {@link java.lang.String} object

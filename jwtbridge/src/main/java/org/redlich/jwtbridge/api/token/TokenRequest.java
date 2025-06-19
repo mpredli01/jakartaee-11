@@ -10,6 +10,12 @@ public class TokenRequest {
     private String password;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public TokenRequest() {
+        }
+
+    /**
      * <p>Getter for the field <code>username</code>.</p>
      *
      * @return a {@link java.lang.String} object

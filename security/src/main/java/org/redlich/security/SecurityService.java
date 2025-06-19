@@ -17,6 +17,13 @@ package org.redlich.security;
  * @author mpredli01
  */
 public class SecurityService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public SecurityService() {
+        }
+
     /**
      * <p>message.</p>
      *

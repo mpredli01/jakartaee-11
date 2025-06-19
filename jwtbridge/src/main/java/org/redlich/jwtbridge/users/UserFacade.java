@@ -23,6 +23,12 @@ public class UserFacade {
         }
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public UserFacade() {
+        }
+
+    /**
      * <p>getUser.</p>
      *
      * @param userName a {@link java.lang.String} object

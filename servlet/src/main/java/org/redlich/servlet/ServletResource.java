@@ -35,6 +35,12 @@ public class ServletResource {
     ServletService servletService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public ServletResource() {
+        }
+
+    /**
      * <p>hello.</p>
      *
      * @param name a {@link java.lang.String} object

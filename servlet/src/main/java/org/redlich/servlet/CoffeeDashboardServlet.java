@@ -49,6 +49,12 @@ public class CoffeeDashboardServlet extends HttpServlet {
        """);
     }
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public CoffeeDashboardServlet() {
+        }
+
     /** {@inheritDoc} */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

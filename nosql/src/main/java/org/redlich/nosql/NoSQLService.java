@@ -17,6 +17,13 @@ package org.redlich.nosql;
  * @author mpredli01
  */
 public class NoSQLService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public NoSQLService() {
+        }
+
     /**
      * <p>message.</p>
      *

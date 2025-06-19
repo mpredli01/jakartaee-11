@@ -25,6 +25,12 @@ public class TestAuthenticationMechanism2 implements HttpAuthenticationMechanism
     @Inject
     private IdentityStoreHandler identityStoreHandler;
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public TestAuthenticationMechanism2() {
+        }
+
     /** {@inheritDoc} */
     @Override
     public AuthenticationStatus validateRequest(HttpServletRequest request, HttpServletResponse response, HttpMessageContext httpMessageContext) throws AuthenticationException {

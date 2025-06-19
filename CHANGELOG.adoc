@@ -2,6 +2,10 @@
 
 == Jakarta EE Example Applications
 
+=== June 19, 2025
+
+* Address all JavaDoc warnings.
+
 === June 16, 2025
 
 * Cleanup all Payara scripts by removing the workaround from an earlier Payara 7 alpha release.

@@ -28,6 +28,12 @@ public class JwtBridgeApplication extends Application {
     JwtBridgeService jwtBridgeService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public JwtBridgeApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

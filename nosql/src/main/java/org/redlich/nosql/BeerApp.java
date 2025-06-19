@@ -27,6 +27,13 @@ import java.util.Optional;
  * @author mpredli01
  */
 public class BeerApp {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public BeerApp() {
+        }
+
     /**
      * <p>main.</p>
      *

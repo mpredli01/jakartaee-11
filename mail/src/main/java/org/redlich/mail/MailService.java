@@ -17,6 +17,13 @@ package org.redlich.mail;
  * @author mpredli01
  */
 public class MailService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public MailService() {
+        }
+
     /**
      * <p>message.</p>
      *

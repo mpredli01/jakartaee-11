@@ -36,6 +36,12 @@ public class BrewerResources {
     BrewerService brewerService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public BrewerResources() {
+        }
+
+    /**
      * <p>findById.</p>
      *
      * @param id the id of the brewer in the database

@@ -18,6 +18,13 @@ import jakarta.ws.rs.ext.Provider;
 @Provider
 @ApplicationScoped
 public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ConstraintViolationExceptionMapper() {
+        }
+
     /** {@inheritDoc} */
     @Override
     public Response toResponse(ConstraintViolationException e) {

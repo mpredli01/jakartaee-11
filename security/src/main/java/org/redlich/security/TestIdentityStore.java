@@ -19,6 +19,12 @@ import jakarta.security.enterprise.identitystore.IdentityStore;
 public class TestIdentityStore implements IdentityStore {
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public TestIdentityStore() {
+        }
+
+    /**
      * <p>validate.</p>
      *
      * @param usernamePasswordCredential a {@link jakarta.security.enterprise.credential.UsernamePasswordCredential} object

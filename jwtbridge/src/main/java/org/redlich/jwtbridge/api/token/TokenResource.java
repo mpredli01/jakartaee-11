@@ -24,6 +24,12 @@ public class TokenResource {
     UserFacade userFacade;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public TokenResource() {
+        }
+
+    /**
      * <p>generateToken.</p>
      *
      * @param request a {@link org.redlich.jwtbridge.api.token.TokenRequest} object
@@ -66,7 +72,14 @@ public class TokenResource {
         return false;
         }
 
+    /**
+     * <p>UnauthorizedException class.</p>
+     */
     public static class UnauthorizedException extends RuntimeException {
+        /**
+         * <p>UnauthorizedException.</p>
+         * @param message the message to display.
+         */
         public UnauthorizedException(String message) {
             super(message);
             }

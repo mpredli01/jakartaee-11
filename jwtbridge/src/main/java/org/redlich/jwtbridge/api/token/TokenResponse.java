@@ -9,6 +9,12 @@ public class TokenResponse {
     private String token;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public TokenResponse() {
+        }
+
+    /**
      * <p>Getter for the field <code>token</code>.</p>
      *
      * @return a {@link java.lang.String} object

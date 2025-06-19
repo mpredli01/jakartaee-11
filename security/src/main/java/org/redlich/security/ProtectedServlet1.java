@@ -48,6 +48,12 @@ public class ProtectedServlet1 extends HttpServlet {
     @Inject
     private SecurityContext securityContext;
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ProtectedServlet1() {
+        }
+
     /** {@inheritDoc} */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

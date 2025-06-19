@@ -19,11 +19,11 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <jakartaee.version>11.0.0-RC1</jakartaee.version>
-        <jnosql.version>1.1.1</jnosql.version>
+        <jakartaee.version>11.0.0</jakartaee.version>
+        <jnosql.version>1.1.0</jnosql.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
-        <microprofile.version>7.0</microprofile.version>
+        <microprofile.version>7.1</microprofile.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <weld.se.core.version>5.1.2.Final</weld.se.core.version>
         <smallye.config.version>3.8.2</smallye.config.version>
@@ -41,7 +41,7 @@
         <module>jwtbridge</module>
         <module>mail</module>
         <module>nosql</module>
-        <module>persistence</module>
+        <!-- <module>persistence</module> -->
         <module>rest</module>
         <module>security</module>
         <module>servlet</module>

@@ -20,6 +20,13 @@ import jakarta.enterprise.context.ApplicationScoped;
  */
 @ApplicationScoped
 public class ServletService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ServletService() {
+        }
+
     /**
      * <p>message.</p>
      *

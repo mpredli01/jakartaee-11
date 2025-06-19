@@ -41,6 +41,12 @@ public class ValidationApplication extends Application {
     ValidationService validationService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public ValidationApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

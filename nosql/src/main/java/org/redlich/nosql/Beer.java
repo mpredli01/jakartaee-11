@@ -48,7 +48,7 @@ public class Beer {
     private double abv;
 
     /**
-     * <p>Constructor for Beer.</p>
+     * <p>Default constructor that creates an instance of {@link Beer}.</p>
      */
     public Beer() {
         id = 0;
@@ -58,6 +58,14 @@ public class Beer {
         abv = 10.0;
         }
 
+    /**
+     * <p>Primary constructor that creates and instance of {@link Beer}.</p>
+     * @param id the primary key in the Beer collection.
+     * @param name the name of the beer.
+     * @param type the type of beer.
+     * @param brewerId the brewerId corresponding to the {@link Brewer}.
+     * @param abv the alcohol-by-volume measurement of the beer
+     */
     private Beer(int id, String name, BeerType type, int brewerId, double abv) {
         this.id = id;
         this.name = name;
@@ -132,6 +140,9 @@ public class Beer {
         return new BeerBuilder();
         }
 
+    /**
+     * <p>BeerBuilder class.</p>
+     */
     public static class BeerBuilder {
         private int id;
         private String name;
@@ -139,36 +150,71 @@ public class Beer {
         private int brewer_id;
         private double abv;
 
+        /**
+         * <p>Default constructor.</p>
+         */
         private BeerBuilder() {
             }
 
+        /**
+         * <p>id.</p>
+         *
+         * @param id the primary key in the Beer collection.
+         * @return {@link BeerBuilder}.
+         */
         public BeerBuilder id(int id) {
             this.id = id;
             return this;
             }
 
+        /**
+         * <p>name</p>
+         * @param name the name of the {@link Beer}.
+         * @return {@link BeerBuilder}.
+         */
         public BeerBuilder name(String name) {
             this.name = name;
             return this;
             }
 
+        /**
+         * <p>type.</p>
+         *
+         * @param type the beer type.
+         * @return {@link BeerBuilder}.
+         */
         public BeerBuilder type(BeerType type) {
             this.type = type;
             return this;
             }
 
+        /**
+         * <p>brewer_id.</p>
+         *
+         * @param brewer_id the brewerId from the {@link Brewer}
+         * @return {@link BeerBuilder}.
+         */
         public BeerBuilder brewer_id(int brewer_id) {
             this.brewer_id = brewer_id;
             return this;
             }
 
+        /**
+         * <p>abv.</p>
+         * @param abv the alcohol-by-volume measurement of the beer.
+         * @return {@link BeerBuilder}.
+         */
         public BeerBuilder abv(double abv) {
             this.abv = abv;
             return this;
             }
 
+        /**
+         * <p>build.</p>
+         * @return {@link Beer}.
+         */
         public Beer build() {
             return new Beer(id, name, type, brewer_id, abv);
-        }
+            }
         }
     }

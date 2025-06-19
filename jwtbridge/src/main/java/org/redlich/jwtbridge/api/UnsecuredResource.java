@@ -16,6 +16,12 @@ import jakarta.ws.rs.core.Response;
 public class UnsecuredResource {
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public UnsecuredResource() {
+        }
+
+    /**
      * <p>getUnsecuredHello.</p>
      *
      * @return a {@link java.lang.String} object

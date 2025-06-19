@@ -19,7 +19,13 @@ import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
 
 /**
- * <p>UserRecord class.</p>
+ * <p>UserRecord record.</p>
+ *
+ * @param name - the user's name.
+ * @param working - the users' work status.
+ * @param aboutMe - the user's profile.
+ * @param age - the user's age.
+ * @param email - the user's email address.
  *
  * @author mpredli01
  */

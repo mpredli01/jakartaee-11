@@ -32,6 +32,12 @@ import java.util.Properties;
 public class EmailService {
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public EmailService() {
+        }
+
+    /**
      * <p>main.</p>
      *
      * @param args an array of {@link java.lang.String} objects

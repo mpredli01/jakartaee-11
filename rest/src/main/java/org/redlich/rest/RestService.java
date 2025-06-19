@@ -17,6 +17,13 @@ package org.redlich.rest;
  * @author mpredli01
  */
 public class RestService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public RestService() {
+        }
+
     /**
      * <p>message.</p>
      *

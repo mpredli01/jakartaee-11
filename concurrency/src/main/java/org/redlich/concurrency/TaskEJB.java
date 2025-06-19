@@ -55,11 +55,19 @@ public class TaskEJB {
 
     /* Keep track of periodic tasks so we can kill them later */
     private Map<String, ScheduledFuture<?>> periodicTasks;
+
     /* Keep the log (textarea content) for all clients in this EJB */
     private String infoField;
+
     /* Fire CDI events for the WebSocket endpoint */
     @Inject
     private Event<String> events;
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public TaskEJB() {
+        }
 
     /**
      * <p>init.</p>

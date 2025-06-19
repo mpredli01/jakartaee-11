@@ -28,7 +28,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author mpredli01
  */
-@ApplicationPath("/concurrency")
+@ApplicationPath("concurrency")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class ConcurrencyApplication extends Application {
@@ -39,6 +39,12 @@ public class ConcurrencyApplication extends Application {
 
     @Inject
     ConcurrencyService concurrencyService;
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ConcurrencyApplication() {
+        }
 
     /**
      * <p>sayHello.</p>

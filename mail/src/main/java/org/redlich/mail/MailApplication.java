@@ -41,6 +41,12 @@ public class MailApplication extends Application {
     MailService mailService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public MailApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

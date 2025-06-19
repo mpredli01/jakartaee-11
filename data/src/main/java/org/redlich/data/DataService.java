@@ -17,6 +17,13 @@ package org.redlich.data;
  * @author mpredli01
  */
 public class DataService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public DataService() {
+        }
+
     /**
      * <p>message.</p>
      *

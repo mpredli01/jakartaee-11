@@ -29,6 +29,13 @@ import java.io.PrintWriter;
  */
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public HelloWorldServlet() {
+        }
+
     /** {@inheritDoc} */
     @Override
     @Produces(MediaType.APPLICATION_JSON)

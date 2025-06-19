@@ -44,6 +44,12 @@ public class DataApplication extends Application {
     DataService dataService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public DataApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

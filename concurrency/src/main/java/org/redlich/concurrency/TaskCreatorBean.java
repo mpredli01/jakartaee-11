@@ -32,12 +32,30 @@ public class TaskCreatorBean implements Serializable {
     private static final long serialVersionUID = 7393500655950989708L;
     private static final Logger log = Logger.getLogger("TaskCreatorBean");
 
+    /**
+     * <p>taskEJB.</p>
+     */
     @EJB
     TaskEJB taskEJB;
 
+    /**
+     * <p>taskMessages.</p>
+     */
     private String taskMessages;
+
+    /**
+     * <p>taskType.</p>
+     */
     private String taskType;
+
+    /**
+     * <p>taskName.</p>
+     */
     private String taskName;
+
+    /**
+     * <p>periodicTask.</p>
+     */
     private String periodicTask;
 
     /**

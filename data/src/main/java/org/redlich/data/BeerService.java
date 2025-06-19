@@ -35,6 +35,12 @@ public class BeerService {
     BrewerRepository brewerRepository;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public BeerService() {
+        }
+
+    /**
      * <p>findById.</p>
      *
      * @param id the id

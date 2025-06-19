@@ -44,6 +44,12 @@ public class RestApplication extends Application {
     RestService restService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public RestApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

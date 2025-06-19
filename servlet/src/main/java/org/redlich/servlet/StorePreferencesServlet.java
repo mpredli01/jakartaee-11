@@ -28,6 +28,12 @@ import java.io.IOException;
 @WebServlet("/storePreferences")
 public class StorePreferencesServlet extends HttpServlet {
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public StorePreferencesServlet() {
+        }
+
     /** {@inheritDoc} */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

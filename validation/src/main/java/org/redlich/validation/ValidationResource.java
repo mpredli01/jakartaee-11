@@ -42,6 +42,12 @@ public class ValidationResource {
     ValidationService validationService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public ValidationResource() {
+        }
+
+    /**
      * <p>validate.</p>
      *
      * @return a {@link java.lang.String} object

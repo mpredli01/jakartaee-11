@@ -39,6 +39,13 @@ public class NoSQLApplication extends Application {
     NoSQLService noSQLService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public NoSQLApplication() {
+        }
+
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

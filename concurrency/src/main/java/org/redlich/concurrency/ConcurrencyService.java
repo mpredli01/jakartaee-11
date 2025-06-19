@@ -20,6 +20,13 @@ import jakarta.enterprise.context.ApplicationScoped;
  */
 @ApplicationScoped
 public class ConcurrencyService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ConcurrencyService() {
+        }
+
     /**
      * <p>message.</p>
      *

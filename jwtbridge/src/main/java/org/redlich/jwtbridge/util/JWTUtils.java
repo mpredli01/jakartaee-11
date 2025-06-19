@@ -27,6 +27,12 @@ public class JWTUtils {
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 24;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public JWTUtils() {
+        }
+        
+    /**
      * <p>generateToken.</p>
      *
      * @param username a {@link java.lang.String} object

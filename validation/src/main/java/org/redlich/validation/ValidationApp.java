@@ -25,6 +25,9 @@ import java.util.Set;
  */
 public class ValidationApp {
 
+    /**
+     * <p>Default constructor.</p>
+     */
     ValidationApp() {
         }
 

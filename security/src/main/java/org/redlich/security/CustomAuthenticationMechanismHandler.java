@@ -30,6 +30,12 @@ public class CustomAuthenticationMechanismHandler implements HttpAuthenticationM
     @Inject
     TestAuthenticationMechanism2 authenticationMechanism2;
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public CustomAuthenticationMechanismHandler() {
+        }
+
     /** {@inheritDoc} */
     @Override
     public AuthenticationStatus validateRequest(HttpServletRequest request, HttpServletResponse response,

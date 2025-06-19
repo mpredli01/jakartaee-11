@@ -43,6 +43,12 @@ public class RestResource {
     UriInfo uriInfo;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public RestResource() {
+        }
+
+    /**
      * <p>rest.</p>
      *
      * @return a {@link java.lang.String} object

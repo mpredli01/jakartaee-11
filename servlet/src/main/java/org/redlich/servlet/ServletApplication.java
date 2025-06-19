@@ -41,6 +41,12 @@ public class ServletApplication extends Application {
     ServletService servletService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public ServletApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

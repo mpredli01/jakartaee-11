@@ -17,6 +17,13 @@ package org.redlich.jwtbridge;
  * @author mpredli01
  */
 public class JwtBridgeService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public JwtBridgeService() {
+        }
+
     /**
      * <p>message.</p>
      *

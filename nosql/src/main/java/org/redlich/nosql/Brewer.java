@@ -114,35 +114,66 @@ public class Brewer {
         return new BrewerBuilder();
         }
 
+    /**
+     * <p>BrewerBuilder class.</p>
+     */
     public static class BrewerBuilder {
         private int id;
         private String name;
         private String city;
         private String state;
 
+        /**
+         * <p>Default constructor.</p>
+         */
         private BrewerBuilder() {
             }
 
+        /**
+         * <p>id.</p>
+         * @param id the primary key of the brewer collection.
+         * @return {@link BrewerBuilder}
+         */
         public BrewerBuilder id(int id) {
             this.id = id;
             return this;
             }
 
+        /**
+         * <p>name.</p>
+         * @param name the name of the brewer.
+         * @return {@link BrewerBuilder}
+         */
         public BrewerBuilder name(String name) {
             this.name = name;
             return this;
             }
 
+        /**
+         * <p>city.</p>
+         * @param city the city in which the brewer resides.
+         * @return {@link BrewerBuilder}
+         */
         public BrewerBuilder city(String city) {
             this.city = city;
             return this;
             }
 
+        /**
+         * <p>state.</p>
+         *
+         * @param state the state in which the brewer resides.
+         * @return {@link BrewerBuilder}
+         */
         public BrewerBuilder state(String state) {
             this.state = state;
             return this;
             }
 
+        /**
+         * <p>build.</p>
+         * @return {@link Brewer}
+         */
         public Brewer build() {
             return new Brewer(id, name, city, state);
             }

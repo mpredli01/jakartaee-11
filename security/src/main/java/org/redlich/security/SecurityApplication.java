@@ -39,6 +39,12 @@ public class SecurityApplication extends Application {
     SecurityService securityService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public SecurityApplication() {
+        }
+
+    /**
      * <p>sayHello.</p>
      *
      * @return a {@link java.lang.String} object

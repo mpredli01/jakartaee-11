@@ -135,6 +135,12 @@ public class Brewer {
         return new BrewerBuilder();
         }
 
+    /**
+     * <p>BrewerBuilder class.</p>
+     *
+     * @author mpredli01
+     * @version $Id: $Id
+     */
     public static class BrewerBuilder {
         private int id;
         private String name;

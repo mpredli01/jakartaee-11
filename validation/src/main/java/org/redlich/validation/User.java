@@ -25,6 +25,14 @@ import jakarta.validation.constraints.Email;
  */
 public class User {
 
+    /**
+     *
+     * @param name - the user's name.
+     * @param working - the users' work status.
+     * @param aboutMe - the user's profile.
+     * @param age - the user's age.
+     * @param email - the user's email address.
+     */
     User(String name, boolean working, String aboutMe, int age, String email) {
         setName(name);
         setWorking(true);

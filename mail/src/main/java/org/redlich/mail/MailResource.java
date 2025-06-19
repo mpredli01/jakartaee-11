@@ -64,6 +64,12 @@ public class MailResource {
     MailService service;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public MailResource() {
+        }
+
+    /**
      * <p>mail.</p>
      *
      * @return a {@link java.lang.String} object

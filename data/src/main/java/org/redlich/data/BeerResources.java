@@ -43,6 +43,12 @@ public class BeerResources {
     BeerService beerService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public BeerResources() {
+        }
+
+    /**
      * <p>findById.</p>
      *
      * @param id - the id

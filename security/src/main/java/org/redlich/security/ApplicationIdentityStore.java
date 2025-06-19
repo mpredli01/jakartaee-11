@@ -36,14 +36,18 @@ import jakarta.security.enterprise.identitystore.InMemoryIdentityStoreDefinition
         })
 public class ApplicationIdentityStore implements IdentityStore {
 
-    ApplicationIdentityStore() {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ApplicationIdentityStore() {
         }
 
     /**
      * A method to validate the username.
      *
-     * @param usernamePasswordCredential an instance of UsernamePasswordCredential
-     * @return CredentialValidationResult
+     * @param usernamePasswordCredential an instance of <code>UsernamePasswordCredential</code>.
+     * @return <code>CredentialValidationResult</code>
      */
     public CredentialValidationResult validate(UsernamePasswordCredential usernamePasswordCredential) {
 
