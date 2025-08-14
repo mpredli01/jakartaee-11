@@ -2,6 +2,11 @@
 
 == Jakarta EE Example Applications
 
+=== August 14, 2025
+
+* Update `README.adoc` file
+* Test Jakarta Data example application with Payara Micro 7.2025.1.Alpha4
+
 === June 19, 2025
 
 * Address all JavaDoc warnings.
