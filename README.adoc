@@ -6,6 +6,7 @@ This repository complements the presentations, https://redlich.net/pdf/portfolio
 
 **Getting Started with Jakarta EE 11 and What's New in Jakarta EE 12** has been presented at these conferences and webinars:
 
+* Dublin Java Users Group, September 25, 2025
 * https://www.youtube.com/watch?v=deGvcfwIefo&pp=ygURamFrYXJ0YSB0ZWNoIHRhbGs%3D[Jakarta Tech Talk], June 25, 2025
 * https://www.youtube.com/watch?v=CT_yrYaQoKI[SouJava 30Y #Celebration Week (Day One)], June 16, 2025
 

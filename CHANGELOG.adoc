@@ -2,14 +2,18 @@
 
 == Jakarta EE Example Applications
 
+=== September 26, 2025
+
+* Update README.adoc to add presentation at https://www.dubjug.org/[Dublin Java Users Group]
+
 === September 4, 2025
 
-* Test Jakarta EE 11 demo applications with Payara Micro 7.2025.1.Beta1
+* Test Jakarta EE 11 demo applications with Payara Micro 7.2025.1.Beta1.
 
 === August 14, 2025
 
 * Update `README.adoc` file
-* Test Jakarta Data example application with Payara Micro 7.2025.1.Alpha4
+* Test Jakarta Data example application with Payara Micro 7.2025.1.Alpha4.
 
 === June 19, 2025
 

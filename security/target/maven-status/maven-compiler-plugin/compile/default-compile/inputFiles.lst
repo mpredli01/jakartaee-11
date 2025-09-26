@@ -1,0 +1,10 @@
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/ProtectedServlet1.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/SecurityApplication.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/TestIdentityStore.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/TestAuthenticationMechanism1.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/CustomAuthenticationMechanismHandler.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/SecurityService.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/SingleSecurityServlet.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/ApplicationIdentityStore.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/TestAuthenticationMechanism2.java
+/usr/local/portfolio/jakartaee-11/security/src/main/java/org/redlich/security/ProtectedServlet2.java

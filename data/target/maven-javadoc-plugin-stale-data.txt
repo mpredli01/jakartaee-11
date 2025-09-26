@@ -1,0 +1,123 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'/Users/mpredli01/.m2/repository/org/eclipse/jnosql/databases/jnosql-mongodb/1.1.0/jnosql-mongodb-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-document/1.1.0/jnosql-communication-document-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-core/1.1.0/jnosql-communication-core-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-query/1.1.0/jnosql-communication-query-1.1.0.jar:/Users/mpredli01/.m2/repository/org/antlr/antlr4-runtime/4.12.0/antlr4-runtime-4.12.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-document/1.1.0/jnosql-mapping-document-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-core/1.1.0/jnosql-mapping-core-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-api-core/1.1.0/jnosql-mapping-api-core-1.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-reflection/1.1.0/jnosql-mapping-reflection-1.1.0.jar:/Users/mpredli01/.m2/repository/io/github/classgraph/classgraph/4.8.165/classgraph-4.8.165.jar:/Users/mpredli01/.m2/repository/jakarta/nosql/nosql-document/1.0.0-b7/nosql-document-1.0.0-b7.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/databases/jnosql-database-commons/1.1.0/jnosql-database-commons-1.1.0.jar:/Users/mpredli01/.m2/repository/org/mongodb/mongodb-driver-sync/4.11.1/mongodb-driver-sync-4.11.1.jar:/Users/mpredli01/.m2/repository/org/mongodb/bson/4.11.1/bson-4.11.1.jar:/Users/mpredli01/.m2/repository/org/mongodb/mongodb-driver-core/4.11.1/mongodb-driver-core-4.11.1.jar:/Users/mpredli01/.m2/repository/jakarta/nosql/nosql-core/1.0.0-b7/nosql-core-1.0.0-b7.jar:/Users/mpredli01/.m2/repository/jakarta/data/jakarta.data-api/1.0.0-M2/jakarta.data-api-1.0.0-M2.jar:/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-validation/1.1.0/jnosql-mapping-validation-1.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/json/bind/jakarta.json.bind-api/3.0.0/jakarta.json.bind-api-3.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/json/jakarta.json-api/2.1.0/jakarta.json-api-2.1.0.jar:/Users/mpredli01/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/mpredli01/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.1.0/jakarta.interceptor-api-2.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.0.1/jakarta.enterprise.cdi-api-4.0.1.jar:/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.0.1/jakarta.enterprise.lang-model-4.0.1.jar:/Users/mpredli01/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.0/jakarta.annotation-api-2.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/mpredli01/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/mpredli01/.m2/repository/jakarta/el/jakarta.el-api/5.0.0/jakarta.el-api-5.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-api/11.0.0/jakarta.jakartaee-api-11.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-core-api/11.0.0/jakarta.jakartaee-core-api-11.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/4.0.0/jakarta.ws.rs-api-4.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/mpredli01/.m2/repository/jakarta/mail/jakarta.mail-api/2.1.3/jakarta.mail-api-2.1.3.jar:/Users/mpredli01/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/authorization/jakarta.authorization-api/3.0.0/jakarta.authorization-api-3.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/batch/jakarta.batch-api/2.1.1/jakarta.batch-api-2.1.1.jar:/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-web-api/11.0.0/jakarta.jakartaee-web-api-11.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/servlet/jsp/jakarta.servlet.jsp-api/4.0.0/jakarta.servlet.jsp-api-4.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-el-api/4.1.0/jakarta.enterprise.cdi-el-api-4.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/3.0.2/jakarta.servlet.jsp.jstl-api-3.0.2.jar:/Users/mpredli01/.m2/repository/jakarta/faces/jakarta.faces-api/4.1.2/jakarta.faces-api-4.1.2.jar:/Users/mpredli01/.m2/repository/jakarta/websocket/jakarta.websocket-api/2.2.0/jakarta.websocket-api-2.2.0.jar:/Users/mpredli01/.m2/repository/jakarta/websocket/jakarta.websocket-client-api/2.2.0/jakarta.websocket-client-api-2.2.0.jar:/Users/mpredli01/.m2/repository/jakarta/ejb/jakarta.ejb-api/4.0.1/jakarta.ejb-api-4.0.1.jar:/Users/mpredli01/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/mpredli01/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/Users/mpredli01/.m2/repository/jakarta/authentication/jakarta.authentication-api/3.1.0/jakarta.authentication-api-3.1.0.jar:/Users/mpredli01/.m2/repository/jakarta/security/enterprise/jakarta.security.enterprise-api/4.0.0/jakarta.security.enterprise-api-4.0.0.jar:/Users/mpredli01/.m2/repository/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.1.1/jakarta.enterprise.concurrent-api-3.1.1.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/microprofile/7.1/microprofile-7.1.pom:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/fault-tolerance/microprofile-fault-tolerance-api/4.1/microprofile-fault-tolerance-api-4.1.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/health/microprofile-health-api/4.0.1/microprofile-health-api-4.0.1.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/metrics/microprofile-metrics-api/5.1.0/microprofile-metrics-api-5.1.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/jwt/microprofile-jwt-auth-api/2.1/microprofile-jwt-auth-api-2.1.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/openapi/microprofile-openapi-api/4.1/microprofile-openapi-api-4.1.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/rest/client/microprofile-rest-client-api/4.0/microprofile-rest-client-api-4.0.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/telemetry/microprofile-telemetry-api/2.1/microprofile-telemetry-api-2.1.pom:/Users/mpredli01/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/Users/mpredli01/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/Users/mpredli01/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations/2.14.0/opentelemetry-instrumentation-annotations-2.14.0.jar:/Users/mpredli01/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.32.0/opentelemetry-semconv-1.32.0.jar:/Users/mpredli01/.m2/repository/org/jboss/weld/se/weld-se-shaded/5.1.2.Final/weld-se-shaded-5.1.2.Final.jar:/Users/mpredli01/.m2/repository/io/smallrye/config/smallrye-config-core/3.8.2/smallrye-config-core-3.8.2.jar:/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-annotation/2.4.0/smallrye-common-annotation-2.4.0.jar:/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-expression/2.4.0/smallrye-common-expression-2.4.0.jar:/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-function/2.4.0/smallrye-common-function-2.4.0.jar:/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-constraint/2.4.0/smallrye-common-constraint-2.4.0.jar:/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-classloader/2.4.0/smallrye-common-classloader-2.4.0.jar:/Users/mpredli01/.m2/repository/org/ow2/asm/asm/9.7/asm-9.7.jar:/Users/mpredli01/.m2/repository/io/smallrye/config/smallrye-config-common/3.8.2/smallrye-config-common-3.8.2.jar:/Users/mpredli01/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.1/microprofile-config-api-3.1.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+-sourcepath
+'/usr/local/portfolio/jakartaee-11/data/src/main/java:/usr/local/portfolio/jakartaee-11/data/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Jakarta Data Specification Demo 1.0.0 API'
+-use
+-version
+-windowtitle
+'Jakarta Data Specification Demo 1.0.0 API'
+org.redlich.data
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/databases/jnosql-mongodb/1.1.0/jnosql-mongodb-1.1.0.jar = 1707680425000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-document/1.1.0/jnosql-communication-document-1.1.0.jar = 1707158099000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-core/1.1.0/jnosql-communication-core-1.1.0.jar = 1707158098000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/communication/jnosql-communication-query/1.1.0/jnosql-communication-query-1.1.0.jar = 1707158097000
+/Users/mpredli01/.m2/repository/org/antlr/antlr4-runtime/4.12.0/antlr4-runtime-4.12.0.jar = 1676839292000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-document/1.1.0/jnosql-mapping-document-1.1.0.jar = 1707158106000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-core/1.1.0/jnosql-mapping-core-1.1.0.jar = 1707158094000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-api-core/1.1.0/jnosql-mapping-api-core-1.1.0.jar = 1707158104000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-reflection/1.1.0/jnosql-mapping-reflection-1.1.0.jar = 1707158103000
+/Users/mpredli01/.m2/repository/io/github/classgraph/classgraph/4.8.165/classgraph-4.8.165.jar = 1700153793000
+/Users/mpredli01/.m2/repository/jakarta/nosql/nosql-document/1.0.0-b7/nosql-document-1.0.0-b7.jar = 1687424682000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/databases/jnosql-database-commons/1.1.0/jnosql-database-commons-1.1.0.jar = 1707680426000
+/Users/mpredli01/.m2/repository/org/mongodb/mongodb-driver-sync/4.11.1/mongodb-driver-sync-4.11.1.jar = 1699465238000
+/Users/mpredli01/.m2/repository/org/mongodb/bson/4.11.1/bson-4.11.1.jar = 1699465081000
+/Users/mpredli01/.m2/repository/org/mongodb/mongodb-driver-core/4.11.1/mongodb-driver-core-4.11.1.jar = 1699465177000
+/Users/mpredli01/.m2/repository/jakarta/nosql/nosql-core/1.0.0-b7/nosql-core-1.0.0-b7.jar = 1687424681000
+/Users/mpredli01/.m2/repository/jakarta/data/jakarta.data-api/1.0.0-M2/jakarta.data-api-1.0.0-M2.jar = 1701203173000
+/Users/mpredli01/.m2/repository/org/eclipse/jnosql/mapping/jnosql-mapping-validation/1.1.0/jnosql-mapping-validation-1.1.0.jar = 1707201616000
+/Users/mpredli01/.m2/repository/jakarta/json/bind/jakarta.json.bind-api/3.0.0/jakarta.json.bind-api-3.0.0.jar = 1716387131665
+/Users/mpredli01/.m2/repository/jakarta/json/jakarta.json-api/2.1.0/jakarta.json-api-2.1.0.jar = 1716387131714
+/Users/mpredli01/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar = 1688603676000
+/Users/mpredli01/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.1.0/jakarta.interceptor-api-2.1.0.jar = 1643175355000
+/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.0.1/jakarta.enterprise.cdi-api-4.0.1.jar = 1652885430000
+/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.0.1/jakarta.enterprise.lang-model-4.0.1.jar = 1652885429000
+/Users/mpredli01/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.0/jakarta.annotation-api-2.1.0.jar = 1638357337000
+/Users/mpredli01/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar = 1716387131054
+/Users/mpredli01/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar = 1653588099000
+/Users/mpredli01/.m2/repository/jakarta/el/jakarta.el-api/5.0.0/jakarta.el-api-5.0.0.jar = 1645783394000
+/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-api/11.0.0/jakarta.jakartaee-api-11.0.0.jar = 1748536140000
+/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-core-api/11.0.0/jakarta.jakartaee-core-api-11.0.0.jar = 1729919840000
+/Users/mpredli01/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/4.0.0/jakarta.ws.rs-api-4.0.0.jar = 1712068403000
+/Users/mpredli01/.m2/repository/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.jar = 1716387131152
+/Users/mpredli01/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar = 1716387131127
+/Users/mpredli01/.m2/repository/jakarta/mail/jakarta.mail-api/2.1.3/jakarta.mail-api-2.1.3.jar = 1716387131225
+/Users/mpredli01/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar = 1716387131709
+/Users/mpredli01/.m2/repository/jakarta/authorization/jakarta.authorization-api/3.0.0/jakarta.authorization-api-3.0.0.jar = 1712340652000
+/Users/mpredli01/.m2/repository/jakarta/batch/jakarta.batch-api/2.1.1/jakarta.batch-api-2.1.1.jar = 1716387131221
+/Users/mpredli01/.m2/repository/jakarta/platform/jakarta.jakartaee-web-api/11.0.0/jakarta.jakartaee-web-api-11.0.0.jar = 1741750784000
+/Users/mpredli01/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar = 1716572121000
+/Users/mpredli01/.m2/repository/jakarta/servlet/jsp/jakarta.servlet.jsp-api/4.0.0/jakarta.servlet.jsp-api-4.0.0.jar = 1715246121000
+/Users/mpredli01/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-el-api/4.1.0/jakarta.enterprise.cdi-el-api-4.1.0.jar = 1716387131359
+/Users/mpredli01/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/3.0.2/jakarta.servlet.jsp.jstl-api-3.0.2.jar = 1724345551000
+/Users/mpredli01/.m2/repository/jakarta/faces/jakarta.faces-api/4.1.2/jakarta.faces-api-4.1.2.jar = 1730878124000
+/Users/mpredli01/.m2/repository/jakarta/websocket/jakarta.websocket-api/2.2.0/jakarta.websocket-api-2.2.0.jar = 1711631348000
+/Users/mpredli01/.m2/repository/jakarta/websocket/jakarta.websocket-client-api/2.2.0/jakarta.websocket-client-api-2.2.0.jar = 1711631348000
+/Users/mpredli01/.m2/repository/jakarta/ejb/jakarta.ejb-api/4.0.1/jakarta.ejb-api-4.0.1.jar = 1716387131436
+/Users/mpredli01/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar = 1716387131430
+/Users/mpredli01/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar = 1712739547000
+/Users/mpredli01/.m2/repository/jakarta/authentication/jakarta.authentication-api/3.1.0/jakarta.authentication-api-3.1.0.jar = 1714669804000
+/Users/mpredli01/.m2/repository/jakarta/security/enterprise/jakarta.security.enterprise-api/4.0.0/jakarta.security.enterprise-api-4.0.0.jar = 1715257448000
+/Users/mpredli01/.m2/repository/jakarta/enterprise/concurrent/jakarta.enterprise.concurrent-api/3.1.1/jakarta.enterprise.concurrent-api-3.1.1.jar = 1718135029000
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/microprofile/7.1/microprofile-7.1.pom = 1744399528000
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/fault-tolerance/microprofile-fault-tolerance-api/4.1/microprofile-fault-tolerance-api-4.1.jar = 1722528386000
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/health/microprofile-health-api/4.0.1/microprofile-health-api-4.0.1.jar = 1716387131561
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/metrics/microprofile-metrics-api/5.1.0/microprofile-metrics-api-5.1.0.jar = 1716387131582
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/jwt/microprofile-jwt-auth-api/2.1/microprofile-jwt-auth-api-2.1.jar = 1716387131605
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/openapi/microprofile-openapi-api/4.1/microprofile-openapi-api-4.1.jar = 1742319947000
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/rest/client/microprofile-rest-client-api/4.0/microprofile-rest-client-api-4.0.jar = 1722519199000
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/telemetry/microprofile-telemetry-api/2.1/microprofile-telemetry-api-2.1.pom = 1744272527000
+/Users/mpredli01/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar = 1741388500000
+/Users/mpredli01/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar = 1741388464000
+/Users/mpredli01/.m2/repository/io/opentelemetry/instrumentation/opentelemetry-instrumentation-annotations/2.14.0/opentelemetry-instrumentation-annotations-2.14.0.jar = 1741915328000
+/Users/mpredli01/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.32.0/opentelemetry-semconv-1.32.0.jar = 1743608850000
+/Users/mpredli01/.m2/repository/org/jboss/weld/se/weld-se-shaded/5.1.2.Final/weld-se-shaded-5.1.2.Final.jar = 1696532190000
+/Users/mpredli01/.m2/repository/io/smallrye/config/smallrye-config-core/3.8.2/smallrye-config-core-3.8.2.jar = 1723053835558
+/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-annotation/2.4.0/smallrye-common-annotation-2.4.0.jar = 1723053835589
+/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-expression/2.4.0/smallrye-common-expression-2.4.0.jar = 1723053835686
+/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-function/2.4.0/smallrye-common-function-2.4.0.jar = 1723053835788
+/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-constraint/2.4.0/smallrye-common-constraint-2.4.0.jar = 1723053835784
+/Users/mpredli01/.m2/repository/io/smallrye/common/smallrye-common-classloader/2.4.0/smallrye-common-classloader-2.4.0.jar = 1723053835750
+/Users/mpredli01/.m2/repository/org/ow2/asm/asm/9.7/asm-9.7.jar = 1718052692085
+/Users/mpredli01/.m2/repository/io/smallrye/config/smallrye-config-common/3.8.2/smallrye-config-common-3.8.2.jar = 1723053835622
+/Users/mpredli01/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.1/microprofile-config-api-3.1.jar = 1695160288000
+/usr/local/portfolio/jakartaee-11/data/src/main/java = 1692876197698
+/usr/local/portfolio/jakartaee-11/data/target/generated-sources/annotations = 1758828342337
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/tag-search-index.js = 1758828357811
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/overview-tree.html = 1758828357746
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/module-search-index.js = 1758828357805
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/index.html = 1758828357915
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/package-search-index.js = 1758828357806
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/link.svg = 1758828357933
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/index-all.html = 1758828357907
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/allpackages-index.html = 1758828357803
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/member-search-index.js = 1758828357810
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/copy.svg = 1758828357928
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/script.js = 1758828357927
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/stylesheet.css = 1758828357924
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/search-page.js = 1758828357944
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/help-doc.html = 1758828357921
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/element-list = 1758828357501
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/search.html = 1758828357912
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/allclasses-index.html = 1758828357799
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/type-search-index.js = 1758828357807
+/usr/local/portfolio/jakartaee-11/data/target/reports/apidocs/search.js = 1758828357940

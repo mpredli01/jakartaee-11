@@ -1,0 +1,13 @@
+org/redlich/jwtbridge/api/token/TokenRequest.class
+org/redlich/jwtbridge/api/token/TokenResponse.class
+org/redlich/jwtbridge/api/SecuredResource.class
+org/redlich/jwtbridge/api/token/TokenResource.class
+org/redlich/jwtbridge/users/User.class
+org/redlich/jwtbridge/api/UnsecuredResource.class
+org/redlich/jwtbridge/users/UserFacade.class
+org/redlich/jwtbridge/util/JWTUtils.class
+org/redlich/jwtbridge/util/BuildScript.class
+org/redlich/jwtbridge/api/token/TokenResource$UnauthorizedException.class
+org/redlich/jwtbridge/api/JwtBridgeApplication.class
+org/redlich/jwtbridge/JwtAuthenticationMechanismDefinition.class
+org/redlich/jwtbridge/JwtBridgeService.class

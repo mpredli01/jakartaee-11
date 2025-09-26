@@ -1,0 +1,10 @@
+org/redlich/security/TestAuthenticationMechanism2.class
+org/redlich/security/ProtectedServlet2.class
+org/redlich/security/SecurityApplication.class
+org/redlich/security/TestIdentityStore.class
+org/redlich/security/ApplicationIdentityStore.class
+org/redlich/security/CustomAuthenticationMechanismHandler.class
+org/redlich/security/TestAuthenticationMechanism1.class
+org/redlich/security/SecurityService.class
+org/redlich/security/ProtectedServlet1.class
+org/redlich/security/SingleSecurityServlet.class

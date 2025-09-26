@@ -1,0 +1,12 @@
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/users/User.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/util/BuildScript.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/token/TokenRequest.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/token/TokenResource.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/util/JWTUtils.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/users/UserFacade.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/JwtBridgeApplication.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/SecuredResource.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/JwtAuthenticationMechanismDefinition.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/JwtBridgeService.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/token/TokenResponse.java
+/usr/local/portfolio/jakartaee-11/jwtbridge/src/main/java/org/redlich/jwtbridge/api/UnsecuredResource.java
