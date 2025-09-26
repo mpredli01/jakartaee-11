@@ -23,7 +23,7 @@
         <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <concurrency.version>3.1.1</concurrency.version>
         <faces.version>4.1.0</faces.version>
-        <mojarra.version>4.1.0</mojarra.version>
+        <mojarra.version>4.1.1</mojarra.version>
         <mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>
     </properties>
 
