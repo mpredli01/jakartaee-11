@@ -1,7 +1,0 @@
-org/redlich/security/ArquillianBase.class
-org/redlich/security/ShrinkWrap.class
-org/redlich/security/TestSecurityApp.class
-org/redlich/security/ArquillianBase$1.class
-org/redlich/security/Assert.class
-org/redlich/security/AppCustomAuthenticationMechanismHandlerIT.class
-org/redlich/security/ArquillianBase$2.class
