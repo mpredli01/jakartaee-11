@@ -2,7 +2,7 @@
 
 == Jakarta EE Example Applications
 
-=== November xx, 2025
+=== December 2, 2025
 
 * Test Jakarta EE 11 demo applications with Payara Micro 7.2025.1.
 * Create `build-and-exec.sh` scripts for each demo application.
