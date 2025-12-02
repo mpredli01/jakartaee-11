@@ -2,6 +2,13 @@
 
 == Jakarta EE Example Applications
 
+=== November xx, 2025
+
+* Test Jakarta EE 11 demo applications with Payara Micro 7.2025.1.
+* Create `build-and-exec.sh` scripts for each demo application.
+* Bump `org.glassfish.jersey.core:jersey-common` and `org.glassfish.jersey.core:jersey-client` from 4.0.0-M1 to 4.0.0.
+* Bump `org.jboss.resteasy:resteasy-client` from 7.0.0.Alpha1 to 7.0.0.Final.
+
 === September 26, 2025
 
 * Update README.adoc to add presentation at https://www.dubjug.org/[Dublin Java Users Group]
