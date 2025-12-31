@@ -11,8 +11,25 @@
  */
 package org.redlich.rest;
 
+/**
+ * <p>RestService class.</p>
+ *
+ * @author mpredli01
+ */
 public class RestService {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public RestService() {
+        }
+
+    /**
+     * <p>message.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String message() {
-        return "Hosted on serverless Payara Cloud!";
+        return "Hosted on the Payara Platform and serverless Payara Cloud!";
         }
     }

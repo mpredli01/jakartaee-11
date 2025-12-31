@@ -18,8 +18,21 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
 
+/**
+ * <p>User class.</p>
+ *
+ * @author mpredli01
+ */
 public class User {
 
+    /**
+     *
+     * @param name - the user's name.
+     * @param working - the users' work status.
+     * @param aboutMe - the user's profile.
+     * @param age - the user's age.
+     * @param email - the user's email address.
+     */
     User(String name, boolean working, String aboutMe, int age, String email) {
         setName(name);
         setWorking(true);
@@ -44,47 +57,98 @@ public class User {
     @Email(message = "Email should be valid")
     private String email;
 
+    /**
+     * <p>Getter for the field <code>name</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getName() {
         return name;
         }
 
+    /**
+     * <p>isWorking.</p>
+     *
+     * @return a boolean
+     */
     public boolean isWorking() {
         return working;
         }
 
+    /**
+     * <p>Getter for the field <code>aboutMe</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getAboutMe() {
         return aboutMe;
         }
 
+    /**
+     * <p>Getter for the field <code>age</code>.</p>
+     *
+     * @return a int
+     */
     public int getAge() {
         return age;
         }
 
+    /**
+     * <p>Getter for the field <code>email</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getEmail() {
         return email;
         }
 
 
+    /**
+     * <p>Setter for the field <code>name</code>.</p>
+     *
+     * @param name a {@link java.lang.String} object
+     */
     public void setName(String name) {
         this.name = name;
         }
 
+    /**
+     * <p>Setter for the field <code>working</code>.</p>
+     *
+     * @param working a boolean
+     */
     public void setWorking(boolean working) {
         this.working = working;
         }
 
+    /**
+     * <p>Setter for the field <code>aboutMe</code>.</p>
+     *
+     * @param aboutMe a {@link java.lang.String} object
+     */
     public void setAboutMe(String aboutMe) {
         this.aboutMe = aboutMe;
         }
 
+    /**
+     * <p>Setter for the field <code>age</code>.</p>
+     *
+     * @param age a int
+     */
     public void setAge(int age) {
         this.age = age;
         }
 
+    /**
+     * <p>Setter for the field <code>email</code>.</p>
+     *
+     * @param email a {@link java.lang.String} object
+     */
     public void setEmail(String email) {
         this.email = email;
         }
 
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         return "User{ " +

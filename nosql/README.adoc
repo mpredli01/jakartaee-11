@@ -1,0 +1,40 @@
+= Welcome to the Jakarta NoSQL Demo Application
+
+ifndef::imagesdir[:imagesdir: src/main/webapp/images]
+
+Hosted on the Payara Platform and serverless Payara Cloud
+
+image::payara-logo.png[alt=Payara Logo, width=30%, height=30%]
+image::gsjug-logo.png[alt=PayGarden State JUG Logo, width=30%, height=30%]
+image::jakartaee-logo.png[alt=Jakarta EE Logo, width=30%, height=30%]
+
+== Example Application
+
+This project is a demonstration on how to use the https://jakarta.ee/specifications/nosql/[Jakarta NoSQL] specification.
+
+
+== Build the Application
+
+`$ mvn clean compile package`
+
+This will build a WAR file that may be dropped in any Jakarta EE-compliant application server.
+
+== Deploy the Application
+
+These examples may be deployed using any Jakarta EE-compliant application server. For these demos, I am using https://www.payara.fish/learn/getting-started-with-payara-micro/[Payara Micro]. It may be downloaded as a JAR file and executed as follows:
+
+`$ java -jar <path>/payara-micro-<version>.jar target/nosql-1.0.0.war`
+
+Here, `<version>` is in the form of 6.2024.12 or 7.2024.1.Alpha2
+
+A script, `start-payara-micro.sh` is included for your convenience. All you need to do is download Payara Micro
+
+== Executing the Application
+
+Upon successful deployment, the application may be executed in the browser:
+
+http://localhost:8080/nosql-1.0.0[Main Application]
+
+== Testing
+
+Please stay tuned for details...

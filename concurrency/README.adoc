@@ -4,54 +4,38 @@ ifndef::imagesdir[:imagesdir: src/main/webapp/images]
 
 Hosted on the Payara Platform and serverless Payara Cloud
 
-image::payara-logo.png[alt=Payara Logo, width=70%, height=70%]
-image::gsjug-logo.png[alt=PayGarden State JUG Logo, width=70%, height=70%]
-image::jakartaee-logo.png[alt=Jakarta EE Logo, width=70%, height=70%]
+image::payara-logo.png[alt=Payara Logo, width=30%, height=30%]
+image::gsjug-logo.png[alt=PayGarden State JUG Logo, width=30%, height=30%]
+image::jakartaee-logo.png[alt=Jakarta EE Logo, width=30%, height=30%]
 
-This project is a demonstration on how to use the Jakarta Concurrency specification. The primary example application is a task creator that allows you to add tasks that are handled immediately or with a delay of three or eight seconds. A command-line application is also included that serves as a placeholder that displays a welcome screen.
+== Example Application
 
-== Application Server
+This project is a demonstration on how to use the https://jakarta.ee/specifications/concurrency/[Jakarta Concurrency] specification. The application is a task creator that allows you to add tasks that are handled immediately or with a delay of three or eight seconds.
 
-These examples may be executed using any Jakarta EE-compliant application server.  Payara Micro is used for these demo applications. It is downloaded as a JAR file and executed as follows:
+The application was modeled after the Task Creator example from the comprehensive set of https://github.com/eclipse-ee4j/jakartaee-examples/blob/main/README.md[Jakarta EE 10 Examples].
 
-`$ java -jar <path>/payara-micro-6.2024.6.jar <path>/<warfile>.war`
-
-A script, `start-payara-micro.sh` is included for your convenience. All you need to do is install Payara Micro
-
-== Command-Line Application
-
-The command-line application is currently a placeholder for a more comprehensive application. This `ConcurrencyApp` class is referenced in the `pom.xml` file as `<mainClass>org.redlich.concurrency.ConcurrencyApp</mainClass>`, so executing it is as easy as:
-
-`$ mvn clean compile exec:java`
-
-Upon executing this application, you will be presented with the following output on the terminal window:
-
-[APP] ---------------------------------------------------------
-[APP] Welcome to the Jakarta Concurrency Demo Application
-[APP] ---------------------------------------------------------
-
-== REST Application
-
-The REST application was modeled after the Task Creator example from the comprehensive set of https://github.com/eclipse-ee4j/jakartaee-examples/blob/main/README.md[Jakarta EE 10 Examples]. The `ConcurrencyApplication` class defines the `/jaxrs` endpoint and serves as the entry point of the application.
+== Build the Application
 
 `$ mvn clean compile package`
 
 This will build a WAR file that may be dropped in any Jakarta EE-compliant application server.
 
-== Executing the REST Application
+== Deploy the Application
 
-The REST application may be executed via:
+These examples may be deployed using any Jakarta EE-compliant application server. For these demos, I am using https://www.payara.fish/learn/getting-started-with-payara-micro/[Payara Micro]. It may be downloaded as a JAR file and executed as follows:
 
-https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]
+`$ java -jar <path>/payara-micro-<version>.jar target/concurrency-1.0.0.war`
 
-=== Example Application
+Here, `<version>` is in the form of 6.2024.12 or 7.2024.1.Alpha2
 
-The application may be exercised by running the CLI version or deployed on Payara Cloud:
+A script, `start-payara-micro.sh` is included for your convenience. All you need to do is download Payara Micro
 
-`$ mvn clean compile exec:java`
+== Executing the Application
 
-* https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/[Main Application]
+Upon successful deployment, the application may be executed in the browser:
 
-=== Testing
+http://localhost:8080/concurrency-1.0.0[Main Application]
+
+== Testing
 
 Please stay tuned for details...

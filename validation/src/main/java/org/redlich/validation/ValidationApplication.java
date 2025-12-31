@@ -14,6 +14,7 @@ package org.redlich.validation;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.core.MediaType;
@@ -27,7 +28,8 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author airhacks.com
  */
-@ApplicationPath("validation")
+@ApplicationPath("/validation")
+@Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class ValidationApplication extends Application {
 
@@ -35,8 +37,26 @@ public class ValidationApplication extends Application {
     @ConfigProperty(name = "message")
     String message;
 
+    @Inject
+    ValidationService validationService;
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ValidationApplication() {
+        }
+
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     public String sayHello() {
-        return this.message;
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(validationService.message());
+        return builder.toString();
         }
     }

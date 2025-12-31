@@ -16,6 +16,7 @@ import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
@@ -28,16 +29,19 @@ import java.util.Objects;
 @Entity
 public class Brewer {
     @Id
+    @Positive(message = "The primary key must be a non-negative integer!")
     private int id;
 
     @Column
-    @NotBlank
+    @NotBlank(message = "The name of the brewer is required!")
     private String name;
 
     @Column
+    @NotNull(message = "The city where the brewer resides is required!")
     private String city;
 
     @Column
+    @NotNull(message = "The state where the brewer resides is required!")
     private String state;
 
     /**
@@ -60,7 +64,7 @@ public class Brewer {
     /**
      * <p>Getter for the field <code>id</code>.</p>
      *
-     * @return a int
+     * @return the id of the brewer in the database
      */
     public int getId() {
         return id;
@@ -125,12 +129,18 @@ public class Brewer {
     /**
      * <p>builder.</p>
      *
-     * @return a {@link org.redlich.beers.Brewer.BrewerBuilder} object
+     * @return a {@link org.redlich.data.Brewer.BrewerBuilder} object
      */
     public static BrewerBuilder builder() {
         return new BrewerBuilder();
         }
 
+    /**
+     * <p>BrewerBuilder class.</p>
+     *
+     * @author mpredli01
+     * @version $Id: $Id
+     */
     public static class BrewerBuilder {
         private int id;
         private String name;
@@ -140,26 +150,55 @@ public class Brewer {
         private BrewerBuilder() {
             }
 
+        /**
+         * Returns the primary key of the brewer.
+         * 
+         * @param id the primary key.
+         * @return BrewerBuilder
+         */
         public BrewerBuilder id(int id) {
             this.id = id;
             return this;
             }
 
+        /**
+         * Returns the name of the brewer.
+         *
+         * @param name the name of the brewer.
+         * @return BrewerBuilder
+         */
         public BrewerBuilder name(String name) {
             this.name = name;
             return this;
             }
 
+        /**
+         * Returns the city of where the brewer is located.
+         *
+         * @param city the city where the brewer is located.
+         * @return BrewerBuilder
+         */
         public BrewerBuilder city(String city) {
             this.city = city;
             return this;
             }
 
+        /**
+         * Returns the state of where the brewer is located.
+         *
+         * @param state the state where the brewer is located.
+         * @return BrewerBuilder
+         */
         public BrewerBuilder state(String state) {
             this.state = state;
             return this;
             }
 
+        /**
+         * <p>Brewer build()</p>
+         *
+         * @return Brewer
+         */
         public Brewer build() {
             return new Brewer(id, name, city, state);
             }
