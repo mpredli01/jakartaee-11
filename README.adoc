@@ -1,13 +1,30 @@
-= Jakarta EE Example Applications
+= Jakarta EE 11 Example Applications
 
 == Introduction
 
-This repository complements the presentation, https://redlich.net/pdf/portfolio/jakarta-ee-11-going-beyond-the-era-of-java-ee.pdf[Jakarta EE 11: Going Beyond the Era of Java EE], which, so far, has been presented at:
+This repository complements the presentations, https://redlich.net/pdf/portfolio/getting-started-with-jakarta-ee-11-and-whats-new-in-jakarta-ee-12.pdf[Getting Started with Jakarta EE 11 and What's New in Jakarta EE 12], https://redlich.net/pdf/portfolio/a-developers-guide-to-jakarta-ee-11.pdf[A Developer's Guide to Jakarta EE 11] and https://redlich.net/pdf/portfolio/jakarta-ee-11-going-beyond-the-era-of-java-ee.pdf[Jakarta EE 11: Going Beyond the Era of Java EE]
 
-* https://www.meetup.com/phillyjug/events/294593853/[Philly Java Users Group] on November 15, 2023
-* JCON World on November 21, 2023
-* https://www.youtube.com/watch?v=chC-fezerkc&list=PLutlXcN4EAwC64sgFLJSWAgQJvVo6T4Dh&index=1[Jakarta Tech Talk] on December 13, 2023
-* Payara Virtual Conference on December 14, 2023
+**Getting Started with Jakarta EE 11 and What's New in Jakarta EE 12** has been presented at these conferences and webinars:
+
+* Dublin Java Users Group, September 25, 2025
+* https://www.youtube.com/watch?v=deGvcfwIefo&pp=ygURamFrYXJ0YSB0ZWNoIHRhbGs%3D[Jakarta Tech Talk], June 25, 2025
+* https://www.youtube.com/watch?v=CT_yrYaQoKI[SouJava 30Y #Celebration Week (Day One)], June 16, 2025
+
+**A Developer's Guide to Jakarta EE 11** has been presented at these conferences and webinars:
+
+* https://www.youtube.com/watch?v=wnWuw8956I8[Devnexus 2025], March 5, 2025
+* https://www.youtube.com/watch?v=s9C8HQqYOlY[jChampions 2025], January 24, 2025
+* https://www.youtube.com/watch?v=eQG-KVCLi4A[JakartaOne 2024], December 3, 2024
+* https://www.youtube.com/watch?v=R1fhAl4QwhI[Jakarta Tech Talk], August 14, 2024
+
+**Jakarta EE 11: Going Beyond the Era of Java EE** has been presented at these conferences and webinars:
+
+* Devnexus 2024, April 11, 2024.
+* Payara Virtual Conference, December 14, 2023
+* https://www.youtube.com/watch?v=chC-fezerkc&list=PLutlXcN4EAwC64sgFLJSWAgQJvVo6T4Dh&index=1[Jakarta Tech Talk], December 13, 2023
+* JCON World, November 21, 2023
+* https://www.meetup.com/phillyjug/events/294593853/[Philly Java Users Group], November 15, 2023
+
 
 == Example Applications
 
@@ -22,10 +39,23 @@ Each folder contains a demonstration of a Jakarta EE specification:
 * https://jakarta.ee/specifications/servlet/[Jakarta Servlet]
 * https://jakarta.ee/specifications/bean-validation/[Jakarta Validation]
 
-There is also an example of the new https://github.com/eclipse/microprofile-jwt-bridge/blob/main/README.adoc[MicroProfile JWT Bridge] specification. Introduced in the Summer of 2023, this specification is still a work-in-progress. It has already been decided that this new specification will be maintained in the MicroProfile set of standalone specifications, and it is anticipated that it will be included in MicroProfile 7.0, scheduled for release on June 19, 2024.
+There is also an example of the new https://github.com/eclipse/microprofile-jwt-bridge/blob/main/README.adoc[MicroProfile JWT Bridge] specification. Introduced in the Summer of 2023, this specification is still a work-in-progress. It has already been decided that this new specification will be maintained in the MicroProfile set of standalone specifications, and was originally anticipated to be included in MicroProfile 7.0, released on June 19, 2024.
 
 == Documentation
 
 Please refer to the corresponding `README.adoc` files under each project.
 
 Corresponding documentation for each Jakarta EE specification may be found under the `spec` directory and will be automatically be generated upon executing `mvn clean package`.
+
+== Naming Conventions Used in This Repository
+
+For each demo application, there is an effort to provide a consistent set of naming conventions. While things may be slightly different in some demo applications, these are:
+
+* `<specficationName>App.java`
+* `<specificationName>Application.java`
+* `<specificationName>Resource.java`
+* `<specficationName>Service.java`
+
+The root endpoint will match the name of each folder
+
+* `http://localhost:8080/<specificationName>`

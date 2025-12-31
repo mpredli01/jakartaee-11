@@ -16,6 +16,7 @@ import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.util.Objects;
 
@@ -31,31 +32,34 @@ public class Beer {
      *
      */
     @Id
+    @Positive(message = "The primary key must be a non-negative integer!")
     private int id;
     /**
      *
      */
     @Column
-    @NotBlank
+    @NotBlank(message = "The name of the beer is required!")
     private String name;
 
     /**
      *
      */
     @Column
-    @NotNull
+    @NotNull(message = "The beer type is required!")
     private BeerType type;
 
     /**
      *
      */
     @Column("brewer_id")
+    @NotNull(message = "The brewerId is required!")
     private int brewerId;
 
     /**
      *
      */
     @Column
+    @NotNull(message = "The alcohol by volume (ABV) is required!")
     private double abv;
 
     /**
@@ -71,11 +75,11 @@ public class Beer {
 
     /**
      *
-     * @param id
-     * @param name
-     * @param type
-     * @param brewerId
-     * @param abv
+     * @param id - the id
+     * @param name - the beer name
+     * @param type - the beer type
+     * @param brewerId - the brewerId
+     * @param abv - the ABV
      */
     private Beer(int id, String name, BeerType type, int brewerId, double abv) {
         this.id = id;
@@ -183,31 +187,65 @@ public class Beer {
         private BeerBuilder() {
             }
 
+        /**
+         * Returns the primary key in the Beer database collection.
+         *
+         * @param id - the primary key
+         * @return id
+         */
         public BeerBuilder id(int id) {
             this.id = id;
             return this;
             }
 
+        /**
+         * Returns the name of the beer.
+         *
+         * @param name - the name of the beer.
+         * @return - the name of the beer.
+         */
         public BeerBuilder name(String name) {
             this.name = name;
             return this;
             }
 
+        /**
+         * Returns the beer type, i.e., ale, stout, etc.
+         *
+         * @param type - beer type
+         * @return BeerBuilder
+         */
         public BeerBuilder type(BeerType type) {
             this.type = type;
             return this;
             }
 
+        /**
+         * Returns the brewerId of the brewer.
+         *
+         * @param brewerId - the brewerId
+         * @return BeerBuilder
+         */
         public BeerBuilder brewerId(int brewerId) {
             this.brewerId = brewerId;
             return this;
             }
 
+        /**
+         *
+         * Returns the alcohol by volume.
+         * @param abv - the alcohol by volume value
+         * @return BeerBuilder
+         */
         public BeerBuilder abv(double abv) {
             this.abv = abv;
             return this;
             }
 
+        /**
+         * Returns an instance of the Beer class.
+         * @return Beer
+         */
         public Beer build() {
             return new Beer(id, name, type, brewerId, abv);
             }

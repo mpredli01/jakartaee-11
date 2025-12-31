@@ -1,0 +1,53 @@
+= Welcome to the MicroProfile JWT Bridge Demo Application
+
+ifndef::imagesdir[:imagesdir: src/main/webapp/images]
+
+Hosted on the Payara Platform and serverless Payara Cloud
+
+image::payara-logo.png[alt=Payara Logo, width=30%, height=30%]
+image::gsjug-logo.png[alt=PayGarden State JUG Logo, width=30%, height=30%]
+image::jakartaee-logo.png[alt=Jakarta EE Logo, width=30%, height=30%]
+
+== Example Application
+
+This project is a demonstration on how to use the https://github.com/eclipse/microprofile-jwt-bridge/blob/main/README.adoc[MicroProfile JWT Bridge] specification.
+
+The application was modeled from a https://github.com/luiseufrasio/payara-vcon-jwt-demo/blob/full-secured/README.md[application] created by https://www.linkedin.com/in/luis-neto-16786b227/[Luis Neto], Java Software Engineer at Payara. This was demonstrated at the Virtual Payara Conference in June 2024.
+
+== Build the Application
+
+`$ mvn clean compile package`
+
+This will build a WAR file that may be dropped in any Jakarta EE-compliant application server.
+
+== Deploy the Application
+
+These examples may be deployed using any Jakarta EE-compliant application server. For these demos, I am using https://www.payara.fish/learn/getting-started-with-payara-micro/[Payara Micro]. It may be downloaded as a JAR file and executed as follows:
+
+`$ java -jar <path>/payara-micro-<version>.jar target/jwtbridge-1.0.0.war`
+
+Here, `<version>` is in the form of 6.2024.12 or 7.2024.1.Alpha2
+
+A script, `start-payara-micro.sh` is included for your convenience. All you need to do is download Payara Micro
+
+== Executing the Application
+
+Upon successful deployment, the application may be executed in the browser:
+
+http://localhost:8080/jwtbridge-1.0.0[Main Application]
+
+`curl -H 'Content-Type: application/json' -d '{ "username":"Mike", "password":"password" }' -X POST http://localhost:8080/jwtbridge-1.0.0/api/token/generate`
+
+A JWT token will be generated and a script, `run.sh` will be created with the new token.
+
+An example `curl` command is as follows:
+
+`curl -X GET http://localhost:8080/jwtbridge-1.0.0/api/secured/hi-with-token -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNaWtlIiwicm9sZXMiOlsiYWRtaW4iXSwiaXNzIjoicGF5YXJhIiwiZXhwIjoxNzM2ODkwMTAwfQ.5J_O40dmtPUCAH5MWgwXuiCV7HeTA7UfAFtsuS9dGDU"`
+
+== Testing
+
+Please stay tuned for details...
+
+== Resources
+
+https://github.com/luiseufrasio[Luís Neto GitHub]

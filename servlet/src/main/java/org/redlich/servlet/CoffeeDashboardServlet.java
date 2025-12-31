@@ -23,6 +23,11 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <p>CoffeeDashboardServlet class.</p>
+ *
+ * @author mpredli01
+ */
 @WebServlet("/coffeeDashboard")
 public class CoffeeDashboardServlet extends HttpServlet {
 
@@ -45,12 +50,12 @@ public class CoffeeDashboardServlet extends HttpServlet {
     }
 
     /**
-     *
-     * @param req the HTTP servlet request
-     * @param resp the HTTP servlet response
-     * @throws ServletException the servlet exception
-     * @throws IOException the I/O exception
+     * <p>Default constructor.</p>
      */
+    public CoffeeDashboardServlet() {
+        }
+
+    /** {@inheritDoc} */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();

@@ -19,7 +19,10 @@
 
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
+        <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <jaxrs.version>4.0.0</jaxrs.version>
+        <resteasy.version>7.0.0.Final</resteasy.version>
+        <jersey.core.version>4.0.0</jersey.core.version>
         <mainClass>org.redlich.rest.RestApp</mainClass>
     </properties>
 
@@ -32,19 +35,19 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-client</artifactId>
-            <version>7.0.0.Alpha2</version>
+            <version>${resteasy.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-common</artifactId>
-            <version>4.0.0-M1</version>
+            <version>${jersey.core.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
-            <version>4.0.0-M1</version>
+            <version>${jersey.core.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -58,6 +61,19 @@
                 <configuration>
                     <mainClass>${mainClass}</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

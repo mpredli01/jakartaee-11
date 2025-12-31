@@ -36,10 +36,16 @@ public class BrewerResources {
     BrewerService brewerService;
 
     /**
+     * <p>Default constructor.</p>
+     */
+    public BrewerResources() {
+        }
+
+    /**
      * <p>findById.</p>
      *
-     * @param id a int
-     * @return a {@link org.redlich.beers.BrewerResponse} object
+     * @param id the id of the brewer in the database
+     * @return a {@link org.redlich.data.BrewerResponse} object
      */
     @GET
     @Path("/{id}")
@@ -96,9 +102,9 @@ public class BrewerResources {
     /**
      * <p>add.</p>
      *
-     * @param id a int
-     * @param request a {@link org.redlich.beers.BrewerRequest} object
-     * @return a {@link org.redlich.beers.BrewerResponse} object
+     * @param id the id of the brewer in the database
+     * @param request a {@link org.redlich.data.BrewerRequest} object
+     * @return a {@link org.redlich.data.BrewerResponse} object
      */
     @POST
     @Path("/{id}")
@@ -110,7 +116,7 @@ public class BrewerResources {
     /**
      * <p>remove.</p>
      *
-     * @param id a int
+     * @param id the id of the brewer in the database
      */
     @Path("/{id}")
     @DELETE

@@ -13,14 +13,54 @@ package org.redlich.concurrency;
 
 import java.util.Set;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-/* This class configures JAX-RS for this application.
- * The JAX-RS paths for this application's endpoints are under /jaxrs/ */
-@ApplicationPath("/jaxrs/")
+/**
+ * This class configures JAX-RS for this application.
+ * The JAX-RS paths for this application's endpoints are under /concurrency/
+ *
+ * @author mpredli01
+ */
+@ApplicationPath("concurrency")
+@Path("")
+@Produces(MediaType.APPLICATION_JSON)
 public class ConcurrencyApplication extends Application {
 
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
+    @Inject
+    ConcurrencyService concurrencyService;
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ConcurrencyApplication() {
+        }
+
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
+    @GET
+    public String sayHello() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(concurrencyService.message());
+        return builder.toString();
+        }
+
+    /** {@inheritDoc} */
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
