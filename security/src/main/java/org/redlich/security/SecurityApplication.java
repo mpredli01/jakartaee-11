@@ -11,44 +11,50 @@
  */
 package org.redlich.security;
 
-import java.io.IOException;
-
-import jakarta.annotation.security.DeclareRoles;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.HttpConstraint;
-import jakarta.servlet.annotation.ServletSecurity;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
- * Test Servlet that prints out the name of the authenticated caller and whether
- * this caller is in any of the roles {admin, audit, user}
+ * Define a container authentication mechanism that implements the HTTP basic access authentication protocol as defined by the Servlet spec (13.6.1) and make that implementation available as an enabled CDI bean.
+ *
+ * @author mpredli01
  */
-@WebServlet("/security")
-@DeclareRoles({ "admin", "audit", "user" })
-@ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
-public class SecurityApplication extends HttpServlet {
 
-    private static final long serialVersionUID = 1L;
+@ApplicationPath("/security")
+@Path("")
+@Produces(MediaType.APPLICATION_JSON)
+public class SecurityApplication extends Application {
+
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
+    @Inject
+    SecurityService securityService;
 
     /**
-     * @param request the HttpServletRequest
-     * @param response the HttpServletResponse
+     * <p>Default constructor.</p>
      */
-    @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        String webName = null;
-        if (request.getUserPrincipal() != null) {
-            webName = request.getUserPrincipal().getName();
-            }
-        response.getWriter().write("web username: " + webName + "\n");
-
-        response.getWriter().write("web user has role \"admin\": " + request.isUserInRole("admin") + "\n");
-        response.getWriter().write("web user has role \"audit\": " + request.isUserInRole("audit") + "\n");
-        response.getWriter().write("web user has role \"user\": " + request.isUserInRole("user") + "\n");
+    public SecurityApplication() {
         }
 
+    /**
+     * <p>sayHello.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
+    @GET
+    public String sayHello() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.message);
+        builder.append("\n\n");
+        builder.append(securityService.message());
+        return builder.toString();
+        }
     }

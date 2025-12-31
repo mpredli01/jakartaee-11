@@ -11,18 +11,75 @@
  */
 package org.redlich.nosql;
 
+/**
+ * <p>BeerType class.</p>
+ *
+ * @author mpredli01
+ */
 public enum BeerType {
+
+    /**
+     * <p>Ale beer type.</p>
+     */
     ALE,
+
+    /**
+     * <p>Stout beer type.</p>
+     */
     STOUT,
+
+    /**
+     * <p>Porter beer type.</p>
+     */
     PORTER,
+
+    /**
+     * <p>India Pale Ale beer type.</p>
+     */
     IPA,
+
+    /**
+     * <p>American Pale Ale beer type.</p>
+     */
     APA,
+
+    /**
+     * <p>Lager beer type.</p>
+     */
     LAGER,
+
+    /**
+     * <p>Gose beer type.</p>
+     */
     GOSE,
+
+    /**
+     * <p>Saison beer type.</p>
+     */
     SAISON,
+
+    /**
+     * <p>Lambic beer type.</p>
+     */
     LAMBIC,
+
+    /**
+     * <p>Kölsch beer type.</p>
+     */
     KOLSCH,
+
+    /**
+     * <p>Pilsner beer type.</p>
+     */
     PILSNER,
+
+    /**
+     * <p>Märzen beer type.</p>
+     */
     MARZEN,
+
+    /**
+     * <p>Extra Special Bitter beer type.</p>
+     */
     ESB
     }

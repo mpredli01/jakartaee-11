@@ -23,6 +23,11 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 /* The tasks just notify the JAX-RS web service in the EJB */
+/**
+ * <p>Task class.</p>
+ *
+ * @author mpredli01
+ */
 public class Task implements Runnable {
 
     private static final Logger log = Logger.getLogger("Task");
@@ -30,7 +35,7 @@ public class Task implements Runnable {
     /* Use this WS_URL for Payara Cloud
      * private static final String WS_URL = "https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/jaxrs/taskinfo";
      */
-    private static final String WS_URL = "http://localhost:8080/concurrency-1.0.0/jaxrs/taskinfo";
+    private static final String WS_URL = "http://localhost:8080/concurrency-1.0.0/concurrency/taskinfo";
     
     private final String name;
     private final String type;
@@ -38,6 +43,12 @@ public class Task implements Runnable {
     private final Client client;
     private int counter;
 
+    /**
+     * <p>Constructor for Task.</p>
+     *
+     * @param n a {@link java.lang.String} object
+     * @param t a {@link java.lang.String} object
+     */
     public Task(String n, String t) {
         name = n;
         type = t;
@@ -50,6 +61,7 @@ public class Task implements Runnable {
             sendToWebService("submitted");
         }
 
+    /** {@inheritDoc} */
     @Override
     public void run() {
         /* Send: 14:15:45 - TASKTYPE Task ABCDE started */
@@ -79,6 +91,11 @@ public class Task implements Runnable {
                 .post(Entity.html(msg));
         }
 
+    /**
+     * <p>Getter for the field <code>name</code>.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     public String getName() {
         return name;
         }

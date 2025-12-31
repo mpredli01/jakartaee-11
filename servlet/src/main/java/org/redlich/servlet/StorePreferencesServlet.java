@@ -20,14 +20,27 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+/**
+ * <p>StorePreferencesServlet class.</p>
+ *
+ * @author mpredli01
+ */
 @WebServlet("/storePreferences")
 public class StorePreferencesServlet extends HttpServlet {
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public StorePreferencesServlet() {
+        }
+
+    /** {@inheritDoc} */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/coffee_preferences.html").forward(req, resp);
         }
 
+    /** {@inheritDoc} */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String[] coffeeTypes = req.getParameterValues("coffeeType");

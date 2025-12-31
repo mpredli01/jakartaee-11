@@ -16,15 +16,31 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * <p>HelloWorldServlet class.</p>
+ *
+ * @author mpredli01
+ */
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
+
+    /**
+     * <p>Default constructor.</p>
+     */
+    public HelloWorldServlet() {
+        }
+
+    /** {@inheritDoc} */
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
+    @Produces(MediaType.APPLICATION_JSON)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
         out.println("Hello, World!");
         }
     }

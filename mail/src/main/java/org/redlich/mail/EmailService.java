@@ -24,8 +24,24 @@ import jakarta.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
+/**
+ * <p>EmailService class.</p>
+ *
+ * @author mpredli01
+ */
 public class EmailService {
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public EmailService() {
+        }
+
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects
+     */
     public static void main(String[] args) {
 
         try {

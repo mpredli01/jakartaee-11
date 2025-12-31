@@ -26,6 +26,11 @@ import java.util.Set;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+/**
+ * <p>ValidationResource class.</p>
+ *
+ * @author mpredli01
+ */
 @Path("validate")
 public class ValidationResource {
 
@@ -34,8 +39,19 @@ public class ValidationResource {
     String message;
 
     @Inject
-    ValidationService service;
+    ValidationService validationService;
 
+    /**
+     * <p>Default constructor.</p>
+     */
+    public ValidationResource() {
+        }
+
+    /**
+     * <p>validate.</p>
+     *
+     * @return a {@link java.lang.String} object
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String validate() {
@@ -55,7 +71,8 @@ public class ValidationResource {
                 builder.append(violation.getMessage());
                 builder.append("\n");
                 }
-            builder.append(service.message());
+            builder.append("\n");
+            builder.append(validationService.message());
             builder.append("\n");
             }
         return builder.toString();
