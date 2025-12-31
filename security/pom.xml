@@ -21,7 +21,7 @@
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <security.version>4.0.0</security.version>
-        <soteria.version>3.0.3</soteria.version>
+        <soteria.version>3.0.4</soteria.version>
         <mainClass>org.redlich.security.SecurityApp</mainClass>
     </properties>
 
