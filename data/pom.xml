@@ -22,8 +22,8 @@
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <jakarta.nosql.version>1.0.0-b7</jakarta.nosql.version>
         <!-- It was necessary to downgrade to JNoSQL 1.1.0 due to the rename of Pageable and the removal of PageableRepository -->
-        <!-- <jnosql.version>1.1.1-SNAPSHOT</jnosql.version> -->
-        <jnosql.version>1.1.1</jnosql.version>
+        <!-- <jnosql.version>1.1.1</jnosql.version> -->
+        <jnosql.version>1.1.0</jnosql.version>
         <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <jakarta.nosql.version>1.0.0</jakarta.nosql.version>
         <microprofile.config.version>3.1</microprofile.config.version>
@@ -37,6 +37,7 @@
         <junit.version>5.10.1</junit.version>
         <mockito.verson>5.9.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
+        <flapdoodle.embed.mongo.version>4.22.0</flapdoodle.embed.mongo.version>
         <awaitility.version>4.2.0</awaitility.version>
         <testcontainers.version>1.19.6</testcontainers.version>
         <testcontainer.mongodb.version>1.19.4</testcontainer.mongodb.version>
@@ -58,7 +59,7 @@
         <dependency>
             <groupId>de.flapdoodle.embed</groupId>
             <artifactId>de.flapdoodle.embed.mongo</artifactId>
-            <version>4.13.1</version>
+            <version>${flapdoodle.embed.mongo.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
