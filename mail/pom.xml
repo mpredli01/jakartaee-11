@@ -21,7 +21,7 @@
     <properties>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
         <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
-        <jakarta.mail.version>2.1.3</jakarta.mail.version>
+        <jakarta.mail.version>2.1.5</jakarta.mail.version>
         <angus.mail.version>2.0.3</angus.mail.version>
         <mainClass>org.redlich.mail.MailApp</mainClass>
     </properties>
