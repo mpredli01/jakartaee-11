@@ -13,6 +13,7 @@ package org.redlich.concurrency;
 
 import java.util.Set;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
@@ -28,7 +29,8 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author mpredli01
  */
-@ApplicationPath("concurrency")
+@ApplicationScoped
+@ApplicationPath("/concurrency")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class ConcurrencyApplication extends Application {

@@ -11,6 +11,7 @@
  */
 package org.redlich.data;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
@@ -26,19 +27,21 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  * @author mpredli01
  * @version $Id: $Id
  */
+@ApplicationScoped
 @ApplicationPath("/data")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
 public class DataApplication extends Application {
+
+    @Inject
+    @ConfigProperty(name = "message")
+    String message;
+
     @Inject
     BeerService beerService;
 
     @Inject
     BrewerService brewerService;
-
-    @Inject
-    @ConfigProperty(name = "message")
-    String message;
 
     @Inject
     DataService dataService;

@@ -11,11 +11,14 @@
  */
 package org.redlich.data;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>DataService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class DataService {
 
     /**

@@ -11,11 +11,14 @@
  */
 package org.redlich.mail;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>MailService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class MailService {
 
     /**

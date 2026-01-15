@@ -11,11 +11,14 @@
  */
 package org.redlich.security;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>SecurityService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class SecurityService {
 
     /**

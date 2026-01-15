@@ -2,7 +2,17 @@
 
 == Jakarta EE Example Applications
 
-=== January xx, 2026
+=== January 15, 2026
+
+* Rename `add.sh` to `add-via-payara.sh` and `delete.sh` to `delete-via-payara.sh` in the Jakarta Data example demo.
+* Rename `generate-token.sh` to `generate-token-via-payara.sh` in the MicroProfile JWT Bridge example demo.
+* Add `add-via-glassfish.sh` and `delete-via-glassfish.sh` to the Jakarta Data demo.
+* Add `generate-token-via-glassfish.sh` to the MicroProfile JTW Bridge example demo.
+* Update the `beans.xml` file in all example demos
+- Set the `bean-discovery-mode` attribute to `annotated` instead of `all`.
+* Add the appropriate scope, i.e., `@ApplicationScoped`, to all beans where necessary.
+
+=== January 14, 2026
 
 * Rename `build-and-exec.sh` to `payara-build-and-exec.sh` in all example demos.
 * Add `glassfish-build-and-exec.sh` to all example demos.

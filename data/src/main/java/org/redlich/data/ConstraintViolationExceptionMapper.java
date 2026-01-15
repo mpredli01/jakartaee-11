@@ -15,8 +15,9 @@ import jakarta.ws.rs.ext.Provider;
  * @author mpredli01
  * @version $Id: $Id
  */
-@Provider
+
 @ApplicationScoped
+@Provider
 public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {
 
     /**

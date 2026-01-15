@@ -26,8 +26,8 @@ import java.util.List;
  * @author mpredli01
  * @version $Id: $Id
  */
-@Path("brewer")
 @ApplicationScoped
+@Path("brewer")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class BrewerResources {

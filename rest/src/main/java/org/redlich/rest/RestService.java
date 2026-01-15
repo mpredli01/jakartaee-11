@@ -11,11 +11,14 @@
  */
 package org.redlich.rest;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>RestService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class RestService {
 
     /**

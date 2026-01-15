@@ -13,11 +13,16 @@ package org.redlich.mail;
 
 import java.util.Properties;
 
-import jakarta.mail.*;
+import jakarta.mail.AuthenticationFailedException;
+import jakarta.mail.Authenticator;
+import jakarta.mail.PasswordAuthentication;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.Session;
+import jakarta.mail.Transport;
+import jakarta.mail.internet.AddressException;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
-
-import jakarta.mail.internet.AddressException;
 
 /**
  * <p>MailApp class.</p>

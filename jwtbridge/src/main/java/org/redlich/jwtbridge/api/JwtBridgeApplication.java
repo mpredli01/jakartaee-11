@@ -1,5 +1,6 @@
 package org.redlich.jwtbridge.api;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
@@ -15,6 +16,8 @@ import org.redlich.jwtbridge.JwtBridgeService;
  *
  * @author mpredli01
  */
+
+@ApplicationScoped
 @ApplicationPath("/jwtbridge")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)

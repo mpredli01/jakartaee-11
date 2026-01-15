@@ -11,6 +11,7 @@
  */
 package org.redlich.concurrency;
 
+import java.net.ServerSocket;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,6 +22,7 @@ import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.jboss.jdeparser.JCatch;
 
 /* The tasks just notify the JAX-RS web service in the EJB */
 /**
@@ -32,9 +34,7 @@ public class Task implements Runnable {
 
     private static final Logger log = Logger.getLogger("Task");
 
-    /* Use this WS_URL for Payara Cloud
-     * private static final String WS_URL = "https://concurrency-demo-dev-bfa859d4.payara.app/concurrency/jaxrs/taskinfo";
-     */
+    // TODO: Dynamically obtain the URL for use with other application servers
     private static final String WS_URL = "http://localhost:8080/concurrency-1.0.0/concurrency/taskinfo";
     
     private final String name;

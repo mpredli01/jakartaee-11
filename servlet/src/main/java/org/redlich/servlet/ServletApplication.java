@@ -11,6 +11,7 @@
  */
 package org.redlich.servlet;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.GET;
@@ -28,6 +29,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author airhacks.com
  */
+@ApplicationScoped
 @ApplicationPath("/servlet")
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)

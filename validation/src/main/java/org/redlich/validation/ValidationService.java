@@ -11,11 +11,14 @@
  */
 package org.redlich.validation;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>ValidationService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class ValidationService {
 
     /**

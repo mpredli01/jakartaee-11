@@ -11,11 +11,14 @@
  */
 package org.redlich.jwtbridge;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 /**
  * <p>JwtBridgeService class.</p>
  *
  * @author mpredli01
  */
+@ApplicationScoped
 public class JwtBridgeService {
 
     /**
