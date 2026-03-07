@@ -2,6 +2,10 @@
 
 == Jakarta EE Example Applications
 
+=== March 7, 2026
+
+* Test Jakarta EE 11 demo applications with Payara Micro 7.2026.2 and GlassFish 8.0.0.
+
 === January 15, 2026
 
 * Rename `add.sh` to `add-via-payara.sh` and `delete.sh` to `delete-via-payara.sh` in the Jakarta Data example demo.
