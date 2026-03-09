@@ -2,6 +2,11 @@
 
 == Jakarta EE Example Applications
 
+=== March 9, 2026
+
+* Upgrade `jakarta.mail:jakarta.mail-api` from 2.1.3 to 2.1.5.
+* Upgrade `org.jboss.resteasy:resteasy-client` from 7.0.0.Final to 7.0.1.Final.
+
 === March 7, 2026
 
 * Test Jakarta EE 11 demo applications with Payara Micro 7.2026.2 and GlassFish 8.0.0.
