@@ -21,7 +21,7 @@
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
         <payara.version>7.2025.1</payara.version>
         <jakartaee.version>11.0.0</jakartaee.version>
-        <jnosql.version>1.1.0</jnosql.version>
+        <jnosql.version>1.1.11</jnosql.version>
         <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.json.version>2.1.1</jakarta.json.version>
         <microprofile.version>7.1</microprofile.version>
