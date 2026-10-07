@@ -1,0 +1,7 @@
+### Start application with Payara Platform
+GET http://localhost:8080/mail-1.0.0/
+Content-Type: text/html
+
+### Start application with Eclipse GlassFish
+GET http://localhost:8081
+Content-Type: text/html

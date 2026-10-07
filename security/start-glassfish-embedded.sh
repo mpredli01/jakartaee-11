@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-java -jar /usr/local/bin/glassfish-embedded/glassfish-embedded-all-8.0.0-M15.jar
+java -jar /usr/local/bin/glassfish-embedded/glassfish-embedded-all-8.0.4.jar

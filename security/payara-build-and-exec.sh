@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-mvn clean package && java -jar /usr/local/bin/payara-micro/payara-micro-7.2026.2.jar target/security-1.0.0.war
+mvn clean package && java -jar /usr/local/bin/payara-micro/payara-micro-7.2026.9.jar target/security-1.0.0.war

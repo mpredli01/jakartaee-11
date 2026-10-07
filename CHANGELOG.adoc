@@ -2,6 +2,19 @@
 
 == Jakarta EE Example Applications
 
+=== October 7, 2026
+
+* Test Jakarta EE 11 demo applications with Payara Micro 7.2026.9 and GlassFish 8.0.4.
+* Initial support for HTTP request files for each demo application.
+* Remove references to Payara Cloud and add reference to Eclipse GlassFish.
+* Add GlassFish logo to complement the Payara, Garden State JUG and Jakarta EE logos.
+* Upgrade `jakarta.faces:jakarta.faces-api` from 4.1.0 to 4.1.2.
+* Upgrade `org.glassfish:mojarra-parent` from 4.1.1 to 4.1.17.
+* Upgrade `org.eclipse.angus:jakarta.mail` from 2.0.3 to 2.0.5.
+* Upgrade `org.jboss.resteasy:resteasy-client` from 7.0.1.Final to 7.0.5.Final.
+* Upgrade `org.glassfish.jersey.core:jersey-common` from 4.0.0 to 4.0.3.
+* Upgrade `org.glassfish.jersey.core:jersey-client` from 4.0.0 to 4.0.3.
+
 === March 9, 2026
 
 * Upgrade `jakarta.mail:jakarta.mail-api` from 2.1.3 to 2.1.5.

@@ -24,6 +24,8 @@
         <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
         <liberty.maven.plugin.version>3.10.3</liberty.maven.plugin.version>
         <jsonwebtoken.version>0.11.5</jsonwebtoken.version>
+        <http.port>9081</http.port>
+        <https.port>9081</https.port>
         <app.name>mp-jwt-app</app.name>
         <mainClass>org.redlich.jwtbridge.JwtBridgeApp</mainClass>
     </properties>

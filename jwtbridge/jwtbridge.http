@@ -1,0 +1,45 @@
+### Start application with Payara Platform
+GET http://localhost:8080/jwtbridge-1.0.0/
+Content-Type: text/html
+
+### Start application with Eclipse GlassFish
+GET http://localhost:8081
+Content-Type: text/html
+
+###
+# curl -X GET http://localhost:8080/jwtbridge-1.0.0/jwtbridge/secured/hi-with-token -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNaWtlIiwicm9sZXMiOlsiYWRtaW4iXSwiaXNzIjoicGF5YXJhIiwiZXhwIjoxNzcyNjU2NjczfQ.tVm5m7VTxOXwJDecQ9lRgpXvjh6EWWCzuQVM52aA33U"
+GET http://localhost:8080/jwtbridge-1.0.0/jwtbridge/secured/hi-with-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNaWtlIiwicm9sZXMiOlsiYWRtaW4iXSwiaXNzIjoicGF5YXJhIiwiZXhwIjoxNzcyNjU2NjczfQ.tVm5m7VTxOXwJDecQ9lRgpXvjh6EWWCzuQVM52aA33U
+
+###
+GET http://localhost:8080/jwtbridge-1.0.0/jwtbridge
+
+###
+GET http://localhost:8080/jwtbridge-1.0.0/jwtbridge/unsecured/hi-without-token/
+
+###
+GET http://localhost:8081/jwtbridge/secured/hi-with-token
+
+### Generate token with Eclipse GlassFish
+# curl -H 'Content-Type: application/json' -d '{ "username":"Mike", "password":"password" }' -X POST http://localhost:8081/jwtbridge/token/generate
+POST http://localhost:8081/jwtbridge/token/generate
+Content-Type: application/json
+
+{
+  "username": "Mike",
+  "password": "password"
+}
+
+### Generate token with Payara Platform
+# curl -H 'Content-Type: application/json' -d '{ "username":"Mike", "password":"password" }' -X POST http://localhost:8080/jwtbridge-1.0.0/jwtbridge/token/generate
+POST http://localhost:8080/jwtbridge-1.0.0/jwtbridge/token/generate
+Content-Type: application/json
+
+{
+  "username": "Mike",
+  "password": "password"
+}
+
+###
+
+

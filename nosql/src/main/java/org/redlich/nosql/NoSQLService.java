@@ -30,6 +30,6 @@ public class NoSQLService {
      * @return a {@link java.lang.String} object
      */
     public String message() {
-        return "Hosted on the Payara Platform and serverless Payara Cloud!";
+        return "Hosted on Eclipse GlassFish and Payara Platform!";
     }
 }

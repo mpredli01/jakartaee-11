@@ -1,0 +1,19 @@
+### Start application with Payara Platform
+GET http://localhost:8080/data-1.0.0/
+Content-Type: text/html
+
+### Start application with Eclipse GlassFish
+GET http://localhost:8081/
+Content-Type: text/html
+
+### Start base application with Eclipse GlassFish
+GET http://localhost:8081/data
+Content-Type: text/html
+
+### Get list of beers from the database with Eclipse GlassFish
+GET http://localhost:8081/data/beer
+Content-Type: */*
+
+### Get the list of brewers from the database with Eclipse GlassFish
+GET http://localhost:8081/data/brewer
+Content-Type: */*
