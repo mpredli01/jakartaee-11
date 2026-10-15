@@ -2,6 +2,10 @@
 
 == Jakarta EE Example Applications
 
+=== October 15, 2026
+
+* Remove the one instance of a hard-coded password in the Jakarta Mail example demo application.
+
 === October 7, 2026
 
 * Test Jakarta EE 11 demo applications with Payara Micro 7.2026.9 and GlassFish 8.0.4.
