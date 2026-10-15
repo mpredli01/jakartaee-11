@@ -20,8 +20,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>MMMM dd, yyyy</maven.build.timestamp.format>
         <exec.maven.plugin.version>3.2.0</exec.maven.plugin.version>
-        <asciidoctor-maven.version>2.2.4</asciidoctor-maven.version>
-        <asciidoctorj-pdf.version>2.3.9</asciidoctorj-pdf.version>
+        <asciidoctor-maven.version>3.2.0</asciidoctor-maven.version>
+        <asciidoctorj-pdf.version>2.3.27</asciidoctorj-pdf.version>
         <revisiondate>${maven.build.timestamp}</revisiondate>
         <revremark>Draft</revremark>
         <gen-doc-dir>${project.build.directory}/generated-docs</gen-doc-dir>

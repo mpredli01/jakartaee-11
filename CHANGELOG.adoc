@@ -5,6 +5,11 @@
 === October 15, 2026
 
 * Remove the one instance of a hard-coded password in the Jakarta Mail example demo application.
+* Upgrade `org.apache.maven.plugins:maven-compiler-plugin` from 3.5.1 to 3.6.0.
+* Upgrade `org.apache.maven.plugins:maven-surefire-plugin` from 3.1.0 to 3.6.0.
+* Upgrade `org.apache.maven.plugin:maven-javadoc-plugin` from 3.11.2 to 3.12.0.
+* Upgrade `org.asciidoctor:asciidoctorj-pdf` from 2.3.0 to 2.3.27.
+* Upgrade `org.asciidoctor:asciidoctor-maven-plugin` from 2.3.0 to 3.2.0.
 
 === October 7, 2026
 

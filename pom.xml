@@ -13,12 +13,11 @@
     <packaging>pom</packaging>
 
     <properties>
-        <maven.compile.version>3.5.1</maven.compile.version>
-        <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
+        <maven.compile.version>3.6.0</maven.compile.version>
+        <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
         <payara.version>7.2025.1</payara.version>
         <jakartaee.version>11.0.0</jakartaee.version>
         <jnosql.version>1.1.0</jnosql.version>
@@ -33,7 +32,7 @@
         <mockito.verson>5.2.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
         <junit.version>5.10.2</junit.version>
-        <asciidoctorj-pdf.version>2.3.0</asciidoctorj-pdf.version>
+        <asciidoctorj-pdf.version>2.3.27</asciidoctorj-pdf.version>
     </properties>
 
     <modules>
